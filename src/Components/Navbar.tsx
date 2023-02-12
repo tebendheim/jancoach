@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
 	const { isDarkMode, toggle } = useDarkMode();
 
 	return (
-		<nav className='sticky top-0 bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-neutral-800'>
+		<nav className='sticky top-0 bg-transparent border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-transparent z-30 backdrop-blur-xl -backdrop-hue-rotate-10 backdrop-brightness-50 dark:backdrop-brightness-125'>
 			<div className='container flex flex-wrap justify-between items-center mx-auto'>
 				<a href="/" className='self-center text-xl whitespace-nowrap dark:text-gray-300 font-medium hover:text-white'>
 					HEL VED
@@ -73,14 +73,17 @@ const Navbar: React.FC = () => {
 								Om meg
 							</a>
 						</li>
-					</ul>
-					<button onClick={toggle} className="text-blue-500">
+						<li>
+						<button onClick={toggle} className="text-blue-500">
 						{isDarkMode ? (
 						<MoonIcon className="h-6 w-6" />
 						) : (
 						<SunIcon className="h-6 w-6" />
 						)}
 					</button>
+						</li>
+					</ul>
+					
 					
 				</div>
 			</div>
