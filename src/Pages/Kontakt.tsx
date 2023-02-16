@@ -8,7 +8,9 @@ const Kontakt: React.FC = () => {
         message:""
     })
     const handleSubmit = (event:any)=>{
-
+        setState({
+            ...state, [event.target.name]: event.target.value
+        })
     }
     const handleChange = (event:any) => {
         setState({
