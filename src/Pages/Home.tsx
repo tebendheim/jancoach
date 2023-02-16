@@ -5,7 +5,7 @@ function Home() {
 	return (
 		<section className='h-auto h-max-full min-h-fit bg'>
 			<div className="absolute to-transparent
-				bg-[url('../../Bilder/janPaaFjellet.png')]
+				bg-[url('../../public/Bilder/janPaaFjellet.png')]
 				bg-no-repeat
 				bg-cover bg-clip-content min-w-full min-h-full z-0 top-0 left-0">
 				<p className="text-lg absolute bottom-0 left-32 text-center ">Det handler om hel ved</p>
