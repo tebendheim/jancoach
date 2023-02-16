@@ -6,4 +6,4 @@
       status = "200"
 
 [build]
-  command = "yarn && npm build"
+  command = "yarn && yarn build"
