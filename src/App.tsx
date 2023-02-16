@@ -24,9 +24,9 @@ function App( {}: React.HTMLAttributes<HTMLDivElement>) {
 			<Routes>
 				<Route path='/' element={<Layout />} >
 					<Route index element={<Home />} />
-					<Route path='kontakt' element={<Kontakt />} />
-					<Route path='tjenester' element={<Tjenester />} />
-					<Route path='om' element={<Om />} />
+					<Route path = 'kontakt' element={<Kontakt />} />
+					<Route path = 'tjenester' element={<Tjenester />} />
+					<Route path = 'om' element={<Om />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
