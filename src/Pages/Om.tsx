@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Om = () => {
+const Om: React.FC  = () => {
   return (
     <div>Om</div>
   )
