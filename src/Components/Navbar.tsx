@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
 	const { isDarkMode, toggle } = useDarkMode();
 
 	return (
-		<nav className='h-26 fixed w-screen top-0 bg-transparent border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-transparent z-30 backdrop-blur-xl  dark:backdrop-brightness-50 backdrop-brightness-125'>
+		<nav className='h-24 sticky w-screen top-0 bg-transparent border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-transparent z-30 backdrop-blur-xl  dark:backdrop-brightness-50 backdrop-brightness-125'>
 			<div className='container flex flex-wrap justify-between items-center mx-auto'>
 				<a href="/" className='self-center text-xl whitespace-nowrap dark:text-white font-bold dark:hover:text-gray-300'>
 					HEL VED

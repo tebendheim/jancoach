@@ -2,7 +2,10 @@ import React from 'react'
 
 const Om = () => {
   return (
-    <div>Om</div>
+    <section className='relative '>
+      <div>Om</div> 
+    </section>
+    
   )
 }
 

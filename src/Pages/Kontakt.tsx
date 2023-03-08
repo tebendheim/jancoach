@@ -16,7 +16,7 @@ const Kontakt: React.FC = () => {
         })
     }
   return (
-    <section>
+    <section className="relative">
         <h1></h1>
         <form onSubmit={handleSubmit} className="h-full w-full">
             <fieldset className='flex flex-col justify-between'>
