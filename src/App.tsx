@@ -7,7 +7,6 @@ import Kontakt from './Pages/Kontakt';
 import Tjenester from './Pages/Tjenester';
 import Om from './Pages/Om';
 import { useDarkMode } from "usehooks-ts";
-import Layout from './Components/Layout';
 
 
 function App( {}: React.HTMLAttributes<HTMLDivElement>) {
@@ -18,15 +17,18 @@ function App( {}: React.HTMLAttributes<HTMLDivElement>) {
   } else {
     document.documentElement.classList.remove("dark");
   }
+	//const [count, setCount] = useState(0);
 
 	return (
 		<BrowserRouter>
+			<Navbar />
 			<Routes>
-				<Route path='/' element={<Layout />} >
+				<Route path='/' >
 					<Route index element={<Home />} />
-					<Route path = 'kontakt' element={<Kontakt />} />
-					<Route path = 'tjenester' element={<Tjenester />} />
-					<Route path = 'om' element={<Om />} />
+					<Route path='kontakt' element={<Kontakt />} />
+					<Route path='tjenester' element={<Tjenester />} />
+					<Route path='om' element={<Om />} />
+
 				</Route>
 			</Routes>
 		</BrowserRouter>
