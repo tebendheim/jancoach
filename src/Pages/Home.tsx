@@ -9,8 +9,8 @@ function Home():JSX.Element {
 	return (
 			<section className="col-span-full row-start-1">
 				<section>
-					<div className="h-screen w-full to-transparent
-						bg-[url('../../Bilder/janPaaFjellet.png')]
+					<div className="h-screen
+						bg-[url('Bilder/janPaaFjellet.png')]
 						bg-no-repeat
 						bg-cover bg-clip-content z-0">	
 						<div className="flex ">
