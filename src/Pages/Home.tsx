@@ -2,6 +2,7 @@ import React from 'react';
 import {Navigate, Link} from 'react-router-dom'
 import OmHome from '../Components/OmHome'
 import Navbar from '../Components/Navbar'
+import JanPaaFjeler from '../../Bilder/janPaaFjellet.png'
 
 
 function Home():JSX.Element {
@@ -10,7 +11,7 @@ function Home():JSX.Element {
 			<section className="col-span-full row-start-1">
 				<section>
 					<div className="h-screen
-						bg-[url('Bilder/janPaaFjellet.png')]
+						bg-[url('/Bilder/janPaaFjellet.png')]
 						bg-no-repeat
 						bg-cover bg-clip-content z-0">	
 						<div className="flex ">
