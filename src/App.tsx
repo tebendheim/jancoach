@@ -20,18 +20,20 @@ function App( {}: React.HTMLAttributes<HTMLDivElement>) {
 	//const [count, setCount] = useState(0);
 
 	return (
-		<BrowserRouter>
-			<Navbar />
-			<Routes>
-				<Route path='/' >
-					<Route index element={<Home />} />
-					<Route path='kontakt' element={<Kontakt />} />
-					<Route path='tjenester' element={<Tjenester />} />
-					<Route path='om' element={<Om />} />
+		<section className="grid grid-rows-4 grid-cols-12">
+			<BrowserRouter>
+				<Navbar />
+				<Routes>
+					<Route path='/' >
+						<Route index element={<Home />} />
+						<Route path='kontakt' element={<Kontakt />} />
+						<Route path='tjenester' element={<Tjenester />} />
+						<Route path='om' element={<Om />} />
 
-				</Route>
-			</Routes>
-		</BrowserRouter>
+					</Route>
+				</Routes>
+			</BrowserRouter>
+		</section>
 	);
 }
 
