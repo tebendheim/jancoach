@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
 	
 	const { isDarkMode, toggle } = useDarkMode();
 	return (
-		<section className=" row-start-1 col-span-full row-span-2 z-30">
+		<section className=" row-start-1 col-span-full z-30">
 			<nav className={`fixed backdrop-filter backdrop-blur-2xl bg-white bg-opacity-20 dark:bg-black dark:bg-opacity-75 w-full `}>
 				<div className={`grid ${toggleDD ? "grid-rows-navBar2":"grid-rows-navBar1"} md:grid-rows-1 md:h-24 auto-rows-auto grid-cols-12 items-center`}>
 					<a href="/" className=' font-bold text-lg whitespace-nowrap col-start-2 justify-self-start row-start-1 text-slate-900 dark:text-gray-50 dark:hover:text-gray-400'>

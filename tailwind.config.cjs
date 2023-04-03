@@ -9,11 +9,20 @@ module.exports = {
 				"background": "rgb(210,190,210",
 			},
 			gridAutoRows:{
-				"3":"auto 1fr auto auto / auto 1fr"
+				"3":"auto 1fr auto auto / auto 1fr",
+				"4-auto": "auto auto auto auto"
 			},
 			gridTemplateRows:{
 				"navBar2":"4rem auto",
-				"navBar1":"4rem"
+				"navBar1":"4rem",
+				"12":"repeat(12,1fr)"
+			},
+			gridRowStart:{
+				"8":"8",
+				"9":"9",
+				"10":"10",
+				"11":"11",
+				"12":"12",
 			},
 			
 		},

@@ -20,7 +20,7 @@ function App( {}: React.HTMLAttributes<HTMLDivElement>) {
 	//const [count, setCount] = useState(0);
 
 	return (
-		<section className="grid grid-rows-4 grid-cols-12">
+		<section className="grid grid-rows-4-auto grid-cols-12">
 			<BrowserRouter>
 				<Navbar />
 				<Routes>
