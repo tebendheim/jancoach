@@ -3,25 +3,55 @@ import {Navigate, Link} from 'react-router-dom'
 import OmHome from '../Components/OmHome'
 import Navbar from '../Components/Navbar'
 import JanPaaFjeler from '../../Bilder/janPaaFjellet.png'
+import MyButton from '../Components/MyButton'
 
 
 function Home():JSX.Element {
 	// h-full w-full relative -top-24 left-0
 	return (
-			<section className="col-span-full grid grid-rows-5 grid-cols-12">
+			<section className="col-span-full grid grid-rows-4-auto grid-cols-12">
 				<section className="row-start-1 row-span-2 col-start-1 col-span-full">
 					<div className="h-screen
 						bg-[url('/Bilder/janPaaFjellet.png')]
 						bg-no-repeat
 						bg-cover bg-right-bottom bg-clip-content z-0 ">
-						<div className="relative h-full pt-16 md:pt-24 grid grid-rows-12 grid-cols-12">
-							<div className = "relative self-start col-start-2 row-start-11 col-span-11">
+						<div className="relative h-full pt-16 md:pt-24 grid grid-rows-12 grid-cols-12 ">
+							<div className = "relative self-end col-start-2 row-start-12 col-span-11 pb-12">
 								<p className="self-start font-semibold sm:text-lg md:text-2xl lg:text-4xl xl:text-6xl text-white">Det handler om å være hel ved</p>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section className="bg-red-500 row-start-3 row-span-2 col-start-1 col-span-3"></section>
+				<section className=" row-start-3 row-span-1 col-start-1 col-span-12 grid grid-rows-4-auto grid-cols-12 py-12">
+					<div className="col-start-2 col-span-4 row-start-1 row-span-1 flex flex-col max-h-full min-h-fit">
+						<h1 className="text-4xl font-semibold dark:text-white">Lorem Ipsum</h1>
+						<h2 className="pt-4 font-semibold dark:text-white">What is Lorem Ipsum?</h2>
+						<p className="pt-2 mb-6 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+						<MyButton buttonText = "Gratis veiledningstime" />
+						
+					</div>
+					<div className="col-start-7 bg-slate-400 row-span-1 my-12 col-span-5"></div>
+				</section>
+				<section className=" bg-slate-200 dark:bg-slate-800 row-start-4 row-span-1 col-start-1 col-span-12 grid grid-rows-4-auto grid-cols-12 py-12">
+					<div className="col-start-8 col-span-4 row-start-1 row-span-1 flex flex-col max-h-full min-h-fit">
+						<h1 className="text-4xl font-semibold dark:text-white">Lorem Ipsum</h1>
+						<h2 className="pt-4 font-semibold dark:text-white">What is Lorem Ipsum?</h2>
+						<p className="pt-2 mb-6 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					
+						<MyButton buttonText = "Gratis veiledningstime" />
+					</div>
+					<div className="col-start-2 bg-slate-400 row-span-1 my-12 col-span-5"></div>
+				</section>
+				<section className=" row-start-5 row-span-1 col-start-1 col-span-12 grid grid-rows-4-auto grid-cols-12 py-12 ">
+					<form className="col-start-2 col-span-4 row-start-1 row-span-1 flex flex-col max-h-full min-h-fit">
+						<h1 className="text-4xl font-semibold dark:text-white">Lorem Ipsum</h1>
+						<h2 className="pt-4 font-semibold dark:text-white">What is Lorem Ipsum?</h2>
+						<p className="pt-2 mb-6 dark:text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>	
+						<MyButton buttonText = "Gratis veiledningstime" />
+					</form>
+					<div className="col-start-7 bg-slate-400 row-span-1 my-12 col-span-5"></div>
+				</section>
 			</section>
 			
 
@@ -32,7 +62,38 @@ function Home():JSX.Element {
 export default Home;
 
 
-{/* 
+{/*
+
+Utgangspunkt før endring mot ran.no:
+			<section className="col-span-full grid grid-rows-4-auto grid-cols-12">
+				<section className="row-start-1 row-span-2 col-start-1 col-span-full">
+					<div className="h-screen
+						bg-[url('/Bilder/janPaaFjellet.png')]
+						bg-no-repeat
+						bg-cover bg-right-bottom bg-clip-content z-0 ">
+						<div className="relative h-full pt-16 md:pt-24 grid grid-rows-12 grid-cols-12 ">
+							<div className = "relative self-end col-start-2 row-start-12 col-span-11 pb-12">
+								<p className="self-start font-semibold sm:text-lg md:text-2xl lg:text-4xl xl:text-6xl text-white">Det handler om å være hel ved</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section className=" row-start-3 row-span-1 col-start-1 col-span-12 grid grid-rows-4 grid-cols-12">
+					<div className="col-start-2 col-span-4 row-start-1 row-span-1 flex-col pt-12">
+						<h1 className="">Lorem Ipsum</h1>
+						<h2 className="pt-4">What is Lorem Ipsum?</h2>
+						<p className="pt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						
+						<Link className="border-2 border-slate-50 bg-slate-700 rounded-md" to='om'>
+							<button className="px-4 py-4 text-white text-xl font-medium ">Les mer</button>
+						</Link>
+					</div>
+					<div className="col-start-7 bg-slate-400 row-span-1 mt-12 col-span-5"></div>
+				</section>
+			</section>
+
+
+
 EKS::
 
 <section className="col-span-full grid grid-rows-5 grid-cols-12">

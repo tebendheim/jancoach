@@ -5,6 +5,7 @@ import Home from './Pages/Home';
 import Navbar from './Components/Navbar';
 import Kontakt from './Pages/Kontakt';
 import Tjenester from './Pages/Tjenester';
+import Footer from './Components/Footer';
 import Om from './Pages/Om';
 import { useDarkMode } from "usehooks-ts";
 
@@ -32,6 +33,7 @@ function App( {}: React.HTMLAttributes<HTMLDivElement>) {
 
 					</Route>
 				</Routes>
+				<Footer />
 			</BrowserRouter>
 		</section>
 	);
