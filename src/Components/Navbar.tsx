@@ -23,8 +23,8 @@ const Navbar: React.FC = () => {
 		<section className=" row-start-1 col-span-full z-30">
 			<nav className={`fixed backdrop-filter backdrop-blur-2xl bg-white bg-opacity-20 dark:bg-black dark:bg-opacity-75 w-full `}>
 				<div className={`grid ${toggleDD ? "grid-rows-navBar2":"grid-rows-navBar1"} md:grid-rows-1 md:h-24 auto-rows-auto grid-cols-12 items-center`}>
-					<a href="/" className=' font-bold text-lg whitespace-nowrap col-start-2 justify-self-start row-start-1 text-slate-900 dark:text-gray-50 dark:hover:text-gray-400'>
-						HEL VED
+					<a href="/" className=' font-extrabold text-lg whitespace-nowrap col-start-2 justify-self-start row-start-1 text-slate-900 dark:text-gray-50 dark:hover:text-gray-400'>
+						HEL VED COACHING
 					</a>
 					<button
 						type='button'
@@ -62,10 +62,10 @@ const Navbar: React.FC = () => {
 									)}
 								</button>
 							</li>
-							<li className="my-4 text-center">
+							<li className="my-4 text-center border-2 p-2 rounded-xl hover:border-4 border-gray-800 dark:border-gray-100">
 								<Link
 									to='/kontakt'
-									className=' justify-self-start rounded md:bg-transparent   text-slate-900 text-lg dark:text-gray-50 dark:hover:text-gray-400 '
+									className=' justify-self-start rounded md:bg-transparent font-medium  text-slate-900 hover:text-slate-500  text-lg dark:text-gray-50 dark:hover:text-gray-400 '
 									aria-current='page'
 								>
 									Kontakt
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
 							<li className="my-4 text-center">
 								<Link
 									to='/tjenester'
-									className='rounded md:bg-transparent   text-slate-900 text-lg dark:text-gray-50 dark:hover:text-gray-400 '
+									className='rounded md:bg-transparent   text-slate-900  font-medium hover:text-slate-500 text-lg dark:text-gray-50 dark:hover:text-gray-400 '
 								>
 									Tjenester
 								</Link>
@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
 							<li className="my-4 text-center">
 								<Link
 									to='om'
-									className='whitespace-nowrap rounded md:bg-transparent  text-slate-900 text-lg dark:text-gray-50 dark:hover:text-gray-400 '
+									className='whitespace-nowrap rounded md:bg-transparent  text-slate-900 font-medium hover:text-slate-500 text-lg dark:text-gray-50 dark:hover:text-gray-400 '
 								>
 									Om meg
 								</Link>
