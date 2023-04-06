@@ -34,8 +34,8 @@ const Navbar: React.FC = () => {
 				</div>
 
 				<div className={`grid ${toggleDD ? "grid-rows-navBar2":"grid-rows-navBar1"} md:grid-rows-1  row-start-1 row-span-1 col-start-1 col-span-1 auto-rows-auto grid-cols-12 items-center z-20`}>
-					<Link to="/" className='flex font-extrabold text-lg whitespace-nowrap col-start-2 justify-self-start row-start-1 w-fit text-slate-900 dark:text-gray-50 dark:hover:text-gray-400'>
-						<img className="h-2/3 w-2/3 bg-none dark:bg-white rounded-full" src="/Bilder/Logo.svg"></img>
+					<Link to="/" className='col-start-2 justify-self-start row-start-1 flex flex-col justify-center h-full'>
+						<img className=" h-3/5 bg-none dark:bg-white rounded-full" src="/Bilder/Logo.svg"></img>
 					</Link>
 					<button
 						type='button'
