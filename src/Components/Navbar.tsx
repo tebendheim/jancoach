@@ -34,9 +34,9 @@ const Navbar: React.FC = () => {
 				</div>
 
 				<div className={`grid ${toggleDD ? "grid-rows-navBar2":"grid-rows-navBar1"} md:grid-rows-1  row-start-1 row-span-1 col-start-1 col-span-1 auto-rows-auto grid-cols-12 items-center z-20`}>
-					<a href="/" className=' font-extrabold text-lg whitespace-nowrap col-start-2 justify-self-start row-start-1 text-slate-900 dark:text-gray-50 dark:hover:text-gray-400'>
-						HEL VED COACHING
-					</a>
+					<Link to="/" className='flex font-extrabold text-lg whitespace-nowrap col-start-2 justify-self-start row-start-1 text-slate-900 dark:text-gray-50 dark:hover:text-gray-400'>
+						{isDarkMode ? <svg className="h-full w-full fill-green-600" xmlns="/Bilder/logo-white.svg"></svg>: <svg className="h-full w-full" xmlns="/Bilder/Logo.svg"></svg>}
+					</Link>
 					<button
 						type='button'
 						className={
