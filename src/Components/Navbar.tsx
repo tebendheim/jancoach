@@ -21,8 +21,22 @@ const Navbar: React.FC = () => {
 	const { isDarkMode, toggle } = useDarkMode();
 	return (
 		<section className=" row-start-1 col-span-full z-30">
-			<nav className={`fixed backdrop-filter backdrop-blur-2xl bg-white bg-opacity-20 dark:bg-black dark:bg-opacity-75 w-full `}>
-				<div className={`grid ${toggleDD ? "grid-rows-navBar2":"grid-rows-navBar1"} md:grid-rows-1 md:h-24 auto-rows-auto grid-cols-12 items-center`}>
+			{/* <nav className={` md:h-24 grid grid-rows-1 grid-cols-1 fixed bg-gradient-to-b from-white dark:from-black to-transparent bg-opacity-20  dark:bg-opacity-20 w-full `}> */}
+			<nav className = "md:h-24 grid grid-rows-1 grid-cols-1 fixed">
+				<div id = "backdrop blur" style={{
+        							backdropFilter: `blur(5px)`,
+									mask: `linear-gradient(transparent, black 60%)`,
+									
+      }} className="row-start-1 row-span-1 col-start-1 col-span-1 w-full grid grid-rows-6 z-10 inset-0 bg-gradient-to-b from-white dark:from-black  to-transparent bg-opacity-20  dark:bg-opacity-20">
+					{/* <div className="row-start-1 row-span-1 w-full backdrop-filter mas backdrop-blur-3xl"></div>
+					<div className="row-start-2 row-span-1 w-full backdrop-filter backdrop-blur-2xl"></div>
+					<div className="row-start-3 row-span-1 w-full backdrop-filter backdrop-blur-xl"></div>
+					<div className="row-start-4 row-span-1 w-full  backdrop-filter backdrop-blur-md"></div>
+					<div className="row-start-5 row-span-1 w-full  backdrop-filter backdrop-blur-sm"></div>
+					<div className="row-start-6 row-span-1 w-full backdrop-filter backdrop-blur-none"> </div> */}
+				</div>
+
+				<div className={`grid ${toggleDD ? "grid-rows-navBar2":"grid-rows-navBar1"} md:grid-rows-1  row-start-1 row-span-1 col-start-1 col-span-1 auto-rows-auto grid-cols-12 items-center z-20`}>
 					<a href="/" className=' font-extrabold text-lg whitespace-nowrap col-start-2 justify-self-start row-start-1 text-slate-900 dark:text-gray-50 dark:hover:text-gray-400'>
 						HEL VED COACHING
 					</a>

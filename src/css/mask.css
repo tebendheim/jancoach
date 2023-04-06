@@ -1,0 +1,5 @@
+.mask {
+    backdrop-filter: blur(20px);
+    mask: linear-gradient(transparent, black 60%);
+    transition: 1s;
+}
