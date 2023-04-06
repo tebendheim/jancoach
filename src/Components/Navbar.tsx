@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
 									)}
 								</button>
 							</li>
-							<li className="my-4 text-center border-2 p-2 rounded-xl hover:border-4 border-gray-800 dark:border-gray-100">
+							<li className="my-4 text-center border-2 p-2 m-0.5 rounded-xl hover:border-4 hover:m-0 border-gray-800 dark:border-gray-100">
 								<Link
 									to='/kontakt'
 									className=' justify-self-start rounded md:bg-transparent font-medium  text-slate-900 hover:text-slate-500  text-lg dark:text-gray-50 dark:hover:text-gray-400 '
