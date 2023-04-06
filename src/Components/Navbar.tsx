@@ -2,6 +2,7 @@ import React, { ReactComponentElement, useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
 import { AcademicCapIcon, MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useDarkMode } from "usehooks-ts";
+import '../css/mask.css'
 
 const Navbar: React.FC = () => {
 	const [toggleDD, onToggleDD] = React.useState<boolean>(false);
@@ -21,19 +22,15 @@ const Navbar: React.FC = () => {
 	const { isDarkMode, toggle } = useDarkMode();
 	return (
 		<section className=" row-start-1 col-span-full z-30">
-			{/* <nav className={` md:h-24 grid grid-rows-1 grid-cols-1 fixed bg-gradient-to-b from-white dark:from-black to-transparent bg-opacity-20  dark:bg-opacity-20 w-full `}> */}
-			<nav className = "md:h-24 grid grid-rows-1 grid-cols-1 fixed">
-				<div id = "backdrop blur" style={{
-        							backdropFilter: `blur(5px)`,
-									mask: `linear-gradient(transparent, black 60%)`,
-									
-      }} className="row-start-1 row-span-1 col-start-1 col-span-1 w-full grid grid-rows-6 z-10 inset-0 bg-gradient-to-b from-white dark:from-black  to-transparent bg-opacity-20  dark:bg-opacity-20">
-					{/* <div className="row-start-1 row-span-1 w-full backdrop-filter mas backdrop-blur-3xl"></div>
-					<div className="row-start-2 row-span-1 w-full backdrop-filter backdrop-blur-2xl"></div>
-					<div className="row-start-3 row-span-1 w-full backdrop-filter backdrop-blur-xl"></div>
-					<div className="row-start-4 row-span-1 w-full  backdrop-filter backdrop-blur-md"></div>
-					<div className="row-start-5 row-span-1 w-full  backdrop-filter backdrop-blur-sm"></div>
-					<div className="row-start-6 row-span-1 w-full backdrop-filter backdrop-blur-none"> </div> */}
+			{/* <nav className={` md:h-24 grid grid-rows-1 grid-cols-1 fixed bg-gradient-to-b from-white to-transparent bg-opacity-20 dark:bg-gradient-to-b dark:from-black    dark:bg-opacity-20 w-full `}> */}
+			<nav className={`grid grid-rows-1 grid-cols-1 fixed bg-gradient-to-b from-white to-transparent bg-opacity-80 dark:from-black dark:to-transparent`}>
+				<div className="row-start-1 row-span-1 col-start-1 col-span-1 h-full w-full gradient-blur">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>		
 				</div>
 
 				<div className={`grid ${toggleDD ? "grid-rows-navBar2":"grid-rows-navBar1"} md:grid-rows-1  row-start-1 row-span-1 col-start-1 col-span-1 auto-rows-auto grid-cols-12 items-center z-20`}>
