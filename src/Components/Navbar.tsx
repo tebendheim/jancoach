@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
 	return (
 		<section className=" row-start-1 col-span-full z-30">
 			{/* <nav className={` md:h-24 grid grid-rows-1 grid-cols-1 fixed bg-gradient-to-b from-white to-transparent bg-opacity-20 dark:bg-gradient-to-b dark:from-black    dark:bg-opacity-20 w-full `}> */}
-			<nav className={`grid grid-rows-1 grid-cols-1 fixed bg-gradient-to-b from-white to-transparent bg-opacity-80 dark:from-black dark:to-transparent`}>
+			<nav className={`w-full grid grid-rows-1 grid-cols-1 fixed bg-gradient-to-b from-white to-transparent bg-opacity-80 dark:from-black dark:to-transparent`}>
 				<div className="row-start-1 row-span-1 col-start-1 col-span-1 h-full w-full gradient-blur">
 						<div></div>
 						<div></div>
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
 
 				<div className={`grid ${toggleDD ? "grid-rows-navBar2":"grid-rows-navBar1"} md:grid-rows-1  row-start-1 row-span-1 col-start-1 col-span-1 auto-rows-auto grid-cols-12 items-center z-20`}>
 					<Link to="/" className='col-start-2 justify-self-start row-start-1 flex flex-col justify-center h-full'>
-						<img className=" h-3/5 bg-none dark:bg-white rounded-full" src="/Bilder/Logo.svg"></img>
+						<img className=" h-3/5 bg-none dark:bg-white rounded-full" src="/Bilder/Logo (2).svg"></img>
 					</Link>
 					<button
 						type='button'
