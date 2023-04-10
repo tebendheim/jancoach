@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import { AcademicCapIcon, MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useDarkMode } from "usehooks-ts";
 import '../css/mask.css'
+import logo from "../../Bilder/Logo (2).svg"
 
 const Navbar: React.FC = () => {
 	const [toggleDD, onToggleDD] = React.useState<boolean>(false);
@@ -35,7 +36,7 @@ const Navbar: React.FC = () => {
 
 				<div className={`grid ${toggleDD ? "grid-rows-navBar2":"grid-rows-navBar1"} md:grid-rows-1  row-start-1 row-span-1 col-start-1 col-span-1 auto-rows-auto grid-cols-12 items-center z-20`}>
 					<Link to="/" className='col-start-2 col col-span-2 justify-self-start row-start-1 flex flex-col justify-center h-full'>
-						<img className=" h-3/5 bg-none dark:bg-white rounded-full" src="/Bilder/Logo (2).svg"></img>
+						<img className=" h-3/5 bg-none dark:bg-white rounded-full" src={logo}></img>
 					</Link>
 					<button
 						type='button'
