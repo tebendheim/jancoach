@@ -22,7 +22,7 @@ function Home(): JSX.Element {
   return (
     <section>
       <NavbarPicture
-        imgUrl="/Bilder/janPaaFjellet.png"
+        imgUrl="/src/Bilder/janPaaFjellet.png"
         componentHeight={"screen"}
         height="screen"
         width={"screen"}
@@ -52,7 +52,7 @@ function Home(): JSX.Element {
           />
         </div>
         <div
-          className={` h-96 w-1/2 bg-[url('${"/Bilder/janPaaFjellet.png"}')]
+          className={` h-96 w-1/2 bg-[url('${"/src/Bilder/janPaaFjellet.png"}')]
       				bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
           //   style={{ backgroundImage: `url(${"/Bilder/janPaaFjellet.png"})` }}
         ></div>
