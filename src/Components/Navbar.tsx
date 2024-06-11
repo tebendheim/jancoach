@@ -22,17 +22,17 @@ const Navbar: React.FC = () => {
 
   const { isDarkMode, toggle } = useDarkMode();
   return (
-    <section className="sticky top-0 z-10">
+    <section className="fixed w-full top-0 z-10">
       {/* <nav className={` md:h-24 grid grid-rows-1 grid-cols-1 fixed bg-gradient-to-b from-white to-transparent bg-opacity-20 dark:bg-gradient-to-b dark:from-black    dark:bg-opacity-20 w-full `}> */}
       <nav
         // className={`w-full  fixed bg-gradient-to-b from-white to-transparent bg-opacity-80 dark:from-black dark:to-transparent`}
-        className="flex w-full bg-gradient-to-b from-white/100"
+        className="flex w-full h-20 bg-gradient-to-b from-white/100"
       >
         <div
           // className={`inline-flex flex-row justify-around ${toggleDD ? "" : ""} `}
           className="flex justify-between items-center w-full  mx-6 my-2"
         >
-          <Link to="/" className=" h-full">
+          <Link to="/" className="flex items-center h-full">
             <img
               className=" h-16 bg-none dark:bg-white rounded-full"
               src={logo}

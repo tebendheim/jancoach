@@ -29,11 +29,13 @@ function Home(): JSX.Element {
         tekstkomponent={navSlogan}
       />
 
-      <section className="flex flex-row justify-between gap-32 mx-40 my-40 w-full">
+      <section className="flex flex-row justify-around px-20 py-10 gap-20 w-full">
         <div className="w-5/12">
-          <h1 className="">Lorem Ipsum</h1>
-          <h2 className="">What is Lorem Ipsum?</h2>
-          <p className="">
+          <h1 className="text-3xl font-extrabold text-white">Lorem Ipsum</h1>
+          <h2 className="text-xl font-semibold text-white">
+            What is Lorem Ipsum?
+          </h2>
+          <p className="text-white text-md mb-10">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -52,23 +54,24 @@ function Home(): JSX.Element {
           />
         </div>
         <div
-          className={` h-96 w-1/2 
+          className={` h-96 w-5/12 rounded-3xl
       				bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
           style={{ backgroundImage: `url(${JanPaaFjeler})` }}
         ></div>
       </section>
 
-      <section className=" bg-slate-200 dark:bg-slate-800 row-start-4 row-span-1 col-start-1 col-span-12 grid grid-rows-4-auto grid-cols-12 py-12"></section>
-
-      <section className=" bg-slate-200 dark:bg-slate-800 row-start-4 row-span-1 col-start-1 col-span-12 grid grid-rows-4-auto grid-cols-12 py-12">
-        <div className="col-start-2 col-span-10 md:col-start-8 md:col-span-4 row-start-1 row-span-1 flex flex-col max-h-full min-h-fit">
-          <h1 className="text-4xl font-semibold dark:text-white">
-            Lorem Ipsum
-          </h1>
-          <h2 className="pt-4 font-semibold dark:text-white">
+      <section className="flex flex-row justify-around px-20 py-10 gap-20 w-full bg-slate-200 dark:bg-slate-800">
+        <div
+          className={` h-96 w-5/12 rounded-3xl
+      				bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
+          style={{ backgroundImage: `url(${JanPaaFjeler})` }}
+        ></div>
+        <div className="w-5/12">
+          <h1 className="text-3xl font-extrabold text-white">Lorem Ipsum</h1>
+          <h2 className="text-xl font-semibold text-white">
             What is Lorem Ipsum?
           </h2>
-          <p className="pt-2 mb-6 dark:text-white">
+          <p className="text-white text-md mb-10">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -81,22 +84,20 @@ function Home(): JSX.Element {
           </p>
 
           <MyButton
-            className="w-fit py-2 self-start"
+            className="w-fit inline-flex"
             buttonText="Gratis veiledningstime"
             to="/kontakt"
           />
         </div>
-        <div className=" row-start-2 col-start-2 w-full col-span-10 h-96 md:col-start-2 md:row-start-1  bg-slate-400 row-span-1 my-12 md:col-span-5"></div>
       </section>
-      <section className=" row-start-5 row-span-1 col-start-1 col-span-12 grid grid-rows-4-auto grid-cols-12 py-12 ">
-        <div className="col-start-2 md:col-start-2 md:col-span-4 col-span-10 row-start-1 row-span-1 flex flex-col max-h-full min-h-fit">
-          <h1 className="text-4xl font-semibold dark:text-white">
-            Lorem Ipsum
-          </h1>
-          <h2 className="pt-4 font-semibold dark:text-white">
+
+      <section className="flex flex-row justify-around px-20 my-20 gap-20 w-full">
+        <div className="w-5/12">
+          <h1 className="text-3xl font-extrabold text-white">Lorem Ipsum</h1>
+          <h2 className="text-xl font-semibold text-white">
             What is Lorem Ipsum?
           </h2>
-          <p className="pt-2 mb-6 dark:text-white">
+          <p className="text-white text-md mb-10">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -107,13 +108,18 @@ function Home(): JSX.Element {
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
+
           <MyButton
-            className="w-fit py-2 self-start"
+            className="w-fit inline-flex"
             buttonText="Gratis veiledningstime"
             to="/kontakt"
           />
         </div>
-        <div className=" row-start-2 col-start-2 w-full col-span-10 h-96 md:col-start-7 md:row-start-1  bg-slate-400 row-span-1 my-12 md:col-span-5"></div>
+        <div
+          className={` h-96 w-5/12 rounded-3xl
+      				bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
+          style={{ backgroundImage: `url(${JanPaaFjeler})` }}
+        ></div>
       </section>
     </section>
   );

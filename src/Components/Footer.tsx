@@ -2,11 +2,11 @@ import React, { ReactComponentElement, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AcademicCapIcon, MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useDarkMode } from "usehooks-ts";
-import logo from "../../Bilder/Logo (2).svg";
+import logo from "../Bilder/Logo (2).svg";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="absolute bottom-0 z-0 rounded-lg shadow bg-slate-200 dark:bg-slate-800">
+    <footer className="relative mx-5 bottom-0 z-0 rounded-lg shadow bg-slate-200 dark:bg-slate-800">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link to="#" className="flex items-center mb-4 sm:mb-0 ">

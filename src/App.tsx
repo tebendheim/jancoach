@@ -29,6 +29,7 @@ function App({}: React.HTMLAttributes<HTMLDivElement>) {
           <Route path="om" element={<Om />} />
         </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
