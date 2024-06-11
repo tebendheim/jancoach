@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
 
   const { isDarkMode, toggle } = useDarkMode();
   return (
-    <section className="sticky top-0">
+    <section className="sticky top-0 z-10">
       {/* <nav className={` md:h-24 grid grid-rows-1 grid-cols-1 fixed bg-gradient-to-b from-white to-transparent bg-opacity-20 dark:bg-gradient-to-b dark:from-black    dark:bg-opacity-20 w-full `}> */}
       <nav
         // className={`w-full  fixed bg-gradient-to-b from-white to-transparent bg-opacity-80 dark:from-black dark:to-transparent`}

@@ -21,7 +21,6 @@ function App({}: React.HTMLAttributes<HTMLDivElement>) {
 
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
@@ -30,7 +29,6 @@ function App({}: React.HTMLAttributes<HTMLDivElement>) {
           <Route path="om" element={<Om />} />
         </Route>
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }
