@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate, Link } from "react-router-dom";
 import OmHome from "../Components/OmHome";
-import JanPaaFjeler from "../../Bilder/janPaaFjellet.png";
+// import JanPaaFjeler from "../../Bilder/janPaaFjellet.png";
 import MyButton from "../Components/MyButton";
 import Navbar from "../Components/Navbar";
 import NavbarPicture from "../Components/NavbarPicture";

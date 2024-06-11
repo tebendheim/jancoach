@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { AcademicCapIcon, MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useDarkMode } from "usehooks-ts";
 import "../css/mask.css";
-import logo from "../../Bilder/Logo (2).svg";
+// import logo from "../../Bilder/Logo (2).svg";
+import logo from "../Bilder/Logo (2).svg";
 
 const Navbar: React.FC = () => {
   const [toggleDD, onToggleDD] = React.useState<boolean>(false);
