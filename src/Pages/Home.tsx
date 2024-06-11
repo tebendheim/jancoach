@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate, Link } from "react-router-dom";
 import OmHome from "../Components/OmHome";
-// import JanPaaFjeler from "../../Bilder/janPaaFjellet.png";
+import JanPaaFjeler from "../Bilder/janPaaFjellet.png";
 import MyButton from "../Components/MyButton";
 import Navbar from "../Components/Navbar";
 import NavbarPicture from "../Components/NavbarPicture";
@@ -22,7 +22,7 @@ function Home(): JSX.Element {
   return (
     <section>
       <NavbarPicture
-        imgUrl="/src/Bilder/janPaaFjellet.png"
+        imgUrl={JanPaaFjeler}
         componentHeight={"screen"}
         height="screen"
         width={"screen"}
@@ -52,9 +52,9 @@ function Home(): JSX.Element {
           />
         </div>
         <div
-          className={` h-96 w-1/2 bg-[url('${"/src/Bilder/janPaaFjellet.png"}')]
+          className={` h-96 w-1/2 
       				bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
-          //   style={{ backgroundImage: `url(${"/Bilder/janPaaFjellet.png"})` }}
+          style={{ backgroundImage: `url(${JanPaaFjeler})` }}
         ></div>
       </section>
 
