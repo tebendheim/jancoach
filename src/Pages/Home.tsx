@@ -6,8 +6,9 @@ import JanPaaFjeler from "../../Bilder/janPaaFjellet.png";
 import MyButton from "../Components/MyButton";
 
 function Home(): JSX.Element {
+  // h-full w-full relative -top-24 left-0
   return (
-    <section className="flex">
+    <section className="col-span-full grid grid-rows-4-auto grid-cols-12">
       <section className="row-start-1 row-span-2 col-start-1 col-span-full">
         <div
           className="h-screen
