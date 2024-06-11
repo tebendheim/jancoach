@@ -52,9 +52,9 @@ function Home(): JSX.Element {
           />
         </div>
         <div
-          className={` h-96 w-1/2
+          className={` h-96 w-1/2 bg-[url('${"/Bilder/janPaaFjellet.png"}')]
       				bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
-          style={{ backgroundImage: `url(${"/Bilder/janPaaFjellet.png"})` }}
+          //   style={{ backgroundImage: `url(${"/Bilder/janPaaFjellet.png"})` }}
         ></div>
       </section>
 
