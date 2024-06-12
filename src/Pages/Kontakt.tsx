@@ -26,9 +26,7 @@ const Kontakt: React.FC = () => {
     message: "",
   });
   const [agreed, setAgreed] = React.useState(false);
-  const handleSubmit = (event: any) => {
-    return <div>Funker dette??????</div>;
-  };
+  const handleSubmit = (event: any) => {};
   const handleChange = (event: any) => {
     setState({
       ...state,
@@ -223,7 +221,7 @@ const Kontakt: React.FC = () => {
           <div className="mt-10">
             <button
               type="submit"
-              onSubmit={handleSubmit}
+              // onSubmit={handleSubmit}
               className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Send
