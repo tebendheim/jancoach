@@ -2,10 +2,8 @@ import React, { FormEventHandler } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
 import Navbar from "../Components/Navbar";
-
-function classNames(...classes: any) {
-  return classes.filter(Boolean).join(" ");
-}
+import PrivacySwitch from "../Components/PrivacySwitch";
+import { fetchData } from "../hjelpefunksjoner/ApiService";
 
 interface states {
   email: string;
@@ -26,9 +24,15 @@ const Kontakt: React.FC = () => {
     message: "",
   });
   const [agreed, setAgreed] = React.useState(false);
-  const handleSubmit = (event: any) => {
-    return <div>Funker dette??????</div>;
+
+  const handleSubmit = async (event: any) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+    const response = await fetchData(
+      "https://jsonplaceholder.typicode.com/posts"
+    );
+    console.log(response); // Log the actual response data
   };
+
   const handleChange = (event: any) => {
     setState({
       ...state,
@@ -38,13 +42,14 @@ const Kontakt: React.FC = () => {
   return (
     <section className="row-start-2 col-start-1 col-span-full">
       <Navbar />
+
       <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div
           className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
           aria-hidden="true"
         >
           <div
-            className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
+            className=" left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
             style={{
               clipPath:
                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -62,42 +67,45 @@ const Kontakt: React.FC = () => {
         <form
           onSubmit={handleSubmit}
           className="mx-auto mt-16 max-w-xl sm:mt-20"
+          netlify
         >
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-            <div>
-              <label
-                htmlFor="first-name"
-                className="block text-sm font-semibold leading-6 text-gray-900"
-              >
-                Fornavn
-              </label>
-              <div className="mt-2.5">
-                <input
-                  type="text"
-                  name="fName"
-                  id="first-name"
-                  autoComplete="given-name"
-                  onChange={handleChange}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
+          <div className="flex flex-col justify-around">
+            <div className="flex justify-between gap-10 w-full">
+              <div className="flex-grow-0 basis-5/12">
+                <label
+                  htmlFor="first-name"
+                  className="text-sm font-semibold leading-6 text-gray-900"
+                >
+                  Fornavn
+                </label>
+                <div className="mb-2.5">
+                  <input
+                    type="text"
+                    name="fName"
+                    id="first-name"
+                    autoComplete="given-name"
+                    onChange={handleChange}
+                    className="w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
               </div>
-            </div>
-            <div>
-              <label
-                htmlFor="last-name"
-                className="block text-sm font-semibold leading-6 text-gray-900"
-              >
-                Etternavn
-              </label>
-              <div className="mt-2.5">
-                <input
-                  type="text"
-                  name="lName"
-                  id="last-name"
-                  onChange={handleChange}
-                  autoComplete="family-name"
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
+              <div className="flex-grow-0 basis-5/12">
+                <label
+                  htmlFor="last-name"
+                  className="block text-sm font-semibold leading-6 text-gray-900"
+                >
+                  Etternavn
+                </label>
+                <div className="mb-2.5">
+                  <input
+                    type="text"
+                    name="lName"
+                    id="last-name"
+                    onChange={handleChange}
+                    autoComplete="family-name"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  />
+                </div>
               </div>
             </div>
             <div className="sm:col-span-2">
@@ -107,7 +115,7 @@ const Kontakt: React.FC = () => {
               >
                 Firma
               </label>
-              <div className="mt-2.5">
+              <div className="mb-2.5">
                 <input
                   type="text"
                   name="company"
@@ -125,7 +133,7 @@ const Kontakt: React.FC = () => {
               >
                 Email
               </label>
-              <div className="mt-2.5">
+              <div className="mb-2.5">
                 <input
                   type="email"
                   name="email"
@@ -143,7 +151,7 @@ const Kontakt: React.FC = () => {
               >
                 Telefonnummer
               </label>
-              <div className="relative mt-2.5">
+              <div className="relative mb-2.5">
                 <div className="absolute inset-y-0 left-0 flex items-center">
                   <label htmlFor="country" className="sr-only">
                     Land
@@ -179,7 +187,7 @@ const Kontakt: React.FC = () => {
               >
                 Message
               </label>
-              <div className="mt-2.5">
+              <div className="mb-2.5">
                 <textarea
                   name="message"
                   id="message"
@@ -190,35 +198,8 @@ const Kontakt: React.FC = () => {
                 />
               </div>
             </div>
-            <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
-              <div className="flex h-6 items-center">
-                <Switch
-                  checked={agreed}
-                  onChange={setAgreed}
-                  className={classNames(
-                    agreed ? "bg-indigo-600" : "bg-gray-200",
-                    "flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                  )}
-                >
-                  <span className="sr-only">Agree to policies</span>
-                  <span
-                    aria-hidden="true"
-                    className={classNames(
-                      agreed ? "translate-x-3.5" : "translate-x-0",
-                      "h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"
-                    )}
-                  />
-                </Switch>
-              </div>
-              <Switch.Label className="text-sm leading-6 text-gray-600">
-                By selecting this, you agree to our{" "}
-                <a href="#" className="font-semibold text-indigo-600">
-                  privacy&nbsp;policy
-                </a>
-                .
-              </Switch.Label>
-            </Switch.Group>
           </div>
+          <PrivacySwitch agreed={agreed} setAgreed={setAgreed} />
           <div className="mt-10">
             <button
               type="submit"
@@ -235,36 +216,3 @@ const Kontakt: React.FC = () => {
 };
 
 export default Kontakt;
-
-// //  <h1></h1>
-// <form onSubmit={handleSubmit} className="h-full w-full">
-// <fieldset className='flex flex-col justify-between'>
-//     <label className='flex flex-col dark:text-white my-10'>
-//         E-mail
-//         <input className="w-1/4" type='email' value={state.email} name="email" onChange={handleChange}>
-//         </input>
-//     </label>
-//     <label className='flex flex-col dark:text-white my-10 mx-auto'>
-//         First Name
-//         <input className="w-1/4" type='fName' value={state.fName} name="fName" onChange={handleChange}>
-//         </input>
-//     </label>
-//     <label className='flex flex-col dark:text-white my-10'>
-//         Last Name
-//         <input className="w-1/4" type='lName' value={state.lName} name="lName" onChange={handleChange}>
-//         </input>
-//     </label>
-//     <label className='flex flex-col dark:text-white my-10'>
-//         Message
-//         <input className="w-1/4" type='message' value={state.message} name="message" onChange={handleChange}>
-//         </input>
-//     </label>
-
-//         <div className="flex justify-center align-bottom bg-blue-300 w-full h-screen">
-//             <div className="bg-red-300 h-32 w-32 my-auto"></div>
-//             <div className="bg-red-600 h-32 w-32 my-auto"></div>
-//             <div className="bg-red-900 h-32 w-32 my-auto"></div>
-//             <div className="bg-red-100 h-32 w-32 my-auto"></div>
-//         </div>
-// </fieldset>
-// </form>

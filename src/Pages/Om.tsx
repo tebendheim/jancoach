@@ -4,7 +4,10 @@ import Navbar from "../Components/Navbar";
 const Om = () => {
   return (
     <section className="relative ">
-      <Navbar />
+      <div className="relative h-20">
+        <Navbar />
+      </div>
+
       <div>Om</div>
     </section>
   );
