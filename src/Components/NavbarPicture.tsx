@@ -22,13 +22,22 @@ const NavbarPicture: React.FC<BildeProps> = ({
   children,
 }) => {
   return (
-    <section className={`relative h-full`}>
-      <Navbar />
+    <section className={`relative h-screen flex flex-col`}>
+      <div className="relative h-20">
+        <Navbar />
+      </div>
       <div
-        className="absolute top-0 z-0 h-full w-full bg-no-repeat bg-cover bg-right-bottom bg-clip-content"
-        style={{ backgroundImage: `url(${imgUrl})` }}
-      ></div>
-      {TekstKomponent && <TekstKomponent />}
+        className="mt-20
+       flex-grow flex flex-col items-center justify-around overflow-hidden"
+      >
+        <img
+          className=" mt-auto max-h- w-auto object-contain overflow-auto mb-5"
+          src={imgUrl}
+        />
+        <div className=" mt-auto mb-5">
+          <TekstKomponent />
+        </div>
+      </div>
     </section>
   );
 };

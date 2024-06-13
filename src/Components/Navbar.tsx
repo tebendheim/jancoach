@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
       {/* <nav className={` md:h-24 grid grid-rows-1 grid-cols-1 fixed bg-gradient-to-b from-white to-transparent bg-opacity-20 dark:bg-gradient-to-b dark:from-black    dark:bg-opacity-20 w-full `}> */}
       <nav
         // className={`w-full  fixed bg-gradient-to-b from-white to-transparent bg-opacity-80 dark:from-black dark:to-transparent`}
-        className="flex w-full h-20 bg-gradient-to-b from-white/100"
+        className="flex w-full h-20  bg-gray-300/40"
       >
         <div
           // className={`inline-flex flex-row justify-around ${toggleDD ? "" : ""} `}
