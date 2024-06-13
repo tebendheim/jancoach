@@ -22,11 +22,11 @@ const NavbarPicture: React.FC<BildeProps> = ({
   children,
 }) => {
   return (
-    <section className={`relative h-${componentHeight}`}>
+    <section className={`relative h-full`}>
       <Navbar />
       <div
         className="absolute top-0 z-0 h-full w-full bg-no-repeat bg-cover bg-right-bottom bg-clip-content"
-        style={{ backgroundImage: `url(${JanPaaFjellet})` }}
+        style={{ backgroundImage: `url(${imgUrl})` }}
       ></div>
       {TekstKomponent && <TekstKomponent />}
     </section>

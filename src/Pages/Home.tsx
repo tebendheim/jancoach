@@ -2,6 +2,7 @@ import React from "react";
 import { Navigate, Link } from "react-router-dom";
 import OmHome from "../Components/OmHome";
 import JanPaaFjellet from "../Bilder/janPaaFjellet.png";
+import logo from "../Bilder/Logo.svg";
 import MyButton from "../Components/MyButton";
 import Navbar from "../Components/Navbar";
 import NavbarPicture from "../Components/NavbarPicture";
@@ -21,13 +22,15 @@ function Home(): JSX.Element {
 
   return (
     <section className="">
-      <NavbarPicture
-        imgUrl={JanPaaFjellet}
-        componentHeight={"screen"}
-        height="screen"
-        width={"screen"}
-        tekstkomponent={navSlogan}
-      />
+      <div className="h-screen">
+        <NavbarPicture
+          imgUrl={logo}
+          componentHeight={"screen"}
+          height="screen"
+          width={"screen"}
+          tekstkomponent={navSlogan}
+        />
+      </div>
 
       <section className="flex flex-row justify-around px-20 py-10 gap-20 w-full">
         <div className="w-5/12">
