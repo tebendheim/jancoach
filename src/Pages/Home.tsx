@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate, Link } from "react-router-dom";
 import OmHome from "../Components/OmHome";
-import JanPaaFjeler from "../Bilder/janPaaFjellet.png";
+import JanPaaFjellet from "../Bilder/janPaaFjellet.png";
 import MyButton from "../Components/MyButton";
 import Navbar from "../Components/Navbar";
 import NavbarPicture from "../Components/NavbarPicture";
@@ -20,9 +20,9 @@ function Home(): JSX.Element {
   };
 
   return (
-    <section>
+    <section className="">
       <NavbarPicture
-        imgUrl={JanPaaFjeler}
+        imgUrl={JanPaaFjellet}
         componentHeight={"screen"}
         height="screen"
         width={"screen"}
@@ -56,7 +56,7 @@ function Home(): JSX.Element {
         <div
           className={` h-96 w-5/12 rounded-3xl
       				bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
-          style={{ backgroundImage: `url(${JanPaaFjeler})` }}
+          style={{ backgroundImage: `url(${JanPaaFjellet})` }}
         ></div>
       </section>
 
@@ -64,7 +64,7 @@ function Home(): JSX.Element {
         <div
           className={` h-96 w-5/12 rounded-3xl
       				bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
-          style={{ backgroundImage: `url(${JanPaaFjeler})` }}
+          style={{ backgroundImage: `url(${JanPaaFjellet})` }}
         ></div>
         <div className="w-5/12">
           <h1 className="text-3xl font-extrabold text-white">Lorem Ipsum</h1>
@@ -118,7 +118,7 @@ function Home(): JSX.Element {
         <div
           className={` h-96 w-5/12 rounded-3xl
       				bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
-          style={{ backgroundImage: `url(${JanPaaFjeler})` }}
+          style={{ backgroundImage: `url(${JanPaaFjellet})` }}
         ></div>
       </section>
     </section>

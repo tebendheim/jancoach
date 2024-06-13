@@ -1,71 +1,64 @@
-import React from "react";
+import React, { FormEventHandler, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import InputComponent from "./FormComponents.tsx/InputComponent";
 
 export default function ContactForm() {
-  const [state, handleSubmit] = useForm("xjvnnrlb");
+  const formCode = "xjvnnrlb";
+  const [state, handleSubmit] = useForm(formCode);
+  const [privacy, setPrivacy] = useState(false);
+  const [showAlert, setShowAlert] = useState<boolean>(false); // State to track if alert should be shown
+
   if (state.succeeded) {
     return <p>Thanks for joining!</p>;
   }
+
+  const onSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault();
+    // Add logic to check if privacy consent is given before submitting
+    if (!privacy) {
+      alert("Dette er advarselen");
+      //   setShowAlert(true); // Set showAlert to true to display the alert
+      return;
+    }
+
+    // Proceed with form submission to Formspree
+    await handleSubmit(e);
+  };
+
+  console.log(privacy);
   return (
-    <form className="flex flex-col mx-28" onSubmit={handleSubmit}>
+    <form className="flex flex-col mx-28" onSubmit={onSubmit}>
       <div className="flex justify-between gap-10 w-full">
         <div className="flex-grow-0 basis-5/12">
-          <label
-            htmlFor="first-name"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            Fornavn
-          </label>
-          <div className="mb-2.5">
-            <input
-              type="text"
-              name="fName"
-              id="first-name"
-              autoComplete="given-name"
-              className="w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
-          </div>
+          <InputComponent
+            type="text"
+            width={"full"}
+            name="given-name"
+            label="Fornavn"
+            formCode={formCode}
+            state={state}
+          />
         </div>
         <div className="flex-grow-0 basis-5/12">
-          <label
-            htmlFor="last-name"
-            className="block text-sm font-semibold leading-6 text-gray-900"
-          >
-            Etternavn
-          </label>
-          <div className="mb-2.5">
-            <input
-              type="text"
-              name="lName"
-              id="last-name"
-              autoComplete="family-name"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-            />
-          </div>
+          <InputComponent
+            type="text"
+            width={"full"}
+            name="family-name"
+            label="Etternavn"
+            formCode={formCode}
+            state={state}
+          />
         </div>
       </div>
 
-      <label
-        htmlFor="email"
-        className="block text-sm font-semibold leading-6 text-gray-900"
-      >
-        Email
-      </label>
-      <div className="mb-2.5">
-        <input
-          type="email"
-          name="email"
-          id="email"
-          autoComplete="email"
-          className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-        />
-        <ValidationError prefix="Email" field="email" errors={state.errors} />
-      </div>
+      <InputComponent
+        type="email"
+        width={"full"}
+        name="email"
+        label="email"
+        formCode={formCode}
+        state={state}
+      />
 
       <div className="flex flex-col w-full">
         <label
@@ -103,26 +96,14 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <label
-        htmlFor="company"
-        className="block text-sm font-semibold leading-6 text-gray-900"
-      >
-        Firma
-      </label>
-      <div className="mb-2.5">
-        <input
-          type="text"
-          name="company"
-          id="company"
-          autoComplete="organization"
-          className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-        />
-        <ValidationError
-          prefix="Company"
-          field="company"
-          errors={state.errors}
-        />
-      </div>
+      <InputComponent
+        type="text"
+        width={"full"}
+        name="company"
+        label="Firma"
+        formCode={formCode}
+        state={state}
+      />
 
       <label
         htmlFor="message"
@@ -144,37 +125,50 @@ export default function ContactForm() {
         />
       </div>
 
+      {/* <PrivacySwitch state={state} /> */}
+
+      <div className="flex items-center gap-4 sm:col-span-2">
+        <input
+          type="checkbox"
+          name="privacy consent"
+          id="privacy consent"
+          onChange={(e) => setPrivacy(!privacy)}
+          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+        />
+        <ValidationError
+          prefix="privacy consent"
+          field="privacy consent"
+          errors={state.errors}
+        />
+        <label
+          htmlFor="privacy consent"
+          className="text-sm leading-6 text-gray-600"
+        >
+          By selecting this, you agree to our{" "}
+          <a href="#" className="font-semibold text-indigo-600">
+            privacy&nbsp;policy
+          </a>
+        </label>
+      </div>
+
       <button
-        className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        className={`${
+          privacy
+            ? "bg-indigo-600 text-white focus-visible:outline-indigo-600 hover:bg-indigo-500 "
+            : "border-indigo-600 text-black"
+        }block w-full rounded-md border-2  px-3.5 py-2.5 text-center text-sm font-semibold  shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 `}
         type="submit"
         disabled={state.submitting}
       >
         Submit
       </button>
+      {/* Conditional message when privacy is not checked and submit button is hovered */}
+      {/* Conditional message when privacy is not checked */}
+      {!privacy && showAlert && (
+        <div className="text-red-500 text-sm mt-1 mb-2">
+          Please agree to the privacy policy.
+        </div>
+      )}
     </form>
   );
-}
-{
-  /* 
-  
- 
-  
-  <div className="sm:col-span-2">
-    <label
-      htmlFor="message"
-      className="block text-sm font-semibold leading-6 text-gray-900"
-    >
-      Message
-    </label>
-    <div className="mb-2.5">
-      <textarea
-        name="message"
-        id="message"
-        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-      />
-    </div>
-  </div>
-</div>
-
-*/
 }

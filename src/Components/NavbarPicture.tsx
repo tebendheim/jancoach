@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Navbar from "../Components/Navbar";
+import JanPaaFjellet from "../Bilder/janPaaFjellet.png";
 
 type Size = "screen" | "full" | "custom";
 
@@ -25,7 +26,7 @@ const NavbarPicture: React.FC<BildeProps> = ({
       <Navbar />
       <div
         className="absolute top-0 z-0 h-full w-full bg-no-repeat bg-cover bg-right-bottom bg-clip-content"
-        style={{ backgroundImage: `url(${imgUrl})` }}
+        style={{ backgroundImage: `url(${JanPaaFjellet})` }}
       ></div>
       {TekstKomponent && <TekstKomponent />}
     </section>
