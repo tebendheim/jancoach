@@ -2,7 +2,6 @@ import React, { FormEventHandler } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
 import Navbar from "../Components/Navbar";
-import PrivacySwitch from "../Components/PrivacySwitch";
 import { fetchData } from "../hjelpefunksjoner/ApiService";
 import { useForm, ValidationError } from "@formspree/react";
 import ContactForm from "../Components/ContactForm";
