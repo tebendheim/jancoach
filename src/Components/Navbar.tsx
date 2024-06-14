@@ -26,44 +26,48 @@ const Navbar: React.FC = () => {
       {/* <nav className={` md:h-24 grid grid-rows-1 grid-cols-1 fixed bg-gradient-to-b from-white to-transparent bg-opacity-20 dark:bg-gradient-to-b dark:from-black    dark:bg-opacity-20 w-full `}> */}
       <nav
         // className={`w-full  fixed bg-gradient-to-b from-white to-transparent bg-opacity-80 dark:from-black dark:to-transparent`}
-        className="flex w-full h-20  bg-gray-300/40"
+        className="flex w-full sm:h-20  bg-gray-300/40"
       >
         <div
           // className={`inline-flex flex-row justify-around ${toggleDD ? "" : ""} `}
-          className="flex justify-between items-center w-full  mx-6 my-2"
+          className="flex flex-col sm:flex-row justify-between items-center w-full  mx-6 my-2"
         >
-          <Link to="/" className="flex items-center h-full">
-            <img
-              className=" h-16 bg-none dark:bg-white rounded-full"
-              src={logo}
-            ></img>
-          </Link>
-          <button
-            type="button"
-            className={""}
-            aria-controls="navbar-default"
-            aria-expanded="false"
-            onClick={handleClick}
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="fill-current w-6 h-6 -m-0.5"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+          <div className="flex justify-between w-full sm:w-fit">
+            <Link to="/" className="flex items-center h-full">
+              <img
+                className=" h-16 bg-none dark:bg-white rounded-full"
+                src={logo}
+              ></img>
+            </Link>
+            <button
+              type="button"
+              className={"text-white  col-start-11 justify-self-end sm:hidden"}
+              aria-controls="navbar-default"
+              aria-expanded="false"
+              onClick={handleClick}
             >
-              <path
-                fillRule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-          </button>
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className="fill-current w-6 h-6 -m-0.5"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
 
           <ul
             //   className={` ${toggleDD ? "" : ""}  `}
-            className="flex justify-between items-center gap-6"
+            className={` ${
+              !toggleDD && "hidden sm:flex"
+            }  gap-10 flex flex-col sm:flex-row justify-between sm:items-center "`}
           >
             <li className="">
               <button className="align-middle" onClick={toggle}>
@@ -75,15 +79,15 @@ const Navbar: React.FC = () => {
               </button>
             </li>
             <li className="">
-              <Link to="/kontakt" className="" aria-current="page">
+              <Link to="/kontakt" className="text-xl" aria-current="page">
                 Kontakt
               </Link>
             </li>
-            <li className="">
+            <li className="text-xl">
               <Link to="/tjenester">Tjenester</Link>
             </li>
-            <li className="">
-              <Link to="om">Om meg</Link>
+            <li className="text-xl">
+              <Link to="/om">Om meg</Link>
             </li>
           </ul>
         </div>
