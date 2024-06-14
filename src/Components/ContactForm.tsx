@@ -27,8 +27,11 @@ export default function ContactForm() {
 
   console.log(privacy);
   return (
-    <form className="flex flex-col mx-28" onSubmit={onSubmit}>
-      <div className="flex justify-between gap-10 w-full">
+    <form
+      className="flex flex-col mx-10 sm:mx-28 md:mx-32 lg:mx-44 "
+      onSubmit={onSubmit}
+    >
+      <div className="flex flex-col md:flex-row justify-between md:gap-10 w-full">
         <div className="flex-grow-0 basis-5/12">
           <InputComponent
             type="text"
