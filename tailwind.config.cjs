@@ -17,6 +17,9 @@ module.exports = {
         skog: "#6B8A7A",
         spygroenn: "#B7B597",
         sofa: "#DAD3BE",
+        "nav-dark": "#0E1C16",
+        "section-beige": "#737369",
+        "section-green": "#2A3D34",
       },
       gridAutoRows: {
         3: "auto 1fr auto auto / auto 1fr",

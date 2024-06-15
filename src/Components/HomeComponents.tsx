@@ -17,9 +17,9 @@ const HomeComponents: React.FC<props> = ({
 }) => {
   return (
     <section
-      className={`flex ${flexDirection} justify-around px-20 py-10 gap-20 w-full ${bgColor} dark:${darkBgColor}`}
+      className={`flex ${flexDirection} justify-around px-20 py-10 gap-20 w-full ${bgColor}`}
     >
-      <div className="w-5/12">
+      <div className="w-full md:w-5/12">
         <h1 className="text-3xl font-extrabold text-white">Lorem Ipsum</h1>
         <h2 className="text-xl font-semibold text-white">
           What is Lorem Ipsum?
@@ -39,7 +39,7 @@ const HomeComponents: React.FC<props> = ({
         {myButton}
       </div>
       <div
-        className={` h-96 w-5/12 rounded-3xl
+        className={`w-full h-96 md:w-5/12 rounded-3xl
                   bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
         style={{ backgroundImage: `url(${image})` }}
       ></div>

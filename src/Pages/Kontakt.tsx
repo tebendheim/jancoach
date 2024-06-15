@@ -28,7 +28,10 @@ const Kontakt: React.FC = () => {
 
   return (
     <section className="row-start-2 col-start-1 col-span-full">
-      <Navbar />
+      <Navbar
+        bgColor="bg-new-dark-green sm:bg-new-dark-green/90 text-white dark:bg-nav-dark"
+        logoColor="bg-skog"
+      />
 
       <div className="z-0 bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div

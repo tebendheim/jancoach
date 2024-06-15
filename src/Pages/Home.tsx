@@ -23,21 +23,23 @@ function Home(): JSX.Element {
 
   return (
     <section className="bg-light-beige">
-      <div className="relative h-screen mb-10 bg-light-beige dark:bg-gray-500">
+      <div className="relative h-screen mb-10 bg-light-beige dark:bg-section-beige">
         <NavbarPicture
           imgUrl={logo}
           componentHeight={"full"}
           height="full"
           width={"full"}
           tekstkomponent={navSlogan}
-          navColor={"bg-new-dark-green/90"}
+          navColor={
+            "bg-new-dark-green sm:bg-new-dark-green/90 text-white dark:bg-nav-dark"
+          }
           logoColor={"bg-skog"}
         />
       </div>
 
       <HomeComponents
-        bgColor="bg-skog"
-        darkBgColor="bg-slate-800"
+        bgColor="bg-skog dark:bg-section-green"
+        darkBgColor="bg-section-green "
         flexDirection="flex-col md:flex-row"
         myButton={
           <MyButton
@@ -89,7 +91,7 @@ function Home(): JSX.Element {
             className="w-fit inline-flex bg-gradient-to-terracotta-red"
             buttonText="Gratis veiledningstime"
             to="/kontakt"
-            textColor="text-white"
+            textColor="text-black"
           />
         }
         image={JanPaaFjellet}

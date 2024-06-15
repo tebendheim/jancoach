@@ -6,7 +6,10 @@ const Tjenester = () => {
   return (
     <div>
       <section className="relative h-20">
-        <Navbar />
+        <Navbar
+          bgColor="bg-new-dark-green sm:bg-new-dark-green/90 text-white dark:bg-nav-dark"
+          logoColor="bg-skog"
+        />
       </section>
       <div className="text-white">Tjenester</div>
     </div>
