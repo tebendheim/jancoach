@@ -22,7 +22,7 @@ module.exports = {
         // "section-green": "#2A3D34",
         "nav-dark": "#182C25",
         "section-beige": "#455B55",
-        "section-green": "#1E453E",
+        "section-green": "#182C25",
       },
       gridAutoRows: {
         3: "auto 1fr auto auto / auto 1fr",

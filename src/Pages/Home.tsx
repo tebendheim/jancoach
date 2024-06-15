@@ -33,7 +33,7 @@ function Home(): JSX.Element {
           navColor={
             "bg-new-dark-green sm:bg-new-dark-green/90 text-white dark:bg-nav-dark"
           }
-          logoColor={"bg-skog"}
+          logoColor={"bg-skog dark:bg-section-beige"}
         />
       </div>
 
