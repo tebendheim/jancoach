@@ -47,7 +47,7 @@ module.exports = {
         12: "12",
       },
       margin: {
-        m22: "22px",
+        m22: "25px",
       },
     },
   },
