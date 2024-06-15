@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         nav: "rgb(210,190,210)",
         background: "rgb(210,190,210",
+        "dark-green": "#31473A",
       },
       gridAutoRows: {
         3: "auto 1fr auto auto / auto 1fr",

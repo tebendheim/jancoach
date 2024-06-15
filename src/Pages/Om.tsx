@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 
 const Om = () => {
   return (
-    <section className="relative ">
+    <section className="">
       <div className="relative h-20">
         <Navbar />
       </div>

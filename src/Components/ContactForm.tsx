@@ -1,9 +1,12 @@
 import React, { FormEventHandler, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import InputComponent from "./FormComponents.tsx/InputComponent";
+import ReCAPTCHA from "react-google-recaptcha";
+// import dotenv, { config } from "dotenv";
 
 export default function ContactForm() {
-  const formCode = "xjvnnrlb";
+  const formCode = import.meta.env.VITE_FORM_CODE || "";
+  const siteKey = import.meta.env.VITE_CAPTCHA_SITE_KEY || "";
   const [state, handleSubmit] = useForm(formCode);
   const [privacy, setPrivacy] = useState(false);
   const [showAlert, setShowAlert] = useState<boolean>(false); // State to track if alert should be shown
@@ -153,6 +156,8 @@ export default function ContactForm() {
           </a>
         </label>
       </div>
+
+      <div className="g-recaptcha" data-sitekey={siteKey}></div>
 
       <button
         className={`${
