@@ -11,6 +11,8 @@ interface BildeProps {
   componentHeight: Size | number;
   tekstkomponent: React.FC;
   children?: ReactNode; // Children can be any valid ReactNode
+  navColor: string;
+  logoColor: string;
 }
 
 const NavbarPicture: React.FC<BildeProps> = ({
@@ -20,11 +22,13 @@ const NavbarPicture: React.FC<BildeProps> = ({
   componentHeight,
   tekstkomponent: TekstKomponent,
   children,
+  navColor,
+  logoColor,
 }) => {
   return (
     <section className={`relative h-screen flex flex-col`}>
       <div className="relative h-20">
-        <Navbar />
+        <Navbar bgColor={navColor} logoColor={logoColor} />
       </div>
       <div
         className="mt-20

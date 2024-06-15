@@ -6,7 +6,7 @@ import logo from "../Bilder/Logo (2).svg";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative mx-5 bottom-0 z-0 rounded-lg shadow bg-slate-200 dark:bg-slate-800">
+    <footer className="bg-new-dark-green relative bottom-0 z-0 rounded-lg shadow dark:bg-slate-800">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link to="#" className="flex items-center mb-4 sm:mb-0 ">
@@ -15,11 +15,11 @@ const Footer: React.FC = () => {
               className="h-8 mr-3 bg-white rounded-full"
               alt="Flowbite Logo"
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-skog text-2xl font-semibold whitespace-nowrap dark:text-white">
               Hel Ved Coaching
             </span>
           </Link>
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-skog sm:mb-0 dark:text-gray-400">
             <li>
               <Link to="#" className="mr-4 hover:underline md:mr-6 ">
                 About
@@ -42,8 +42,8 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        <hr className="my-6 border-skog sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span className="block text-sm text-skog sm:text-center dark:text-gray-400">
           © 2023 <span className="hover:underline">Tom-Elbin bendheim</span>
         </span>
       </div>

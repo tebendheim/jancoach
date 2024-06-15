@@ -6,7 +6,12 @@ import "../css/mask.css";
 // import logo from "../../Bilder/Logo (2).svg";
 import logo from "../Bilder/Logo (2).svg";
 
-const Navbar: React.FC = () => {
+interface props {
+  bgColor: string;
+  logoColor: string;
+}
+
+const Navbar: React.FC<props> = ({ bgColor, logoColor }) => {
   const [toggleDD, onToggleDD] = React.useState<boolean>(false);
   const menu = document.getElementById("navbar-default");
   const handleClick = () => {
@@ -26,7 +31,7 @@ const Navbar: React.FC = () => {
       {/* <nav className={` md:h-24 grid grid-rows-1 grid-cols-1 fixed bg-gradient-to-b from-white to-transparent bg-opacity-20 dark:bg-gradient-to-b dark:from-black    dark:bg-opacity-20 w-full `}> */}
       <nav
         // className={`w-full  fixed bg-gradient-to-b from-white to-transparent bg-opacity-80 dark:from-black dark:to-transparent`}
-        className="flex w-full sm:h-20  bg-dark-green/90"
+        className={`flex w-full ${bgColor} sm:h-20  `}
       >
         <div
           // className={`inline-flex flex-row justify-around ${toggleDD ? "" : ""} `}
@@ -35,7 +40,7 @@ const Navbar: React.FC = () => {
           <div className="flex justify-between w-full sm:w-fit">
             <Link to="/" className="flex items-center h-full">
               <img
-                className=" h-16 bg-none dark:bg-white rounded-full"
+                className={` h-16 ${logoColor} rounded-full`}
                 src={logo}
               ></img>
             </Link>
