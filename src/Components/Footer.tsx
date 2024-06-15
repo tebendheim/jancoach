@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
         </div>
         <hr className="my-6 border-skog sm:mx-auto dark:border-gray-700 lg:my-8" />
         <span className="block text-sm text-skog sm:text-center dark:text-gray-400">
-          © 2023 <span className="hover:underline">Tom-Elbin bendheim</span>
+          © 2023 <span className="hover:underline">Tom-Elbin Bendheim</span>
         </span>
       </div>
     </footer>

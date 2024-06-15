@@ -162,10 +162,10 @@ const ContactFormDetails = () => {
         />
         <label
           htmlFor="privacy consent"
-          className="text-sm leading-6 text-gray-600"
+          className="text-sm leading-6 text-white"
         >
           By selecting this, you agree to our{" "}
-          <Link to="/legal/privacy" className="font-semibold text-indigo-600">
+          <Link to="/legal/privacy" className="font-semibold text-indigo-200">
             privacy&nbsp;policy
           </Link>
         </label>
