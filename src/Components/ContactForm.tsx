@@ -1,11 +1,13 @@
 import React, { FormEvent, FormEventHandler, useState } from "react";
+import { Navigate, Link } from "react-router-dom";
 import { useForm, ValidationError } from "@formspree/react";
-import InputComponent from "./FormComponents.tsx/InputComponent";
+import InputComponent from "./FormComponents/InputComponent";
 import ReCAPTCHA, {
   useGoogleReCaptcha,
   GoogleReCaptchaProvider,
   GoogleReCaptcha,
 } from "react-google-recaptcha-v3";
+
 // import dotenv, { config } from "dotenv";
 
 const ContactFormDetails = () => {
@@ -163,9 +165,9 @@ const ContactFormDetails = () => {
           className="text-sm leading-6 text-gray-600"
         >
           By selecting this, you agree to our{" "}
-          <a href="#" className="font-semibold text-indigo-600">
+          <Link to="/legal/privacy" className="font-semibold text-indigo-600">
             privacy&nbsp;policy
-          </a>
+          </Link>
         </label>
       </div>
 

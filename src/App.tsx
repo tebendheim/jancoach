@@ -8,6 +8,8 @@ import Tjenester from "./Pages/Tjenester";
 import Footer from "./Components/Footer";
 import Om from "./Pages/Om";
 import { useDarkMode } from "usehooks-ts";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import CookiePolicy from "./Pages/CoockiePolicy";
 
 function App({}: React.HTMLAttributes<HTMLDivElement>) {
   const { isDarkMode } = useDarkMode();
@@ -27,6 +29,10 @@ function App({}: React.HTMLAttributes<HTMLDivElement>) {
           <Route path="kontakt" element={<Kontakt />} />
           <Route path="tjenester" element={<Tjenester />} />
           <Route path="om" element={<Om />} />
+          <Route path="legal/">
+            <Route path="privacy" element={<PrivacyPolicy />} />
+            <Route path="cookiePolicy" element={<CookiePolicy />} />
+          </Route>
         </Route>
       </Routes>
       <Footer />
