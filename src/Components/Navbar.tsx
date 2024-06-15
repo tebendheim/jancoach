@@ -74,7 +74,7 @@ const Navbar: React.FC<props> = ({ bgColor, logoColor }) => {
               !toggleDD && "hidden sm:flex"
             }  gap-10 flex flex-col sm:flex-row justify-between sm:items-center "`}
           >
-            <li className="">
+            <li className="flex justify-center">
               <button className="align-middle" onClick={toggle}>
                 {isDarkMode ? (
                   <SunIcon className="h-6 w-6 text-blue-600" />
