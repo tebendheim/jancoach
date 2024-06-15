@@ -21,7 +21,7 @@ const ContactFormDetails = () => {
   const [showAlert, setShowAlert] = useState<boolean>(false); // State to track if alert should be shown
 
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <p>Takk for at du tar kontakt!</p>;
   }
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
