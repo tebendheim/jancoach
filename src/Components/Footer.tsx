@@ -6,7 +6,7 @@ import logo from "../Bilder/Logo (2).svg";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-new-dark-green relative bottom-0 z-0 rounded-lg shadow dark:bg-slate-800">
+    <footer className="bg-new-dark-green relative bottom-0 z-0 rounded-lg shadow dark:bg-nav-dark">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link to="#" className="flex items-center mb-4 sm:mb-0 ">

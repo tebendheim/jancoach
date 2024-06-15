@@ -26,19 +26,19 @@ const NavbarPicture: React.FC<BildeProps> = ({
   logoColor,
 }) => {
   return (
-    <section className={`relative h-screen flex flex-col`}>
-      <div className="relative h-20">
+    <section className={`relative  h-screen flex flex-col`} id="NavPicture">
+      <div className="relative h-fit">
         <Navbar bgColor={navColor} logoColor={logoColor} />
       </div>
       <div
-        className="mt-20
+        className=" mt-m22
        flex-grow flex flex-col items-center justify-around overflow-hidden"
       >
         <img
-          className=" mt-auto max-h- w-auto object-contain overflow-auto mb-5"
+          className=" mt-24 max-h- w-auto object-contain overflow-auto"
           src={imgUrl}
         />
-        <div className=" mt-auto mb-5">
+        <div className=" mt-auto mb-0">
           <TekstKomponent />
         </div>
       </div>

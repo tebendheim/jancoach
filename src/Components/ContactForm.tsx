@@ -1,13 +1,22 @@
-import React, { FormEventHandler, useState } from "react";
+import React, { FormEvent, FormEventHandler, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import InputComponent from "./FormComponents.tsx/InputComponent";
-import ReCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA, {
+  useGoogleReCaptcha,
+  GoogleReCaptchaProvider,
+  GoogleReCaptcha,
+} from "react-google-recaptcha-v3";
 // import dotenv, { config } from "dotenv";
 
-export default function ContactForm() {
+const ContactFormDetails = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const formCode = import.meta.env.VITE_FORM_CODE || "";
   const siteKey = import.meta.env.VITE_CAPTCHA_SITE_KEY || "";
-  const [state, handleSubmit] = useForm(formCode);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [state, handleSubmit] = useForm(formCode, {
+    data: { "g-recaptcha-response": executeRecaptcha },
+  });
+
   const [privacy, setPrivacy] = useState(false);
   const [showAlert, setShowAlert] = useState<boolean>(false); // State to track if alert should be shown
 
@@ -15,7 +24,7 @@ export default function ContactForm() {
     return <p>Thanks for joining!</p>;
   }
 
-  const onSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Add logic to check if privacy consent is given before submitting
     if (!privacy) {
@@ -24,16 +33,19 @@ export default function ContactForm() {
       return;
     }
 
-    // Proceed with form submission to Formspree
     await handleSubmit(e);
   };
 
-  console.log(privacy);
+  const handleVerify = (token: string) => {
+    setRecaptchaToken(token);
+  };
+
   return (
     <form
       className="flex flex-col mx-10 sm:mx-28 md:mx-32 lg:mx-44 "
       onSubmit={onSubmit}
     >
+      <GoogleReCaptcha onVerify={handleVerify} />
       <div className="flex flex-col md:flex-row justify-between md:gap-10 w-full">
         <div className="flex-grow-0 basis-5/12">
           <InputComponent
@@ -157,8 +169,6 @@ export default function ContactForm() {
         </label>
       </div>
 
-      <div className="g-recaptcha" data-sitekey={siteKey}></div>
-
       <button
         className={`${
           privacy
@@ -179,4 +189,18 @@ export default function ContactForm() {
       )}
     </form>
   );
-}
+};
+
+const ContactForm = () => {
+  const siteKey = import.meta.env.VITE_CAPTCHA_SITE_KEY || "";
+  return (
+    <GoogleReCaptchaProvider reCaptchaKey={siteKey}>
+      <ContactFormDetails />
+    </GoogleReCaptchaProvider>
+  );
+};
+
+export default ContactForm;
+
+// 6LfbKfkpAAAAAKPbpOLd19vuZ314LkTqw3hucW6t
+// curl -X POST -d 'secret=AIzaSyDYoTFLJeZTBuz7ikVgCPbC-eHuQdCaxaE&response=6LfbKfkpAAAAAKPbpOLd19vuZ314LkTqw3hucW6t' https://www.google.com/recaptcha/api/siteverify

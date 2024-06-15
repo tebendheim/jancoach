@@ -14,7 +14,7 @@ function Home(): JSX.Element {
   const navSlogan = () => {
     return (
       <div className="self-center justify-self-center">
-        <p className="font-semibold sm:text-lg md:text-2xl lg:text-4xl xl:text-6xl text-white">
+        <p className="font-semibold font-rockwell sm:text-lg md:text-2xl lg:text-4xl xl:text-6xl text-white">
           Det handler om å være hel ved
         </p>
       </div>
@@ -23,7 +23,7 @@ function Home(): JSX.Element {
 
   return (
     <section className="bg-light-beige">
-      <div className="relative h-screen mb-10 bg-light-beige dark:bg-section-beige">
+      <div className="relative h-screen pb-10 bg-light-beige dark:bg-section-beige">
         <NavbarPicture
           imgUrl={logo}
           componentHeight={"full"}
@@ -43,7 +43,7 @@ function Home(): JSX.Element {
         flexDirection="flex-col md:flex-row"
         myButton={
           <MyButton
-            className="w-fit inline-flex bg-gradient-to-terracotta-red"
+            className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
             buttonText="Gratis veiledningstime"
             to="/kontakt"
             textColor="text-white"
@@ -53,12 +53,12 @@ function Home(): JSX.Element {
       />
 
       <HomeComponents
-        bgColor="bg-light-beige"
+        bgColor="bg-light-beige dark:bg-section-beige"
         darkBgColor=""
         flexDirection="flex-col md:flex-row-reverse"
         myButton={
           <MyButton
-            className="w-fit inline-flex bg-gradient-to-terracotta-red"
+            className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
             buttonText="Gratis veiledningstime"
             to="/kontakt"
             textColor="text-white"
@@ -68,12 +68,12 @@ function Home(): JSX.Element {
       />
 
       <HomeComponents
-        bgColor="bg-skog"
+        bgColor="bg-skog dark:bg-section-green"
         darkBgColor=""
         flexDirection="flex-col md:flex-row"
         myButton={
           <MyButton
-            className="w-fit inline-flex bg-gradient-to-terracotta-red"
+            className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
             buttonText="Gratis veiledningstime"
             to="/kontakt"
             textColor="text-white"
@@ -83,12 +83,12 @@ function Home(): JSX.Element {
       />
 
       <HomeComponents
-        bgColor="bg-light-beige"
+        bgColor="bg-light-beige dark:bg-section-beige"
         darkBgColor=""
         flexDirection="flex-col md:flex-row-reverse"
         myButton={
           <MyButton
-            className="w-fit inline-flex bg-gradient-to-terracotta-red"
+            className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
             buttonText="Gratis veiledningstime"
             to="/kontakt"
             textColor="text-black"

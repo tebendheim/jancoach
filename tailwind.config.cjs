@@ -31,6 +31,8 @@ module.exports = {
       backgroundImage: {
         "gradient-to-terracotta-red":
           "linear-gradient(to left, #C46852, #B85042)",
+        "gradient-button-dark-mode":
+          "linear-gradient(to right, #550F04, #550F05)",
       },
       gridTemplateRows: {
         navBar2: "4rem auto",
@@ -43,6 +45,9 @@ module.exports = {
         10: "10",
         11: "11",
         12: "12",
+      },
+      margin: {
+        m22: "22px",
       },
     },
   },
