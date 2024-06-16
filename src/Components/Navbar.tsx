@@ -46,7 +46,7 @@ const Navbar: React.FC<props> = ({ bgColor, logoColor }) => {
             </Link>
             <button
               type="button"
-              className={"text-white  col-start-11 justify-self-end sm:hidden"}
+              className={"text-white justify-self-end sm:hidden"}
               aria-controls="navbar-default"
               aria-expanded="false"
               onClick={handleClick}
