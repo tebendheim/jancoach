@@ -7,7 +7,9 @@
 		"start": "vite --host",
 		"dev": "vite",
 		"build": "tsc && vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"build:main": "tsc && vite build",
+		"build:test":"tsc && vite build"
 	},
 	"dependencies": {
 		"@formspree/cli": "^0.9.6",
