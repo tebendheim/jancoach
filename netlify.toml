@@ -6,17 +6,16 @@
       status = "200"
 
 [build]
-  publish = "dist" # Replace with your build output directory
-  command = "yarn build" # Replace with your build command
+  command = "yarn && yarn build"
 
 [context.production]
   # Settings for the main branch
-  command = "yarn build:main" # Adjust this if your build command for the main branch is different
+  command = "yarn && yarn build:main" # Adjust this if your build command for the main branch is different
 
 [context.deploy-preview]
   # Settings for deploy previews (like PRs)
-  command = "yarn build" # Adjust if different for previews
+  command = "yarn && yarn build" # Adjust if different for previews
 
 [context.testbranch]
   # Settings for the testbranch
-  command = "yarn build:test" # Adjust this if your build command for the testbranch is different
+  command = ""yarn && yarn build:test" # Adjust this if your build command for the testbranch is different
