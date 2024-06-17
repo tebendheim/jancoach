@@ -55,14 +55,14 @@ const PrivacyText = () => {
       <h2>SUMMARY OF KEY POINTS</h2>
       <Paragraphs
         items={[
-          <>
+          <h6>
             This summary provides key points from our privacy notice, but you
             can find out more details about any of these topics by clicking the
             link following each key point or by using our
             <Link to="#toc">table of contents</Link>
             below to find the section you are looking for.
-          </>,
-          <>
+          </h6>,
+          <h6>
             What personal information do we process? When you visit, use, or
             navigate our Services, we may process personal information depending
             on how you interact with us and the Services, the choices you make,
@@ -71,10 +71,16 @@ const PrivacyText = () => {
               personal information you disclose to us
             </Link>
             .{" "}
-          </>,
-          "Do we process any sensitive personal information? We do not process sensitive personal information.",
-          "Do we collect any information from third parties? We do not collect any information from third parties.",
-          <>
+          </h6>,
+          <h6>
+            Do we process any sensitive personal information? We do not process
+            sensitive personal information.
+          </h6>,
+          <h6>
+            Do we collect any information from third parties? We do not collect
+            any information from third parties.
+          </h6>,
+          <h6>
             {" "}
             How do we process your information? We process your information to
             provide, improve, and administer our Services, communicate with you,
@@ -83,8 +89,8 @@ const PrivacyText = () => {
             We process your information only when we have a valid legal reason
             to do so. Learn more about
             <Link to="#infouse">how we process your information</Link>.{" "}
-          </>,
-          <>
+          </h6>,
+          <h6>
             {" "}
             In what situations and with which&nbsp;types of&nbsp;parties do we
             share personal information? We may share information in specific
@@ -93,8 +99,8 @@ const PrivacyText = () => {
             <Link to="#whoshare">
               when and with whom we share your personal information
             </Link>
-          </>,
-          <>
+          </h6>,
+          <h6>
             How do we keep your information safe? We
             have&nbsp;organizational&nbsp;and technical processes and procedures
             in place to protect your personal information. However, no
@@ -105,24 +111,24 @@ const PrivacyText = () => {
             defeat our security and improperly collect, access, steal, or modify
             your information. Learn more about
             <Link to="#infosafe">how we keep your information safe</Link>.{" "}
-          </>,
-          <>
+          </h6>,
+          <h6>
             What are your rights? Depending on where you are located
             geographically, the applicable privacy law may mean you have certain
             rights regarding your personal information. Learn more about
             <Link to="#privacyrights">your privacy rights</Link>.
-          </>,
-          <>
+          </h6>,
+          <h6>
             How do you exercise your rights? The easiest way to exercise your
             rights is by sending an email to tomelbin.bendheim@gmail.com. We
             will consider and act upon any request in accordance with applicable
             data protection laws.
-          </>,
-          <>
+          </h6>,
+          <h6>
             {" "}
             Want to learn more about what we do with any information we collect?
             <Link to="#toc">Review the privacy notice in full</Link>.{" "}
-          </>,
+          </h6>,
         ]}
       />
       <h2 id="toc">TABLE OF CONTENTS</h2>
