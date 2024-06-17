@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../Components/Navbar";
-import PrivacyText from "./Components/PrivacyText/privacy4";
+import PrivacyText from "./Components/PrivacyText/privacyText";
 
 const PrivacyPolicy = () => {
   return (

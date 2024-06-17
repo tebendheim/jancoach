@@ -3,8 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import Section from "../Section";
 import ItemList from "../ItemList";
 import Paragraphs from "../ParagraphList";
+import styles from "../../CSS/PrivacyText.module.css";
 
-const privacy4 = () => {
+const PrivacyText = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -16,7 +17,7 @@ const privacy4 = () => {
     }
   }, [location]);
   return (
-    <div className="mx-24">
+    <div className={styles.c}>
       <h1>PRIVACY POLICY</h1>
       <h5>Last updated&nbsp;June 15, 2024</h5>
       <Paragraphs
@@ -536,326 +537,417 @@ const privacy4 = () => {
             partners to offer you certain products, services, or promotions.
           </p>
         </li>
-        <Section
-          id="3pwebsites"
-          title={"5. WHAT IS OUR STANCE ON THIRD-PARTY WEBSITES?"}
-          subtitle={`In Short: We are not responsible for the safety of any information
+      </ul>
+      <Section
+        id="3pwebsites"
+        title={"5. WHAT IS OUR STANCE ON THIRD-PARTY WEBSITES?"}
+        subtitle={`In Short: We are not responsible for the safety of any information
           that you share with third parties that we may link to or who advertise
           on our Services, but are not affiliated with, our Services.`}
-        >
-          <Paragraphs items={[]} />
-        </Section>
-        <h2 id=""></h2>
-        <h4></h4>
-        The Services&nbsp;may link to third-party websites, online services, or
-        mobile applications and/or contain advertisements from third parties
-        that are not affiliated with us and which may link to other websites,
-        services, or applications. Accordingly, we do not make any guarantee
-        regarding any such third parties, and we will not be liable for any loss
-        or damage caused by the use of such third-party websites, services, or
-        applications. The inclusion of a link towards a third-party website,
-        service, or application does not imply an endorsement by us. We cannot
-        guarantee the safety and privacy of data you provide to any third
-        parties. Any data collected by third parties is not covered by this
-        privacy notice. We are not responsible for the content or privacy and
-        security practices and policies of any third parties, including other
-        websites, services, or applications that may be linked to or from the
-        Services. You should review the policies of such third parties and
-        contact them directly to respond to your questions.
-        <Section id="" title={""} subtitle={``}>
-          <Paragraphs items={[]} />
-        </Section>
-        <h2 id="cookies">
-          6. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
-        </h2>
-        <h4>
-          In Short: We may use cookies and other tracking technologies to
-          collect and store your information.
-        </h4>
-        We may use cookies and similar tracking technologies (like web beacons
-        and pixels) to gather information when you interact with our Services.
-        Some online tracking technologies help us maintain the security of our
-        Services&nbsp;and your account, prevent crashes, fix bugs, save your
-        preferences, and assist with basic site functions.We also permit third
-        parties and service providers to use online tracking technologies on our
-        Services for analytics and advertising, including to help manage and
-        display advertisements, to tailor advertisements to your interests, or
-        to send abandoned shopping cart reminders (depending on your
-        communication preferences). The third parties and service providers use
-        their technology to provide advertising about products and services
-        tailored to your interests which may appear either on our Services or on
-        other websites.Specific information about how we use such technologies
-        and how you can refuse certain cookies is set out in our Cookie Notice:
-        <Link to="http://www.tomandveronika.com/legal/cookiepolicy">
-          http://www.tomandveronika.com/legal/cookiepolicy
-        </Link>
-        .<h4>Google Analytics</h4>
-        We may share your information with Google Analytics to track
-        and&nbsp;analyze&nbsp;the use of the Services.&nbsp;The Google Analytics
-        Advertising Features that we may use include:&nbsp;Google Analytics
-        Demographics and Interests Reporting,&nbsp;Google Display Network
-        Impressions Reporting&nbsp;and&nbsp;Remarketing with Google
-        Analytics.&nbsp;To opt out of being tracked by Google Analytics across
-        the Services, visit
-        <Link to="https://tools.google.com/dlpage/gaoptout">
-          https://tools.google.com/dlpage/gaoptout
-        </Link>
-        .&nbsp;You can opt out of Google Analytics Advertising Features through
-        <Link to="https://adssettings.google.com/">Ads Settings</Link>
-        and Ad Settings for mobile apps. Other opt out means include
-        <Link to="http://optout.networkadvertising.org/">
-          http://optout.networkadvertising.org/
-        </Link>
-        and
-        <Link to="http://www.networkadvertising.org/mobile-choice">
-          http://www.networkadvertising.org/mobile-choice
-        </Link>
-        .&nbsp;For more information on the privacy practices of Google, please
-        visit the
-        <Link to="https://policies.google.com/privacy">
-          Google Privacy &amp; Terms page
-        </Link>
-        <Section id="" title={""} subtitle={``}>
-          <Paragraphs items={[]} />
-        </Section>
-        .<h2 id="sociallogins">7. HOW DO WE HANDLE YOUR SOCIAL LOGINS?</h2>
-        <h4>
-          In Short: If you choose to register or log in to our Services using a
-          social media account, we may have access to certain information about
-          you.
-        </h4>
-        <p>
-          Our Services offer you the ability to register and log in using your
-          third-party social media account details (like your Facebook or X
-          logins). Where you choose to do this, we will receive certain profile
-          information about you from your social media provider. The profile
-          information we receive may vary depending on the social media provider
-          concerned, but will often include your name, email address, friends
-          list, and profile picture, as well as other information you choose to
-          make public on such a social media platform.
-        </p>
-        <p>
-          We will use the information we receive only for the purposes that are
-          described in this privacy notice or that are otherwise made clear to
-          you on the relevant Services. Please note that we do not control, and
-          are not responsible for, other uses of your personal information by
-          your third-party social media provider. We recommend that you review
-          their privacy notice to understand how they collect, use, and share
-          your personal information, and how you can set your privacy
-          preferences on their sites and apps.
-        </p>
-        <Section id="" title={""} subtitle={``}>
-          <Paragraphs items={[]} />
-        </Section>
-        <h2 id="intltransfers">
-          8. IS YOUR INFORMATION TRANSFERRED INTERNATIONALLY?
-        </h2>
-        <h4>
-          In Short: We may transfer, store, and process your information in
-          countries other than your own.
-        </h4>
-        <p>
-          Our servers are located in&nbsp;the&nbsp;United
-          States&nbsp;and&nbsp;Norway. If you are accessing our Services from
-          outside&nbsp;the&nbsp;United States&nbsp;and&nbsp;Norway, please be
-          aware that your information may be transferred to, stored, and
-          processed by us in our facilities and by those third parties with whom
-          we may share your personal information (see&nbsp;"
-          <Link to="#whoshare">
-            WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
-          </Link>
-          "&nbsp;above), in&nbsp;the&nbsp;United States,&nbsp;Norway,&nbsp;and
-          other countries.
-        </p>
-        <p>
-          If you are a resident in the European Economic Area (EEA), United
-          Kingdom (UK), or Switzerland, then these countries may not necessarily
-          have data protection laws or other similar laws as comprehensive as
-          those in your country. However, we will take all necessary measures to
-          protect your personal information in accordance with this privacy
-          notice and applicable law.
-        </p>
-        <p>European Commission's Standard Contractual Clauses:</p>
-        <p>
-          We have implemented measures to protect your personal information,
-          including by using the European Commission's Standard Contractual
-          Clauses for transfers of personal information between our group
-          companies and between us and our third-party providers. These clauses
-          require all recipients to protect all personal information that they
-          process originating from the EEA or UK in accordance with European
-          data protection laws and regulations.&nbsp;Our Standard Contractual
-          Clauses can be provided upon request.&nbsp;We have implemented similar
-          appropriate safeguards with our third-party service providers and
-          partners and further details can be provided upon request.
-        </p>
-        <Section id="" title={""} subtitle={``}>
-          <Paragraphs items={[]} />
-        </Section>
-        <h2 id="inforetain">9. HOW LONG DO WE KEEP YOUR INFORMATION?</h2>
-        <h4>
-          In Short: We keep your information for as long as necessary
-          to&nbsp;fulfill&nbsp;the purposes outlined in this privacy notice
-          unless otherwise required by law.
-        </h4>
-        <p>
-          We will only keep your personal information for as long as it is
-          necessary for the purposes set out in this privacy notice, unless a
-          longer retention period is required or permitted by law (such as tax,
-          accounting, or other legal requirements).&nbsp;No purpose in this
-          notice will require us keeping your personal information for longer
-          than&nbsp;three (3)&nbsp;months past the termination of the user's
-          account&nbsp;.
-        </p>
-        <p>
-          When we have no ongoing legitimate business need to process your
-          personal information, we will either delete
-          or&nbsp;anonymize&nbsp;such information, or, if this is not possible
-          (for example, because your personal information has been stored in
-          backup archives), then we will securely store your personal
-          information and isolate it from any further processing until deletion
-          is possible.
-        </p>
-        <Section id="" title={""} subtitle={``}>
-          <Paragraphs items={[]} />
-        </Section>
-        <h2 id="infosafe">10. HOW DO WE KEEP YOUR INFORMATION SAFE?</h2>
-        <h4>
-          In Short: We aim to protect your personal information through a system
-          of&nbsp;organizational&nbsp;and technical security measures.
-        </h4>
-        <p>
-          We have implemented appropriate and reasonable technical
-          and&nbsp;organizational&nbsp;security measures designed to protect the
-          security of any personal information we process. However, despite our
-          safeguards and efforts to secure your information, no electronic
-          transmission over the Internet or information storage technology can
-          be guaranteed to be 100% secure, so we cannot promise or guarantee
-          that hackers, cybercriminals, or other&nbsp;unauthorized&nbsp;third
-          parties will not be able to defeat our security and improperly
-          collect, access, steal, or modify your information. Although we will
-          do our best to protect your personal information, transmission of
-          personal information to and from our Services is at your own risk. You
-          should only access the Services within a secure environment.
-        </p>
-        <Section id="" title={""} subtitle={``}>
-          <Paragraphs items={[]} />
-        </Section>
-        <h2 id="infominors">11. DO WE COLLECT INFORMATION FROM MINORS?</h2>
-        <h4>
-          In Short: We do not knowingly collect data from or market
-          to&nbsp;children under 18 years of age.
-        </h4>
-        <p>
-          We do not knowingly collect, solicit data from, or market to children
-          under 18 years of age, nor do we knowingly sell such personal
-          information. By using the Services, you represent that you are at
-          least 18 or that you are the parent or guardian of such a minor and
-          consent to such minor dependent&rsquo;s use of the Services. If we
-          learn that personal information from users less than 18 years of age
-          has been collected, we will deactivate the account and take reasonable
-          measures to promptly delete such data from our records. If you become
-          aware of any data we may have collected from children under age 18,
-          please contact us at&nbsp;tomelbin.bendheim@gmail.com.
-        </p>
-        <Section id="" title={""} subtitle={``}>
-          <Paragraphs items={[]} />
-        </Section>
-        <h2 id="privacyrights">12. WHAT ARE YOUR PRIVACY RIGHTS?</h2>
-        <h4>
-          In Short: In&nbsp;some regions, such as&nbsp;the European Economic
-          Area (EEA), United Kingdom (UK), and Switzerland, you have rights that
-          allow you greater access to and control over your personal
-          information.&nbsp;You may review, change, or terminate your account at
-          any time, depending on your country, province, or state of residence.
-        </h4>
-        In some regions (like&nbsp;the EEA, UK, and Switzerland), you have
-        certain rights under applicable data protection laws. These may include
-        the right (i) to request access and obtain a copy of your personal
-        information, (ii) to request rectification or erasure; (iii) to restrict
-        the processing of your personal information; (iv) if applicable, to data
-        portability; and (v) not to be subject to automated decision-making. In
-        certain circumstances, you may also have the right to object to the
-        processing of your personal information. You can make such a request by
-        contacting us by using the contact details provided in the
-        section&nbsp;"
-        <Link to="#contact">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</Link>
-        "&nbsp;below. We will consider and act upon any request in accordance
-        with applicable data protection laws. If you are located in the EEA or
-        UK and you believe we are unlawfully processing your personal
-        information, you also have the right to complain to your
-        <Link to="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm">
-          Member State data protection authority
-        </Link>
-        or
-        <Link to="https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/">
-          UK data protection authority
-        </Link>
-        . If you are located in Switzerland, you may contact the
-        <Link to="https://www.edoeb.admin.ch/edoeb/en/home.html">
-          Federal Data Protection and Information Commissioner
-        </Link>
-        .<u>Withdrawing your consent:</u>
-        If we are relying on your consent to process your personal
-        information,&nbsp;you have the right to withdraw your consent at any
-        time. You can withdraw your consent at any time by contacting us by
-        using the contact details provided in the section&nbsp;"
-        <Link to="#contact">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</Link>
-        "&nbsp;below. However, please note that this will not affect the
-        lawfulness of the processing before its withdrawal nor,&nbsp;will it
-        affect the processing of your personal information conducted in reliance
-        on lawful processing grounds other than consent.
-        <u>Opting out of marketing and promotional communications:</u>
-        You can unsubscribe from our marketing and promotional communications at
-        any time by&nbsp;clicking on the unsubscribe link in the emails that we
-        send,&nbsp;or by contacting us using the details provided in the
-        section&nbsp;"
-        <Link to="#contact">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</Link>
-        "&nbsp;below. You will then be removed from the marketing lists.
-        However, we may still communicate with you &mdash; for example, to send
-        you service-related messages that are necessary for the administration
-        and use of your account, to respond to service requests, or for other
-        non-marketing purposes. Account Information If you would at any time
-        like to review or change the information in your account or terminate
-        your account, you can:
-        <li>Contact us using the contact information provided.</li>
-      </ul>
-      Upon your request to terminate your account, we will deactivate or delete
-      your account and information from our active databases. However, we may
-      retain some information in our files to prevent fraud, troubleshoot
-      problems, assist with any investigations, enforce our legal terms and/or
-      comply with applicable legal requirements.
-      <u>Cookies and similar technologies:</u>
-      Most Web browsers are set to accept cookies by default. If you prefer, you
-      can usually choose to set your browser to remove cookies and to reject
-      cookies. If you choose to remove cookies or reject cookies, this could
-      affect certain features or services of our Services.&nbsp;You may also
-      <Link to="http://www.aboutads.info/choices/">
-        opt out of interest-based advertising by advertisers
-      </Link>
-      on our Services.&nbsp;For further information, please see our Cookie
-      Notice:
-      <Link to="http://www.tomandveronika.com/legal/cookiepolicy">
-        http://www.tomandveronika.com/legal/cookiepolicy
-      </Link>
-      . If you have questions or comments about your privacy rights, you may
-      email us at&nbsp;tomelbin.bendheim@gmail.com.
-      <Section id="" title={""} subtitle={``}>
+      >
         <Paragraphs items={[]} />
       </Section>
-      <h2 id="DNT">13. CONTROLS FOR DO-NOT-TRACK FEATURES</h2>
-      <p>
-        Most web browsers and some mobile operating systems and mobile
-        applications include a Do-Not-Track ("DNT") feature or setting you can
-        activate to signal your privacy preference not to have data about your
-        online browsing activities monitored and collected. At this stage, no
-        uniform technology standard for&nbsp;recognizing&nbsp;and implementing
-        DNT signals has been&nbsp;finalized. As such, we do not currently
-        respond to DNT browser signals or any other mechanism that automatically
-        communicates your choice not to be tracked online. If a standard for
-        online tracking is adopted that we must follow in the future, we will
-        inform you about that practice in a revised version of this privacy
-        notice.
-      </p>
+      <h2 id=""></h2>
+      <h4></h4>
+      The Services&nbsp;may link to third-party websites, online services, or
+      mobile applications and/or contain advertisements from third parties that
+      are not affiliated with us and which may link to other websites, services,
+      or applications. Accordingly, we do not make any guarantee regarding any
+      such third parties, and we will not be liable for any loss or damage
+      caused by the use of such third-party websites, services, or applications.
+      The inclusion of a link towards a third-party website, service, or
+      application does not imply an endorsement by us. We cannot guarantee the
+      safety and privacy of data you provide to any third parties. Any data
+      collected by third parties is not covered by this privacy notice. We are
+      not responsible for the content or privacy and security practices and
+      policies of any third parties, including other websites, services, or
+      applications that may be linked to or from the Services. You should review
+      the policies of such third parties and contact them directly to respond to
+      your questions.
+      <Section
+        id="cookies"
+        title={"6. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?"}
+        subtitle={`In Short: We may use cookies and other tracking technologies to collect
+        and store your information.`}
+      >
+        <Paragraphs
+          items={[
+            <>
+              We may use cookies and similar tracking technologies (like web
+              beacons and pixels) to gather information when you interact with
+              our Services. Some online tracking technologies help us maintain
+              the security of our Services&nbsp;and your account, prevent
+              crashes, fix bugs, save your preferences, and assist with basic
+              site functions.We also permit third parties and service providers
+              to use online tracking technologies on our Services for analytics
+              and advertising, including to help manage and display
+              advertisements, to tailor advertisements to your interests, or to
+              send abandoned shopping cart reminders (depending on your
+              communication preferences). The third parties and service
+              providers use their technology to provide advertising about
+              products and services tailored to your interests which may appear
+              either on our Services or on other websites.Specific information
+              about how we use such technologies and how you can refuse certain
+              cookies is set out in our Cookie Notice:
+              <Link to="http://www.tomandveronika.com/legal/cookiepolicy">
+                http://www.tomandveronika.com/legal/cookiepolicy
+              </Link>
+            </>,
+          ]}
+        />
+      </Section>
+      <Section id="googleanalytics" extraTitle="Google Analytics">
+        <Paragraphs
+          items={[
+            <>
+              We may share your information with Google Analytics to track
+              and&nbsp;analyze&nbsp;the use of the Services.&nbsp;The Google
+              Analytics Advertising Features that we may use
+              include:&nbsp;Google Analytics Demographics and Interests
+              Reporting,&nbsp;Google Display Network Impressions
+              Reporting&nbsp;and&nbsp;Remarketing with Google Analytics.&nbsp;To
+              opt out of being tracked by Google Analytics across the Services,
+              visit{" "}
+              <Link to="https://tools.google.com/dlpage/gaoptout">
+                https://tools.google.com/dlpage/gaoptout
+              </Link>
+              .&nbsp;You can opt out of Google Analytics Advertising Features
+              through
+              <Link to="https://adssettings.google.com/"> Ads Settings </Link>
+              and Ad Settings for mobile apps. Other opt out means include
+              <Link to="http://optout.networkadvertising.org/">
+                {" "}
+                http://optout.networkadvertising.org/{" "}
+              </Link>
+              and
+              <Link to="http://www.networkadvertising.org/mobile-choice">
+                {" "}
+                http://www.networkadvertising.org/mobile-choice
+              </Link>
+              .&nbsp;For more information on the privacy practices of Google,
+              please visit the{" "}
+              <Link to="https://policies.google.com/privacy">
+                Google Privacy &amp; Terms page
+              </Link>
+            </>,
+          ]}
+        />
+      </Section>
+      <h2 id=""></h2>
+      <h4></h4>.<h4></h4>
+      <Section
+        id="sociallogins"
+        title={"7. HOW DO WE HANDLE YOUR SOCIAL LOGINS?"}
+        subtitle={`In Short: If you choose to register or log in to our Services using a
+        social media account, we may have access to certain information about
+        you.`}
+      >
+        <Paragraphs
+          items={[
+            <>
+              Our Services offer you the ability to register and log in using
+              your third-party social media account details (like your Facebook
+              or X logins). Where you choose to do this, we will receive certain
+              profile information about you from your social media provider. The
+              profile information we receive may vary depending on the social
+              media provider concerned, but will often include your name, email
+              address, friends list, and profile picture, as well as other
+              information you choose to make public on such a social media
+              platform.
+            </>,
+            <>
+              We will use the information we receive only for the purposes that
+              are described in this privacy notice or that are otherwise made
+              clear to you on the relevant Services. Please note that we do not
+              control, and are not responsible for, other uses of your personal
+              information by your third-party social media provider. We
+              recommend that you review their privacy notice to understand how
+              they collect, use, and share your personal information, and how
+              you can set your privacy preferences on their sites and apps.
+            </>,
+          ]}
+        />
+      </Section>
+      <Section
+        id="intltransfers"
+        title={"8. IS YOUR INFORMATION TRANSFERRED INTERNATIONALLY?"}
+        subtitle={`In Short: We may transfer, store, and process your information in
+        countries other than your own.`}
+      >
+        <Paragraphs
+          items={[
+            <>
+              Our servers are located in&nbsp;the&nbsp;United
+              States&nbsp;and&nbsp;Norway. If you are accessing our Services
+              from outside&nbsp;the&nbsp;United States&nbsp;and&nbsp;Norway,
+              please be aware that your information may be transferred to,
+              stored, and processed by us in our facilities and by those third
+              parties with whom we may share your personal information
+              (see&nbsp;"
+              <Link to="#whoshare">
+                WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
+              </Link>
+              "&nbsp;above), in&nbsp;the&nbsp;United
+              States,&nbsp;Norway,&nbsp;and other countries.
+            </>,
+            <>
+              If you are a resident in the European Economic Area (EEA), United
+              Kingdom (UK), or Switzerland, then these countries may not
+              necessarily have data protection laws or other similar laws as
+              comprehensive as those in your country. However, we will take all
+              necessary measures to protect your personal information in
+              accordance with this privacy notice and applicable law.
+            </>,
+            <u>European Commission's Standard Contractual Clauses:</u>,
+            <>
+              {" "}
+              We have implemented measures to protect your personal information,
+              including by using the European Commission's Standard Contractual
+              Clauses for transfers of personal information between our group
+              companies and between us and our third-party providers. These
+              clauses require all recipients to protect all personal information
+              that they process originating from the EEA or UK in accordance
+              with European data protection laws and regulations.&nbsp;Our
+              Standard Contractual Clauses can be provided upon request.&nbsp;We
+              have implemented similar appropriate safeguards with our
+              third-party service providers and partners and further details can
+              be provided upon request.
+            </>,
+          ]}
+        />
+      </Section>
+      <Section
+        id="inforetain"
+        title={"9. HOW LONG DO WE KEEP YOUR INFORMATION?"}
+        subtitle={`In Short: We keep your information for as long as necessary
+        to fulfill the purposes outlined in this privacy notice unless
+        otherwise required by law.`}
+      >
+        <Paragraphs
+          items={[
+            <>
+              We will only keep your personal information for as long as it is
+              necessary for the purposes set out in this privacy notice, unless
+              a longer retention period is required or permitted by law (such as
+              tax, accounting, or other legal requirements).&nbsp;No purpose in
+              this notice will require us keeping your personal information for
+              longer than&nbsp;three (3)&nbsp;months past the termination of the
+              user's account&nbsp;.
+            </>,
+            <>
+              When we have no ongoing legitimate business need to process your
+              personal information, we will either delete
+              or&nbsp;anonymize&nbsp;such information, or, if this is not
+              possible (for example, because your personal information has been
+              stored in backup archives), then we will securely store your
+              personal information and isolate it from any further processing
+              until deletion is possible.
+            </>,
+          ]}
+        />
+      </Section>
+      <Section
+        id="infosafe"
+        title={"10. HOW DO WE KEEP YOUR INFORMATION SAFE?"}
+        subtitle={`In Short: We aim to protect your personal information through a system
+        of organizational and technical security measures.`}
+      >
+        <Paragraphs
+          items={[
+            <>
+              We have implemented appropriate and reasonable technical
+              and&nbsp;organizational&nbsp;security measures designed to protect
+              the security of any personal information we process. However,
+              despite our safeguards and efforts to secure your information, no
+              electronic transmission over the Internet or information storage
+              technology can be guaranteed to be 100% secure, so we cannot
+              promise or guarantee that hackers, cybercriminals, or
+              other&nbsp;unauthorized&nbsp;third parties will not be able to
+              defeat our security and improperly collect, access, steal, or
+              modify your information. Although we will do our best to protect
+              your personal information, transmission of personal information to
+              and from our Services is at your own risk. You should only access
+              the Services within a secure environment.
+            </>,
+          ]}
+        />
+      </Section>
+      <Section
+        id="infominors"
+        title={"11. DO WE COLLECT INFORMATION FROM MINORS?"}
+        subtitle={`In Short: We do not knowingly collect data from or market
+        to children under 18 years of age.`}
+      >
+        <Paragraphs
+          items={[
+            <>
+              {" "}
+              We do not knowingly collect, solicit data from, or market to
+              children under 18 years of age, nor do we knowingly sell such
+              personal information. By using the Services, you represent that
+              you are at least 18 or that you are the parent or guardian of such
+              a minor and consent to such minor dependent&rsquo;s use of the
+              Services. If we learn that personal information from users less
+              than 18 years of age has been collected, we will deactivate the
+              account and take reasonable measures to promptly delete such data
+              from our records. If you become aware of any data we may have
+              collected from children under age 18, please contact us
+              at&nbsp;tomelbin.bendheim@gmail.com.
+            </>,
+          ]}
+        />
+      </Section>
+      <Section
+        id="privacyrights"
+        title={"12. WHAT ARE YOUR PRIVACY RIGHTS?"}
+        subtitle={`In Short: In some regions, such as the European Economic
+          Area (EEA), United Kingdom (UK), and Switzerland, you have rights that
+          allow you greater access to and control over your personal
+          information. You may review, change, or terminate your account at
+          any time, depending on your country, province, or state of residence.`}
+      >
+        <Paragraphs
+          items={[
+            <>
+              In some regions (like&nbsp;the EEA, UK, and Switzerland), you have
+              certain rights under applicable data protection laws. These may
+              include the right (i) to request access and obtain a copy of your
+              personal information, (ii) to request rectification or erasure;
+              (iii) to restrict the processing of your personal information;
+              (iv) if applicable, to data portability; and (v) not to be subject
+              to automated decision-making. In certain circumstances, you may
+              also have the right to object to the processing of your personal
+              information. You can make such a request by contacting us by using
+              the contact details provided in the section&nbsp;"
+              <Link to="#contact">
+                HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
+              </Link>
+              "&nbsp;below.{" "}
+            </>,
+            <>
+              We will consider and act upon any request in accordance with
+              applicable data protection laws.
+            </>,
+            <>
+              {" "}
+              If you are located in the EEA or UK and you believe we are
+              unlawfully processing your personal information, you also have the
+              right to complain to your
+              <Link to="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm">
+                Member State data protection authority
+              </Link>
+              or
+              <Link to="https://ico.org.uk/make-a-complaint/data-protection-complaints/data-protection-complaints/">
+                UK data protection authority
+              </Link>
+              .
+            </>,
+            <>
+              {" "}
+              If you are located in Switzerland, you may contact the
+              <Link to="https://www.edoeb.admin.ch/edoeb/en/home.html">
+                Federal Data Protection and Information Commissioner.
+              </Link>
+            </>,
+            <u>Withdrawing your consent:</u>,
+            <>
+              {" "}
+              If we are relying on your consent to process your personal
+              information,&nbsp;you have the right to withdraw your consent at
+              any time. You can withdraw your consent at any time by contacting
+              us by using the contact details provided in the section&nbsp;"
+              <Link to="#contact">
+                HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
+              </Link>
+              "&nbsp;below.
+            </>,
+            <>
+              However, please note that this will not affect the lawfulness of
+              the processing before its withdrawal nor,&nbsp;will it affect the
+              processing of your personal information conducted in reliance on
+              lawful processing grounds other than consent.
+            </>,
+            <u>Opting out of marketing and promotional communications:</u>,
+            <>
+              You can unsubscribe from our marketing and promotional
+              communications at any time by&nbsp;clicking on the unsubscribe
+              link in the emails that we send,&nbsp;or by contacting us using
+              the details provided in the section&nbsp;"
+              <Link to="#contact">
+                HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
+              </Link>
+              "&nbsp;below. You will then be removed from the marketing lists.
+              However, we may still communicate with you &mdash; for example, to
+              send you service-related messages that are necessary for the
+              administration and use of your account, to respond to service
+              requests, or for other non-marketing purposes.
+            </>,
+            <u>Account Information</u>,
+            <>
+              If you would at any time like to review or change the information
+              in your account or terminate your account, you can:
+              <ItemList
+                items={[
+                  <>Contact us using the contact information provided.</>,
+                ]}
+              />
+            </>,
+            <>
+              Upon your request to terminate your account, we will deactivate or
+              delete your account and information from our active databases.
+              However, we may retain some information in our files to prevent
+              fraud, troubleshoot problems, assist with any investigations,
+              enforce our legal terms and/or comply with applicable legal
+              requirements.
+            </>,
+            <>
+              {" "}
+              <u>Cookies and similar technologies:</u> Most Web browsers are set
+              to accept cookies by default. If you prefer, you can usually
+              choose to set your browser to remove cookies and to reject
+              cookies. If you choose to remove cookies or reject cookies, this
+              could affect certain features or services of our
+              Services.&nbsp;You may also
+              <Link to="http://www.aboutads.info/choices/">
+                opt out of interest-based advertising by advertisers
+              </Link>
+              on our Services.&nbsp;For further information, please see our
+              Cookie Notice:
+              <Link to="http://www.tomandveronika.com/legal/cookiepolicy">
+                http://www.tomandveronika.com/legal/cookiepolicy
+              </Link>
+              .
+            </>,
+            <>
+              If you have questions or comments about your privacy rights, you
+              may email us at&nbsp;tomelbin.bendheim@gmail.com.
+            </>,
+          ]}
+        />
+      </Section>
+      <Section id="DNT" title={"13. CONTROLS FOR DO-NOT-TRACK FEATURES"}>
+        <Paragraphs
+          items={[
+            <>
+              {" "}
+              Most web browsers and some mobile operating systems and mobile
+              applications include a Do-Not-Track ("DNT") feature or setting you
+              can activate to signal your privacy preference not to have data
+              about your online browsing activities monitored and collected. At
+              this stage, no uniform technology standard
+              for&nbsp;recognizing&nbsp;and implementing DNT signals has
+              been&nbsp;finalized. As such, we do not currently respond to DNT
+              browser signals or any other mechanism that automatically
+              communicates your choice not to be tracked online. If a standard
+              for online tracking is adopted that we must follow in the future,
+              we will inform you about that practice in a revised version of
+              this privacy notice.
+            </>,
+          ]}
+        />
+      </Section>
+      <h2 id=""></h2>
+      <p></p>
       <Section
         id="policyupdates"
         title={"14. DO WE MAKE UPDATES TO THIS NOTICE?"}
@@ -881,7 +973,6 @@ const privacy4 = () => {
       <Section
         id="contact"
         title={"15. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?"}
-        subtitle={``}
       >
         <Paragraphs
           items={[
@@ -898,7 +989,6 @@ const privacy4 = () => {
         title={
           "16. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?"
         }
-        subtitle={``}
       >
         <Paragraphs
           items={[
@@ -921,4 +1011,4 @@ const privacy4 = () => {
   );
 };
 
-export default privacy4;
+export default PrivacyText;
