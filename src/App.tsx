@@ -8,7 +8,7 @@ import Tjenester from "./Pages/Tjenester";
 import Footer from "./Components/Footer";
 import Om from "./Pages/Om";
 import { useDarkMode } from "usehooks-ts";
-import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 import CookiePolicy from "./Pages/CoockiePolicy";
 
 function App({}: React.HTMLAttributes<HTMLDivElement>) {

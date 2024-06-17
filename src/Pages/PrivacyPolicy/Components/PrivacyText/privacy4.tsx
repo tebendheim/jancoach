@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Section from "../Section";
+import ItemList from "../ItemList";
+import Paragraphs from "../ParagraphList";
 
 const privacy4 = () => {
   const location = useLocation();
@@ -13,282 +16,292 @@ const privacy4 = () => {
     }
   }, [location]);
   return (
-    <>
+    <div className="mx-24">
       <h1>PRIVACY POLICY</h1>
-      <p>Last updated&nbsp;June 15, 2024</p>
-      <p>
-        This privacy notice for&nbsp;Tom-Elbin Bendheim&nbsp;(" we ," " us ," or
-        " our "), describes how and why we might collect, store, use, and/or
-        share (" process ") your information when you use our services ("
-        Services "), such as when you:
-      </p>
-      <ul>
-        <li>
-          Visit our website&nbsp;at
-          <Link to="http://www.tomandveronika.com">
-            http://www.tomandveronika.com
-          </Link>
-          , or any website of ours that links to this privacy notice
-        </li>
-      </ul>
-      <ul>
-        <li>
-          Engage with us in other related ways, including any sales, marketing,
-          or events
-        </li>
-      </ul>
-      <p>
-        Questions or concerns? Reading this privacy notice will help you
-        understand your privacy rights and choices. If you do not agree with our
-        policies and practices, please do not use our Services.&nbsp;If you
-        still have any questions or concerns, please contact us
-        at&nbsp;tomelbin.bendheim@gmail.com.
-      </p>
+      <h5>Last updated&nbsp;June 15, 2024</h5>
+      <Paragraphs
+        items={[
+          <>
+            This privacy notice for&nbsp;Tom-Elbin Bendheim&nbsp;(" we ," " us
+            ," or " our "), describes how and why we might collect, store, use,
+            and/or share (" process ") your information when you use our
+            services (" Services "), such as when you:
+          </>,
+          <>
+            <ItemList
+              items={[
+                <>
+                  Visit our website&nbsp;at{" "}
+                  <Link to="http://www.tomandveronika.com">
+                    http://www.tomandveronika.com
+                  </Link>
+                  , or any website of ours that links to this privacy notice
+                </>,
+                "Engage with us in other related ways, including any sales, marketing, or events ",
+              ]}
+            />
+            ,
+            <>
+              Questions or concerns? Reading this privacy notice will help you
+              understand your privacy rights and choices. If you do not agree
+              with our policies and practices, please do not use our
+              Services.&nbsp;If you still have any questions or concerns, please
+              contact us at&nbsp;tomelbin.bendheim@gmail.com.
+            </>
+          </>,
+        ]}
+      />
       <h2>SUMMARY OF KEY POINTS</h2>
-      <p>
-        This summary provides key points from our privacy notice, but you can
-        find out more details about any of these topics by clicking the link
-        following each key point or by using our
-        <Link to="#toc">table of contents</Link>
-        below to find the section you are looking for.
-      </p>
-      <p>
-        What personal information do we process? When you visit, use, or
-        navigate our Services, we may process personal information depending on
-        how you interact with us and the Services, the choices you make, and the
-        products and features you use. Learn more about
-        <Link to="#personalinfo">personal information you disclose to us</Link>.
-      </p>
-      <p>
-        Do we process any sensitive personal information? We do not process
-        sensitive personal information.
-      </p>
-      <p>
-        Do we collect any information from third parties? We do not collect any
-        information from third parties.
-      </p>
-      <p>
-        How do we process your information? We process your information to
-        provide, improve, and administer our Services, communicate with you, for
-        security and fraud prevention, and to comply with law. We may also
-        process your information for other purposes with your consent. We
-        process your information only when we have a valid legal reason to do
-        so. Learn more about
-        <Link to="#infouse">how we process your information</Link>.
-      </p>
-      <p>
-        In what situations and with which&nbsp;types of&nbsp;parties do we share
-        personal information? We may share information in specific situations
-        and with specific&nbsp;categories of&nbsp;third parties. Learn more
-        about
-        <Link to="#whoshare">
-          when and with whom we share your personal information
-        </Link>
-        .
-      </p>
-      <p>
-        How do we keep your information safe? We
-        have&nbsp;organizational&nbsp;and technical processes and procedures in
-        place to protect your personal information. However, no electronic
-        transmission over the internet or information storage technology can be
-        guaranteed to be 100% secure, so we cannot promise or guarantee that
-        hackers, cybercriminals, or other&nbsp;unauthorized&nbsp;third parties
-        will not be able to defeat our security and improperly collect, access,
-        steal, or modify your information. Learn more about
-        <Link to="#infosafe">how we keep your information safe</Link>.
-      </p>
-      <p>
-        What are your rights? Depending on where you are located geographically,
-        the applicable privacy law may mean you have certain rights regarding
-        your personal information. Learn more about
-        <Link to="#privacyrights">your privacy rights</Link>.
-      </p>
-      <p>
-        How do you exercise your rights? The easiest way to exercise your rights
-        is by sending an email to tomelbin.bendheim@gmail.com. We will consider
-        and act upon any request in accordance with applicable data protection
-        laws.
-      </p>
-      <p>
-        Want to learn more about what we do with any information we collect?
-        <Link to="#toc">Review the privacy notice in full</Link>.
-      </p>
+      <Paragraphs
+        items={[
+          <>
+            This summary provides key points from our privacy notice, but you
+            can find out more details about any of these topics by clicking the
+            link following each key point or by using our
+            <Link to="#toc">table of contents</Link>
+            below to find the section you are looking for.
+          </>,
+          <>
+            What personal information do we process? When you visit, use, or
+            navigate our Services, we may process personal information depending
+            on how you interact with us and the Services, the choices you make,
+            and the products and features you use. Learn more about
+            <Link to="#personalinfo">
+              personal information you disclose to us
+            </Link>
+            .{" "}
+          </>,
+          "Do we process any sensitive personal information? We do not process sensitive personal information.",
+          "Do we collect any information from third parties? We do not collect any information from third parties.",
+          <>
+            {" "}
+            How do we process your information? We process your information to
+            provide, improve, and administer our Services, communicate with you,
+            for security and fraud prevention, and to comply with law. We may
+            also process your information for other purposes with your consent.
+            We process your information only when we have a valid legal reason
+            to do so. Learn more about
+            <Link to="#infouse">how we process your information</Link>.{" "}
+          </>,
+          <>
+            {" "}
+            In what situations and with which&nbsp;types of&nbsp;parties do we
+            share personal information? We may share information in specific
+            situations and with specific&nbsp;categories of&nbsp;third parties.
+            Learn more about
+            <Link to="#whoshare">
+              when and with whom we share your personal information
+            </Link>
+          </>,
+          <>
+            How do we keep your information safe? We
+            have&nbsp;organizational&nbsp;and technical processes and procedures
+            in place to protect your personal information. However, no
+            electronic transmission over the internet or information storage
+            technology can be guaranteed to be 100% secure, so we cannot promise
+            or guarantee that hackers, cybercriminals, or
+            other&nbsp;unauthorized&nbsp;third parties will not be able to
+            defeat our security and improperly collect, access, steal, or modify
+            your information. Learn more about
+            <Link to="#infosafe">how we keep your information safe</Link>.{" "}
+          </>,
+          <>
+            What are your rights? Depending on where you are located
+            geographically, the applicable privacy law may mean you have certain
+            rights regarding your personal information. Learn more about
+            <Link to="#privacyrights">your privacy rights</Link>.
+          </>,
+          <>
+            How do you exercise your rights? The easiest way to exercise your
+            rights is by sending an email to tomelbin.bendheim@gmail.com. We
+            will consider and act upon any request in accordance with applicable
+            data protection laws.
+          </>,
+          <>
+            {" "}
+            Want to learn more about what we do with any information we collect?
+            <Link to="#toc">Review the privacy notice in full</Link>.{" "}
+          </>,
+        ]}
+      />
       <h2 id="toc">TABLE OF CONTENTS</h2>
-      <ol>
-        <li>
-          <Link to="#infocollect">WHAT INFORMATION DO WE COLLECT?</Link>
-        </li>
-        <li>
-          <Link to="#infouse">HOW DO WE PROCESS YOUR INFORMATION?</Link>
-        </li>
-        <li>
+      <ItemList
+        items={[
+          <Link to="#infocollect">WHAT INFORMATION DO WE COLLECT?</Link>,
+          <Link to="#infouse">HOW DO WE PROCESS YOUR INFORMATION?</Link>,
           <Link to="#legalbases">
             WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL INFORMATION?
-          </Link>
-        </li>
-        <li>
+          </Link>,
           <Link to="#whoshare">
             WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
-          </Link>
-        </li>
-        <li>
+          </Link>,
           <Link to="#3pwebsites">
             WHAT IS OUR STANCE ON THIRD-PARTY WEBSITES?
-          </Link>
-        </li>
-        <li>
+          </Link>,
           <Link to="#cookies">
             DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
-          </Link>
-        </li>
-        <li>
-          <Link to="#sociallogins">HOW DO WE HANDLE YOUR SOCIAL LOGINS?</Link>
-        </li>
-        <li>
+          </Link>,
+          <Link to="#sociallogins">HOW DO WE HANDLE YOUR SOCIAL LOGINS?</Link>,
           <Link to="#intltransfers">
             IS YOUR INFORMATION TRANSFERRED INTERNATIONALLY?
-          </Link>
-        </li>
-        <li>
-          <Link to="#inforetain">HOW LONG DO WE KEEP YOUR INFORMATION?</Link>
-        </li>
-        <li>
-          <Link to="#infosafe">HOW DO WE KEEP YOUR INFORMATION SAFE?</Link>
-        </li>
-        <li>
-          <Link to="#infominors">DO WE COLLECT INFORMATION FROM MINORS?</Link>
-        </li>
-        <li>
-          <Link to="#privacyrights">WHAT ARE YOUR PRIVACY RIGHTS?</Link>
-        </li>
-        <li>
-          <Link to="#DNT">CONTROLS FOR DO-NOT-TRACK FEATURES</Link>
-        </li>
-        <li>
-          <Link to="#policyupdates">DO WE MAKE UPDATES TO THIS NOTICE?</Link>
-        </li>
-        <li>
-          <Link to="#contact">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</Link>
-        </li>
-        <li>
+          </Link>,
+          <Link to="#inforetain">HOW LONG DO WE KEEP YOUR INFORMATION?</Link>,
+          <Link to="#infosafe">HOW DO WE KEEP YOUR INFORMATION SAFE?</Link>,
+          <Link to="#infominors">DO WE COLLECT INFORMATION FROM MINORS?</Link>,
+          <Link to="#privacyrights">WHAT ARE YOUR PRIVACY RIGHTS?</Link>,
+          <Link to="#DNT">CONTROLS FOR DO-NOT-TRACK FEATURES</Link>,
+          <Link to="#policyupdates">DO WE MAKE UPDATES TO THIS NOTICE?</Link>,
+          <Link to="#contact">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</Link>,
           <Link to="#request">
             HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?
-          </Link>
-        </li>
-      </ol>
-      <h2 id="infocollect">1. WHAT INFORMATION DO WE COLLECT?</h2>
-      <h3>Personal information you disclose to us</h3>
-      <h4>In Short: We collect personal information that you provide to us.</h4>
-      <p>
-        We collect personal information that you voluntarily provide to us when
-        you&nbsp;register on the Services,&nbsp;express an interest in obtaining
-        information about us or our products and Services, when you participate
-        in activities on the Services, or otherwise when you contact us.
-      </p>
-      <p>
-        Personal Information Provided by You. The personal information that we
-        collect depends on the context of your interactions with us and the
-        Services, the choices you make, and the products and features you use.
-        The personal information we collect may include the following:
-      </p>
-      <ul>
-        <li>names</li>
-        <li>phone numbers</li>
-        <li>email addresses</li>
-        <li>mailing addresses</li>
-        <li>usernames</li>
-        <li>passwords</li>
-        <li>contact preferences</li>
-        <li>contact or authentication data</li>
-      </ul>
-      <p>Sensitive Information. We do not process sensitive information.</p>
-      <p>
-        Payment Data. We may collect data necessary to process your payment if
-        you choose to make purchases, such as your payment instrument number,
-        and the security code associated with your payment instrument. All
-        payment data is handled and stored by&nbsp;Stripe. You may find their
-        privacy notice link(s) here:
-        <Link to="https://stripe.com/en-no/privacy">
-          https://stripe.com/en-no/privacy
-        </Link>
-        .
-      </p>
-      <p>
-        Social Media Login Data. We may provide you with the option to register
-        with us using your existing social media account details, like your
-        Facebook, X, or other social media account. If you choose to register in
-        this way, we will collect certain profile information about you from the
-        social media provider, as described in the section called&nbsp;"
-        <Link to="#sociallogins">HOW DO WE HANDLE YOUR SOCIAL LOGINS?</Link>
-        "&nbsp;below.
-      </p>
-      <p>
-        All personal information that you provide to us must be true, complete,
-        and accurate, and you must notify us of any changes to such personal
-        information.
-      </p>
-      <h3>Information automatically collected</h3>
-      <h4>
-        In Short: Some information &mdash; such as your Internet Protocol (IP)
-        address and/or browser and device characteristics &mdash; is collected
-        automatically when you visit our Services.
-      </h4>
-      <p>
-        We automatically collect certain information when you visit, use, or
-        navigate the Services. This information does not reveal your specific
-        identity (like your name or contact information) but may include device
-        and usage information, such as your IP address, browser and device
-        characteristics, operating system, language preferences, referring URLs,
-        device name, country, location, information about how and when you use
-        our Services, and other technical information. This information is
-        primarily needed to maintain the security and operation of our Services,
-        and for our internal analytics and reporting purposes.
-      </p>
-      <p>
-        Like many businesses, we also collect information through cookies and
-        similar technologies.&nbsp;You can find out more about this in our
-        Cookie Notice:
-        <Link to="http://www.tomandveronika.com/legal/cookiepolicy">
-          http://www.tomandveronika.com/legal/cookiepolicy
-        </Link>
-        .
-      </p>
-      <p>The information we collect includes:</p>
-      <ul>
-        <li>
-          Log and Usage Data. Log and usage data is service-related, diagnostic,
-          usage, and performance information our servers automatically collect
-          when you access or use our Services and which we record in log files.
-          Depending on how you interact with us, this log data may include your
-          IP address, device information, browser type, and settings and
-          information about your activity in the Services&nbsp;(such as the
-          date/time stamps associated with your usage, pages and files viewed,
-          searches, and other actions you take such as which features you use),
-          device event information (such as system activity, error reports
-          (sometimes called&nbsp;"crash dumps"), and hardware settings).
-        </li>
-        <li>
-          Device Data. We collect device data such as information about your
-          computer, phone, tablet, or other device you use to access the
-          Services. Depending on the device used, this device data may include
-          information such as your IP address (or proxy server), device and
-          application identification numbers, location, browser type, hardware
-          model, Internet service provider and/or mobile carrier, operating
-          system, and system configuration information.
-        </li>
-        <li>
-          Location Data. We collect location data such as information about your
-          device's location, which can be either precise or imprecise. How much
-          information we collect depends on the type and settings of the device
-          you use to access the Services. For example, we may use GPS and other
-          technologies to collect geolocation data that tells us your current
-          location (based on your IP address). You can opt out of allowing us to
-          collect this information either by refusing access to the information
-          or by disabling your Location setting on your device. However, if you
-          choose to opt out, you may not be able to use certain aspects of the
-          Services.
-        </li>
-      </ul>
+          </Link>,
+        ]}
+      />
+      <Section
+        id="infocollect"
+        title="1. WHAT INFORMATION DO WE COLLECT?"
+        subtitle="In Short: We collect personal information that you provide to us."
+      >
+        <Paragraphs
+          items={[
+            <>
+              {" "}
+              We collect personal information that you voluntarily provide to us
+              when you&nbsp;register on the Services,&nbsp;express an interest
+              in obtaining information about us or our products and Services,
+              when you participate in activities on the Services, or otherwise
+              when you contact us.
+            </>,
+            <>
+              Personal Information Provided by You. The personal information
+              that we collect depends on the context of your interactions with
+              us and the Services, the choices you make, and the products and
+              features you use. The personal information we collect may include
+              the following:
+            </>,
+            <>
+              {" "}
+              <ItemList
+                items={[
+                  "Names",
+                  "phone numbers",
+                  "email addresses",
+                  "mailing addresses",
+                  "usernames",
+                  "passwords",
+                  "contact preferences",
+                  "contact or authentication data",
+                ]}
+              />
+            </>,
+            <>
+              Sensitive Information. We do not process sensitive information.
+            </>,
+            <>
+              Payment Data. We may collect data necessary to process your
+              payment if you choose to make purchases, such as your payment
+              instrument number, and the security code associated with your
+              payment instrument. All payment data is handled and stored
+              by&nbsp;Stripe. You may find their privacy notice link(s) here:
+              <Link to="https://stripe.com/en-no/privacy">
+                https://stripe.com/en-no/privacy.
+              </Link>
+            </>,
+            <>
+              Social Media Login Data. We may provide you with the option to
+              register with us using your existing social media account details,
+              like your Facebook, X, or other social media account. If you
+              choose to register in this way, we will collect certain profile
+              information about you from the social media provider, as described
+              in the section called&nbsp;"
+              <Link to="#sociallogins">
+                HOW DO WE HANDLE YOUR SOCIAL LOGINS?
+              </Link>
+              "&nbsp;below.
+            </>,
+            <>
+              All personal information that you provide to us must be true,
+              complete, and accurate, and you must notify us of any changes to
+              such personal information.
+            </>,
+          ]}
+        />
+        <h3>Information automatically collected</h3>
+        <h4>
+          In Short: Some information &mdash; such as your Internet Protocol (IP)
+          address and/or browser and device characteristics &mdash; is collected
+          automatically when you visit our Services.
+        </h4>
+        <Paragraphs
+          items={[
+            <>
+              We automatically collect certain information when you visit, use,
+              or navigate the Services. This information does not reveal your
+              specific identity (like your name or contact information) but may
+              include device and usage information, such as your IP address,
+              browser and device characteristics, operating system, language
+              preferences, referring URLs, device name, country, location,
+              information about how and when you use our Services, and other
+              technical information. This information is primarily needed to
+              maintain the security and operation of our Services, and for our
+              internal analytics and reporting purposes.
+            </>,
+            <>
+              Like many businesses, we also collect information through cookies
+              and similar technologies.&nbsp;You can find out more about this in
+              our Cookie Notice:
+              <Link to="http://www.tomandveronika.com/legal/cookiepolicy">
+                http://www.tomandveronika.com/legal/cookiepolicy
+              </Link>
+              .
+            </>,
+            <>The information we collect includes:</>,
+            <>
+              <ItemList
+                items={[
+                  <>
+                    Log and Usage Data. Log and usage data is service-related,
+                    diagnostic, usage, and performance information our servers
+                    automatically collect when you access or use our Services
+                    and which we record in log files. Depending on how you
+                    interact with us, this log data may include your IP address,
+                    device information, browser type, and settings and
+                    information about your activity in the Services&nbsp;(such
+                    as the date/time stamps associated with your usage, pages
+                    and files viewed, searches, and other actions you take such
+                    as which features you use), device event information (such
+                    as system activity, error reports (sometimes
+                    called&nbsp;"crash dumps"), and hardware settings).
+                  </>,
+                  <>
+                    Device Data. We collect device data such as information
+                    about your computer, phone, tablet, or other device you use
+                    to access the Services. Depending on the device used, this
+                    device data may include information such as your IP address
+                    (or proxy server), device and application identification
+                    numbers, location, browser type, hardware model, Internet
+                    service provider and/or mobile carrier, operating system,
+                    and system configuration information.
+                  </>,
+                  <>
+                    Location Data. We collect location data such as information
+                    about your device's location, which can be either precise or
+                    imprecise. How much information we collect depends on the
+                    type and settings of the device you use to access the
+                    Services. For example, we may use GPS and other technologies
+                    to collect geolocation data that tells us your current
+                    location (based on your IP address). You can opt out of
+                    allowing us to collect this information either by refusing
+                    access to the information or by disabling your Location
+                    setting on your device. However, if you choose to opt out,
+                    you may not be able to use certain aspects of the Services.
+                  </>,
+                ]}
+              />
+            </>,
+          ]}
+        />
+      </Section>
       <h2 id="infouse">2. HOW DO WE PROCESS YOUR INFORMATION?</h2>
       <h4>
         In Short: We process your information to provide, improve, and
@@ -300,46 +313,32 @@ const privacy4 = () => {
         We process your personal information for a variety of reasons, depending
         on how you interact with our Services, including:
       </p>
-      <ul>
-        <li>
-          <p>
+      <ItemList
+        items={[
+          <>
             To facilitate account creation and authentication and otherwise
             manage user accounts. We may process your information so you can
             create and log in to your account, as well as keep your account in
             working order.
-          </p>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <p>
+          </>,
+          <>
             To respond to user inquiries/offer support to users. We may process
             your information to respond to your inquiries and solve any
             potential issues you might have with the requested service.
-          </p>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <p>
+          </>,
+          <>
             To send administrative information to you. We may process your
             information to send you details about our products and services,
             changes to our terms and policies, and other similar information.
-          </p>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <p>
+          </>,
+          <>
+            {" "}
             To request feedback. We may process your information when necessary
             to request feedback and to contact you about your use of our
             Services.
-          </p>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <p>
+          </>,
+          <>
+            {" "}
             To send you marketing and promotional communications. We may process
             the personal information you send to us for our marketing purposes,
             if this is in accordance with your marketing preferences. You can
@@ -347,57 +346,41 @@ const privacy4 = () => {
             see&nbsp;"
             <Link to="#privacyrights">WHAT ARE YOUR PRIVACY RIGHTS?</Link>
             "&nbsp;below.
-          </p>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <p>
+          </>,
+          <>
+            {" "}
             To deliver targeted advertising to you. We may process your
             information to develop and display&nbsp;personalized&nbsp;content
             and advertising tailored to your interests, location, and
             more.&nbsp;For more information see our Cookie Notice:
             <Link to="http://www.tomandveronika.com/legal/cookiepolicy">
               http://www.tomandveronika.com/legal/cookiepolicy.
-            </Link>
-          </p>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <p>
+            </Link>{" "}
+          </>,
+          <>
+            {" "}
             To protect our Services. We may process your information as part of
             our efforts to keep our Services safe and secure, including fraud
             monitoring and prevention.
-          </p>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <p>
+          </>,
+          <>
             To identify usage trends. We may process information about how you
             use our Services to better understand how they are being used so we
             can improve them.
-          </p>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <p>
+          </>,
+          <>
             To determine the effectiveness of our marketing and promotional
             campaigns. We may process your information to better understand how
             to provide marketing and promotional campaigns that are most
             relevant to you.
-          </p>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          To save or protect an individual's vital interest. We may process your
-          information when necessary to save or protect an individual&rsquo;s
-          vital interest, such as to prevent harm.
-        </li>
-      </ul>
+          </>,
+          <>
+            To save or protect an individual's vital interest. We may process
+            your information when necessary to save or protect an
+            individual&rsquo;s vital interest, such as to prevent harm.
+          </>,
+        ]}
+      />
       <h2 id="legalbases">
         3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?
       </h2>
@@ -865,7 +848,7 @@ const privacy4 = () => {
         review, update, or delete your personal information,
         please&nbsp;visit:&nbsp;tomelbin.bendheim@gmail.com.
       </p>
-    </>
+    </div>
   );
 };
 
