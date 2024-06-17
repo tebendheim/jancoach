@@ -10,9 +10,16 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ id, title, subtitle, children }) => {
   return (
-    <div>
-      <h2 id={id}>{title}</h2>
-      <h4>{subtitle}</h4>
+    <div className="mt-4">
+      <h2 className="font-extrabold" id={id}>
+        {title}
+      </h2>
+      <div className="h-1  rounded-lg bg-section-beige "></div>
+      <div className="h-6   bg-none "></div>
+
+      <h4 className="">{subtitle}</h4>
+      <div className="h-6   bg-none "></div>
+
       {children}
     </div>
   );
