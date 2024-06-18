@@ -35,8 +35,12 @@ const Section: React.FC<SectionProps> = ({
         </>
       )}
 
-      {subtitle && <h4 className="">{subtitle}</h4>}
-      <div className="h-6   bg-none "></div>
+      {subtitle && (
+        <>
+          <h4 className="">{subtitle}</h4>
+          <div className="h-6   bg-none "></div>
+        </>
+      )}
 
       {children}
     </div>

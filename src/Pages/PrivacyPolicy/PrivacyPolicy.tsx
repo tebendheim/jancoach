@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
         bgColor="bg-new-dark-green sm:bg-new-dark-green/90 text-white dark:bg-nav-dark"
         logoColor="bg-skog"
       />
-      <div className="my-24 bg-white">
+      <div className="mt-20 bg-white">
         <PrivacyText />
       </div>
     </section>

@@ -12,7 +12,7 @@
     font-weight: bolder;
   }
   .c h2 {
-    margin:30px 0px 10px 0px;
+    margin:10px 0px 10px 0px;
     font-weight: bold;
   }
   .c h3{
@@ -31,7 +31,7 @@
   }
 
   .c * p{
-    margin:20px 0px 20px 0px;
+    margin:0px 0px 20px 0px;
   }
 
   .c li {
@@ -47,4 +47,11 @@
 
   .c a{
     color:blue;
+  }
+
+  @media (max-width:640px){
+    .c{
+        margin-left: 2rem;
+    margin-right: 2rem;
+    }
   }
