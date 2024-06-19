@@ -27,13 +27,13 @@ const Kontakt: React.FC = () => {
   const [agreed, setAgreed] = React.useState(false);
 
   return (
-    <section className="row-start-2 col-start-1 col-span-full">
+    <section className="">
       <Navbar
         bgColor="bg-new-dark-green sm:bg-new-dark-green/90 text-white dark:bg-nav-dark"
         logoColor="bg-skog"
       />
 
-      <div className="z-0 bg-light-beige px-6 py-24 sm:py-32 lg:px-8 dark:bg-section-beige">
+      <div className="z-0 bg-light-beige px-6 mt-20 sm:py-14 lg:px-8 dark:bg-section-beige">
         <div
           className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
           aria-hidden="true"

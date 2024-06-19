@@ -170,7 +170,10 @@ const ContactFormDetails = () => {
           className="text-sm leading-6 text-white"
         >
           By selecting this, you agree to our{" "}
-          <Link to="/legal/privacy" className="font-semibold text-indigo-200">
+          <Link
+            to="/legal/privacypolicy"
+            className="font-semibold text-indigo-200"
+          >
             privacy&nbsp;policy
           </Link>
         </label>

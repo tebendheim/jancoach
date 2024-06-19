@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navbar from "../../Components/Navbar";
-import PrivacyText from "./Components/Legal/PrivacyText";
+import CookiePolicyText from "./Components/Legal/CookiePolicyText";
 
-const PrivacyPolicy = () => {
+const CookiePolicy = () => {
   return (
     <section>
       <Navbar
         bgColor="bg-new-dark-green sm:bg-new-dark-green/90 text-white dark:bg-nav-dark"
         logoColor="bg-skog"
       />
-      <div className="mt-20 bg-white ">
-        <PrivacyText />
+      <div className="mt-20 bg-white">
+        <CookiePolicyText />
       </div>
     </section>
   );
 };
 
-export default PrivacyPolicy;
+export default CookiePolicy;

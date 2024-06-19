@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { Children, ReactNode } from "react";
 
 interface props {
   myButton: ReactNode;
@@ -6,6 +6,9 @@ interface props {
   darkBgColor: string;
   flexDirection: string;
   image: string;
+  h1: string;
+  h2: string;
+  children: React.ReactNode;
 }
 
 const HomeComponents: React.FC<props> = ({
@@ -14,27 +17,18 @@ const HomeComponents: React.FC<props> = ({
   myButton,
   image,
   darkBgColor,
+  h1,
+  h2,
+  children,
 }) => {
   return (
     <section
       className={`flex ${flexDirection} justify-around px-20 py-10 gap-20 w-full ${bgColor}`}
     >
       <div className="w-full md:w-5/12">
-        <h1 className="text-3xl font-extrabold text-white">Lorem Ipsum</h1>
-        <h2 className="text-xl font-semibold text-white">
-          What is Lorem Ipsum?
-        </h2>
-        <p className="text-white text-md mb-10">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
+        <h1 className="text-3xl font-extrabold text-white">{h1}</h1>
+        <h2 className="text-xl font-semibold text-white">{h2}</h2>
+        <p className="text-white text-md mb-10">{children}</p>
 
         {myButton}
       </div>
