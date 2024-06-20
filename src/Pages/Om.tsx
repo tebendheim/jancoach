@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import image from "../Bilder/JanPaaVannet.jpg";
+import MyButton from "../Components/MyButton";
 
 const Om = () => {
   return (
@@ -11,8 +12,8 @@ const Om = () => {
           logoColor="bg-skog"
         />
       </section>
-      <div className="dark:bg-section-beige bg-light-beige py-10 px-20">
-        <h1 className="mb-10 font-extrabold text-3xl">Om meg</h1>
+      <div className="dark:bg-section-beige bg-light-beige py-10 px-20 flex flex-col ">
+        <h1 className="mb-10 font-extrabold text-3xl self-center">Om meg</h1>
         <div className="flex flex-col-reverse gap-10 lg:flex-row ">
           <ul className="list-disc w-7/12 ">
             <li>
@@ -69,12 +70,18 @@ const Om = () => {
               <h2>Rådgivning</h2>
             </li>
           </ul>
-          <div className="">
+          <div className="flex flex-col">
             <div
               className={`w-full aspect-[3/3] rounded-3xl xl:w-150 lg:w-120 
                 bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
               style={{ backgroundImage: `url(${image})` }}
             ></div>
+            <MyButton
+              className="w-fit mt-10 inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
+              buttonText="Gratis veiledningstime"
+              to="/kontakt"
+              textColor="text-white"
+            />
           </div>
         </div>
       </div>
