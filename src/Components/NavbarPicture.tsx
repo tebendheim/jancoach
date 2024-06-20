@@ -38,7 +38,7 @@ const NavbarPicture: React.FC<BildeProps> = ({
           className=" mt-24 max-h- w-auto object-contain overflow-auto"
           src={imgUrl}
         />
-        <div className=" mt-auto mb-0">
+        <div className=" mt-auto mb-2">
           <TekstKomponent />
         </div>
       </div>

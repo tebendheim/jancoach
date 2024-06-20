@@ -23,7 +23,7 @@ function Home(): JSX.Element {
 
   return (
     <section className="bg-light-beige">
-      <div className="relative h-screen pb-10 bg-light-beige dark:bg-section-beige">
+      <div className="relative bg-light-beige dark:bg-section-beige pb-10">
         <NavbarPicture
           imgUrl={logo}
           componentHeight={"full"}
@@ -40,7 +40,8 @@ function Home(): JSX.Element {
       <HomeComponents
         bgColor="bg-skog dark:bg-section-green"
         darkBgColor="bg-section-green "
-        flexDirection="flex-col md:flex-row"
+        section="flex-col md:flex-row py-10"
+        wrapper="mt-10"
         myButton={
           <MyButton
             className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
@@ -49,24 +50,15 @@ function Home(): JSX.Element {
             textColor="text-white"
           />
         }
-        h1={"Dette er hovedoverskriften"}
-        h2={"dette er sekundæroverskrift"}
+        h1={"Våre tjenester"}
+        // h2={"dette er sekundæroverskrift"}
         children={
-          <>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-            voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-            fugiat iusto fuga praesentium optio, eaque rerum! Provident
-            similique accusantium nemo autem. Veritatis obcaecati tenetur iure
-            eius earum ut molestias architecto voluptate aliquam nihil, eveniet
-            aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur
-            error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-            quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias
-            eos sapiente officiis modi at sunt excepturi expedita sint? Sed
-            quibusdam recusandae alias error harum maxime adipisci amet laborum.
-            Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates
-            a cumque velit{" "}
-          </>
+          <ul className="flex flex-col list-disc mt-4 gap-5 ml-10">
+            <li>Coaching</li>
+            <li>Lederutvikling</li>
+            <li>Foreldreutvikling</li>
+            <li>Rådgivning</li>
+          </ul>
         }
         image={JanPaaFjellet}
       />
@@ -74,7 +66,8 @@ function Home(): JSX.Element {
       <HomeComponents
         bgColor="bg-light-beige dark:bg-section-beige"
         darkBgColor=""
-        flexDirection="flex-col md:flex-row-reverse"
+        section="flex-col md:flex-row-reverse"
+        wrapper="pt-94"
         myButton={
           <MyButton
             className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
@@ -108,7 +101,7 @@ function Home(): JSX.Element {
       <HomeComponents
         bgColor="bg-skog dark:bg-section-green"
         darkBgColor=""
-        flexDirection="flex-col md:flex-row"
+        section="flex-col md:flex-row"
         myButton={
           <MyButton
             className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
@@ -142,7 +135,7 @@ function Home(): JSX.Element {
       <HomeComponents
         bgColor="bg-light-beige dark:bg-section-beige"
         darkBgColor=""
-        flexDirection="flex-col md:flex-row-reverse"
+        section="flex-col md:flex-row-reverse"
         myButton={
           <MyButton
             className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"

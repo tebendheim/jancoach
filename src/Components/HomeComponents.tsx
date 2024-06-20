@@ -4,30 +4,32 @@ interface props {
   myButton: ReactNode;
   bgColor: string;
   darkBgColor: string;
-  flexDirection: string;
+  section: string;
+  wrapper?: string;
   image: string;
-  h1: string;
-  h2: string;
+  h1?: string;
+  h2?: string;
   children: React.ReactNode;
 }
 
 const HomeComponents: React.FC<props> = ({
   bgColor,
-  flexDirection,
+  section,
   myButton,
   image,
   darkBgColor,
+  wrapper,
   h1,
   h2,
   children,
 }) => {
   return (
     <section
-      className={`flex ${flexDirection} justify-around px-20 py-10 gap-20 w-full ${bgColor}`}
+      className={`flex ${section} justify-around px-20 py-10 gap-20 w-full ${bgColor}`}
     >
-      <div className="w-full md:w-5/12">
-        <h1 className="text-3xl font-extrabold text-white">{h1}</h1>
-        <h2 className="text-xl font-semibold text-white">{h2}</h2>
+      <div className={`w-full md:w-5/12 ${wrapper}`}>
+        {h1 && <h1 className="text-3xl font-extrabold text-white">{h1}</h1>}
+        {h2 && <h2 className="text-xl font-semibold text-white">{h2}</h2>}
         <p className="text-white text-md mb-10">{children}</p>
 
         {myButton}
