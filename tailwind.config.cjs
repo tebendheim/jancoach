@@ -10,19 +10,19 @@ module.exports = {
         "dark-green": "#31473A",
         "light-grey": "#EDF4F2",
         "terracotta-red": "#B85042",
-        "light-beige": "#E7E8D1",
+        "light-beige": "#E7E8D1", //denne er i bruk
         "muted-teal": "#A7BEAE",
         "less-muted-teal": "#9bb09d",
         "new-dark-green": "#254336",
-        skog: "#6B8A7A",
+        skog: "#6B8A7A", //denne er i bruk
         spygroenn: "#B7B597",
         sofa: "#DAD3BE",
         // "nav-dark": "#0E1C16",
         // "section-beige": "#737369",
         // "section-green": "#2A3D34",
         "nav-dark": "#182C25",
-        "section-beige": "#455B55",
-        "section-green": "#182C25",
+        "section-beige": "#455B55", //denne er i bruk (darkMode)
+        "section-green": "#182C25", //denne er i bruk (darkMode)
       },
       gridAutoRows: {
         3: "auto 1fr auto auto / auto 1fr",
