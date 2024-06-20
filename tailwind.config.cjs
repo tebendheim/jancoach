@@ -49,7 +49,13 @@ module.exports = {
       margin: {
         m22: "25px",
       },
+      aspectRatio: {
+        "4/3": "4 / 3",
+      },
+      width: {
+        150: "38rem",
+        120: "30rem",
+      },
     },
   },
-  plugins: [],
 };
