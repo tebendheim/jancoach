@@ -41,24 +41,27 @@ function Home(): JSX.Element {
         bgColor="bg-skog dark:bg-section-green"
         darkBgColor="bg-section-green "
         section="flex-col md:flex-row py-10"
-        wrapper="mt-10"
+        wrapper=""
         myButton={
           <MyButton
-            className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
-            buttonText="Gratis veiledningstime"
+            className="w-fit items-center inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
+            buttonText="Book veiledningstime"
             to="/kontakt"
             textColor="text-white"
           />
         }
-        h1={"Våre tjenester"}
-        // h2={"dette er sekundæroverskrift"}
+        h1={"Mine tjenester"}
+        // h2={`Noen av tingene jeg kan hjelpe deg med er:`}
         children={
-          <ul className="flex flex-col list-disc mt-4 gap-5 ml-10">
-            <li>Coaching</li>
-            <li>Lederutvikling</li>
-            <li>Foreldreutvikling</li>
-            <li>Rådgivning</li>
-          </ul>
+          <>
+            <ul className="flex flex-col list-disc mt-4 gap-5 ml-10">
+              <li>Coaching</li>
+              <li>Lederutvikling</li>
+              <li>Foreldreutvikling</li>
+              <li>Rådgivning</li>
+            </ul>
+            <p></p>
+          </>
         }
         image={JanPaaFjellet}
       />
@@ -67,7 +70,7 @@ function Home(): JSX.Element {
         bgColor="bg-light-beige dark:bg-section-beige"
         darkBgColor=""
         section="flex-col md:flex-row-reverse"
-        wrapper="pt-94"
+        wrapper=""
         myButton={
           <MyButton
             className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
