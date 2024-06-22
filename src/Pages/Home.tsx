@@ -40,7 +40,7 @@ function Home(): JSX.Element {
       <HomeComponents
         bgColor="bg-skog dark:bg-section-green"
         darkBgColor="bg-section-green "
-        section="flex-col md:flex-row py-10"
+        section="flex-col items-center md:justify-center md:flex-row py-10"
         wrapper=""
         myButton={
           <MyButton

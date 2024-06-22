@@ -56,6 +56,22 @@ module.exports = {
         150: "38rem",
         120: "30rem",
       },
+      backgroundPosition: {
+        "top-10": "top 10%",
+        "bottom-10": "bottom 10%",
+        "left-10": "left 10%",
+        "right-10": "right 10%",
+        "test-left": "0% 60%",
+        "left-center": "left center",
+      },
+      backgroundSize: {
+        "180-percent": "180%",
+        "150-percent": "150%",
+        "120-percent": "120%",
+      },
+      inset: {
+        "-2": "-10px",
+      },
     },
   },
 };

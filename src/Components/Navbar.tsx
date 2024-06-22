@@ -83,6 +83,11 @@ const Navbar: React.FC<props> = ({ bgColor, logoColor }) => {
                 )}
               </button>
             </li>
+            <li>
+              <Link to={"/"} className="text-xl" aria-current="page">
+                Hjem
+              </Link>
+            </li>
             <li className="">
               <Link to="/kontakt" className="text-xl" aria-current="page">
                 Kontakt
