@@ -12,8 +12,8 @@ const Tjenester = () => {
           logoColor="bg-skog"
         />
       </section>
-      <div className="dark:bg-section-beige bg-light-beige py-10 px-6 flex flex-col-reverse gap-10 ">
-        <div className="relative h-36 sm:h-56 md:h-96 w-full px-0  overflow-hidden">
+      <div className="dark:bg-section-beige bg-light-beige py-10 px-6 flex flex-col gap-10 ">
+        <div className="relative h-36 sm:h-56 md:h-86 w-full px-0  overflow-hidden">
           <div
             className="bg-left-center bg-120-percent md:bg-110-percent bg-no-repeat rounded-3xl h-full w-full"
             style={{
@@ -22,9 +22,11 @@ const Tjenester = () => {
           ></div>
         </div>
         <div className=" flex flex-col gap-10 ">
-          <h1 className="mb-10 font-extrabold text-3xl">
-            Hva kan jeg hjelpe deg med?
-          </h1>
+          <div className="relative h-fit">
+            <h1 className="absolute top-0 transform -translate-y-full text-white bg-section-green rounded-xl sm:p-4  xs:-top-2 sm:left-4  font-extrabold text-l">
+              HVA KAN JEG HJELPE DEG MED?
+            </h1>
+          </div>
           <ul className="list-disc ml-4">
             <li>
               <h2>Coaching</h2>

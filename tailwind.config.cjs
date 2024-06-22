@@ -72,6 +72,9 @@ module.exports = {
       inset: {
         "-2": "-10px",
       },
+      screens: {
+        xs: "330px", // Example custom breakpoint
+      },
     },
   },
 };
