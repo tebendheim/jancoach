@@ -15,7 +15,7 @@ const Tjenester = () => {
       <div className="dark:bg-section-beige bg-light-beige py-10 px-6 flex flex-col gap-10 ">
         <div className="relative h-36 sm:h-56 md:h-86 w-full px-0  overflow-hidden">
           <div
-            className="bg-left-center bg-120-percent md:bg-110-percent bg-no-repeat rounded-3xl h-full w-full"
+            className="bg-left-center bg-120-percent md:bg-110-percent bg-no-repeat rounded-md md:rounded-3xl h-full w-full"
             style={{
               backgroundImage: `url(${image})`,
             }}
@@ -23,7 +23,7 @@ const Tjenester = () => {
         </div>
         <div className=" flex flex-col gap-10 ">
           <div className="relative h-fit">
-            <h1 className="absolute top-0 transform -translate-y-full text-white bg-section-green rounded-xl sm:p-4  xs:-top-2 sm:left-4  font-extrabold text-l">
+            <h1 className="absolute -top-3 p-2 xs:-top-3 sm:left-0 w-full xs:w-auto transform -translate-y-full text-white bg-new-dark-green dark:bg-section-green rounded-md  font-extrabold text-md xs:text-xl md:text-3xl">
               HVA KAN JEG HJELPE DEG MED?
             </h1>
           </div>

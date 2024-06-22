@@ -73,7 +73,7 @@ module.exports = {
         "-2": "-10px",
       },
       screens: {
-        xs: "330px", // Example custom breakpoint
+        xs: "450px", // Example custom breakpoint
       },
     },
   },
