@@ -9,6 +9,8 @@ import NavbarPicture from "../../Components/NavbarPicture";
 import HomeComponents from "./HomeComponents";
 import ServicesList from "../Tjenester/ServiceList";
 import Om from "../Om/Om";
+import FullContactForm from "../Kontakt/FormComponents/FullContactForm";
+import Veiledningstime from "./Veiledningstime";
 
 function Home(): JSX.Element {
   // h-full w-full relative -top-24 left-0
@@ -42,7 +44,7 @@ function Home(): JSX.Element {
       <HomeComponents
         bgColor="bg-skog dark:bg-section-green"
         darkBgColor="bg-section-green "
-        section="flex-col items-center md:justify-center lg:flex-row py-10"
+        section="flex-row items-center md:justify-center lg:flex-row py-10"
         wrapper=""
         myButton={
           <MyButton
@@ -52,15 +54,20 @@ function Home(): JSX.Element {
             textColor="text-white"
           />
         }
-        h1={"Mine tjenester"}
         // h2={`Noen av tingene jeg kan hjelpe deg med er:`}
         children={
           <>
+            <div className="relative h-fit">
+              <h1 className="relative p-2  sm:left-0 w-full xs:w-auto mb-10 text-white bg-new-dark-green dark:bg-section-green rounded-md  font-extrabold text-md xs:text-xl md:text-3xl">
+                HVA KAN JEG HJELPE DEG MED?
+              </h1>
+            </div>
             <ServicesList gridCols="grid-cols-1 lg:grid-cols-2" />
           </>
         }
         image={JanPaaFjellet}
       />
+      <Veiledningstime />
 
       <HomeComponents
         bgColor="bg-light-beige dark:bg-section-beige"
@@ -75,8 +82,6 @@ function Home(): JSX.Element {
             textColor="text-white"
           />
         }
-        h1={""}
-        h2={""}
         children={
           <>
             <div className=" flex flex-col gap-10 ">
@@ -86,8 +91,8 @@ function Home(): JSX.Element {
                 </h1>
               </div>
               <div className="flex flex-col-reverse md:flex-row items-center gap-10">
-                <div className="w-full md:w-2/3 text-2xl">
-                  <p className="mb-4">
+                <div className="w-full md:w-2/3 text-2xl text-black">
+                  <p className="mb-4 ">
                     <span className="font-bold">Jan Bendheim</span> har vært
                     yrkesoffiser i nærmere 40 år, med lederstillinger opp til
                     høyt mellomledernivå. Han har lang erfaring som tillitsvalgt
@@ -111,72 +116,11 @@ function Home(): JSX.Element {
         image={JanPaaFjellet}
       />
 
-      <HomeComponents
-        bgColor="bg-skog dark:bg-section-green"
-        darkBgColor=""
-        section="flex-col md:flex-row"
-        myButton={
-          <MyButton
-            className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
-            buttonText="Gratis veiledningstime"
-            to="/kontakt"
-            textColor="text-white"
-          />
-        }
-        h1={""}
-        h2={""}
-        children={
-          <>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-            voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-            fugiat iusto fuga praesentium optio, eaque rerum! Provident
-            similique accusantium nemo autem. Veritatis obcaecati tenetur iure
-            eius earum ut molestias architecto voluptate aliquam nihil, eveniet
-            aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur
-            error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-            quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias
-            eos sapiente officiis modi at sunt excepturi expedita sint? Sed
-            quibusdam recusandae alias error harum maxime adipisci amet laborum.
-            Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates
-            a cumque velit{" "}
-          </>
-        }
-        image={JanPaaFjellet}
-      />
-
-      <HomeComponents
-        bgColor="bg-light-beige dark:bg-section-beige"
-        darkBgColor=""
-        section="flex-col md:flex-row-reverse"
-        myButton={
-          <MyButton
-            className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
-            buttonText="Gratis veiledningstime"
-            to="/kontakt"
-            textColor="text-black"
-          />
-        }
-        h1={""}
-        h2={""}
-        children={
-          <>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-            voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-            fugiat iusto fuga praesentium optio, eaque rerum! Provident
-            similique accusantium nemo autem. Veritatis obcaecati tenetur iure
-            eius earum ut molestias architecto voluptate aliquam nihil, eveniet
-            aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur
-            error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-            quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias
-            eos sapiente officiis modi at sunt excepturi expedita sint? Sed
-            quibusdam recusandae alias error harum maxime adipisci amet laborum.
-            Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates
-            a cumque velit{" "}
-          </>
-        }
-        image={JanPaaFjellet}
+      <FullContactForm
+        className="z-0 bg-new-dark-green dark:bg-section-green px-6 py-6 sm:py-14 lg:px-8"
+        textColor="text-white"
+        bgInputs="bg-light-beige text-black dark:bg-section-beige dark:text-white"
+        textPrivacy="text-indigo-200"
       />
     </section>
   );
