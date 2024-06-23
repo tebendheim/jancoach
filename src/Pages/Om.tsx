@@ -1,7 +1,7 @@
+import { ShieldExclamationIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import Navbar from "../Components/Navbar";
-import image from "../Bilder/JanPaaVannet.jpg";
-import MyButton from "../Components/MyButton";
+import image from "../Bilder/Molo.jpg";
 
 const Om = () => {
   return (
@@ -12,10 +12,22 @@ const Om = () => {
           logoColor="bg-skog"
         />
       </section>
-      <div className="dark:bg-section-beige bg-light-beige py-10 px-20 flex flex-col ">
-        <h1 className="mb-10 font-extrabold text-3xl self-center">Om meg</h1>
-        <div className="flex flex-col-reverse gap-10 lg:flex-row ">
-          <ul className="list-disc w-7/12 ">
+      <div className="dark:bg-section-beige bg-light-beige py-10 px-6 flex flex-col gap-10 ">
+        <div className="relative h-36 sm:h-56 md:h-86 w-full px-0  overflow-hidden">
+          <div
+            className="bg-left-center bg-120-percent md:bg-110-percent bg-no-repeat rounded-md md:rounded-3xl h-full w-full"
+            style={{
+              backgroundImage: `url(${image})`,
+            }}
+          ></div>
+        </div>
+        <div className=" flex flex-col gap-10 ">
+          <div className="relative h-fit">
+            <h1 className="absolute -top-3 p-2 xs:-top-3 sm:left-0 w-full xs:w-auto transform -translate-y-full text-white bg-new-dark-green dark:bg-section-green rounded-md  font-extrabold text-md xs:text-xl md:text-3xl">
+              OM MEG
+            </h1>
+          </div>
+          <ul className="list-disc ml-4">
             <li>
               <h2>Coaching</h2>
               <p>
@@ -70,19 +82,6 @@ const Om = () => {
               <h2>Rådgivning</h2>
             </li>
           </ul>
-          <div className="flex flex-col">
-            <div
-              className={`w-full aspect-[3/3] rounded-3xl xl:w-150 lg:w-120 
-                bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
-              style={{ backgroundImage: `url(${image})` }}
-            ></div>
-            <MyButton
-              className="w-fit mt-10 inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
-              buttonText="Gratis veiledningstime"
-              to="/kontakt"
-              textColor="text-white"
-            />
-          </div>
         </div>
       </div>
     </div>

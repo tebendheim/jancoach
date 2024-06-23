@@ -9,6 +9,7 @@ interface InputProps {
   type: string;
   state: any;
   width: number | string;
+  textColor: string;
 }
 
 const InputComponent: React.FC<InputProps> = ({
@@ -18,13 +19,14 @@ const InputComponent: React.FC<InputProps> = ({
   state,
   width,
   label,
+  textColor,
 }) => {
   //   const [state, handleSubmit] = useForm(formCode);
   return (
     <div className="mb-2.5">
       <label
         htmlFor={name}
-        className="block text-sm font-semibold leading-6 text-gray-900"
+        className={`block text-sm font-semibold leading-6 ${textColor}`}
       >
         {label}
       </label>

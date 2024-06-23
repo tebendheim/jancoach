@@ -1,16 +1,18 @@
 import React, { FormEvent, FormEventHandler, useState } from "react";
 import { Navigate, Link } from "react-router-dom";
 import { useForm, ValidationError } from "@formspree/react";
-import InputComponent from "./FormComponents/InputComponent";
+import InputComponent from "./InputComponent";
 import ReCAPTCHA, {
   useGoogleReCaptcha,
   GoogleReCaptchaProvider,
   GoogleReCaptcha,
 } from "react-google-recaptcha-v3";
 
-// import dotenv, { config } from "dotenv";
+interface DetailsProps {
+  textColor: string;
+}
 
-const ContactFormDetails = () => {
+const ContactFormDetails: React.FC<DetailsProps> = ({ textColor }) => {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const formCode = import.meta.env.VITE_FORM_CODE || "";
   const siteKey = import.meta.env.VITE_CAPTCHA_SITE_KEY || "";
@@ -61,6 +63,7 @@ const ContactFormDetails = () => {
             label="Fornavn"
             formCode={formCode}
             state={state}
+            textColor={textColor}
           />
         </div>
         <div className="flex-grow-0 basis-5/12">
@@ -71,6 +74,7 @@ const ContactFormDetails = () => {
             label="Etternavn"
             formCode={formCode}
             state={state}
+            textColor={textColor}
           />
         </div>
       </div>
@@ -82,12 +86,13 @@ const ContactFormDetails = () => {
         label="email"
         formCode={formCode}
         state={state}
+        textColor={textColor}
       />
 
       <div className="flex flex-col w-full">
         <label
           htmlFor="phone-number"
-          className="text-sm font-semibold leading-6 text-gray-900"
+          className={`text-sm font-semibold leading-6 ${textColor}`}
         >
           Telefonnummer
         </label>
@@ -128,11 +133,12 @@ const ContactFormDetails = () => {
         label="Firma"
         formCode={formCode}
         state={state}
+        textColor={textColor}
       />
 
       <label
         htmlFor="message"
-        className="block text-sm font-semibold leading-6 text-gray-900"
+        className={`block text-sm font-semibold leading-6 ${textColor}`}
       >
         Message
       </label>
@@ -150,8 +156,6 @@ const ContactFormDetails = () => {
         />
       </div>
 
-      {/* <PrivacySwitch state={state} /> */}
-
       <div className="flex items-center gap-4 sm:col-span-2">
         <input
           type="checkbox"
@@ -167,12 +171,12 @@ const ContactFormDetails = () => {
         />
         <label
           htmlFor="privacy consent"
-          className="text-sm leading-6 text-white"
+          className={`text-sm leading-6 ${textColor}`}
         >
           By selecting this, you agree to our{" "}
           <Link
             to="/legal/privacypolicy"
-            className="font-semibold text-indigo-200"
+            className="font-semibold text-indigo-900 dark:text-indigo-50"
           >
             privacy&nbsp;policy
           </Link>
@@ -201,11 +205,11 @@ const ContactFormDetails = () => {
   );
 };
 
-const ContactForm = () => {
+const ContactForm: React.FC<DetailsProps> = ({ textColor }) => {
   const siteKey = import.meta.env.VITE_CAPTCHA_SITE_KEY || "";
   return (
     <GoogleReCaptchaProvider reCaptchaKey={siteKey}>
-      <ContactFormDetails />
+      <ContactFormDetails textColor={textColor} />
     </GoogleReCaptchaProvider>
   );
 };

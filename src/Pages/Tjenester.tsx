@@ -2,6 +2,7 @@ import { ShieldExclamationIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import Navbar from "../Components/Navbar";
 import image from "../Bilder/GammelBaat.jpg";
+import FullContactForm from "../Components/FormComponents/FullContactForm";
 
 const Tjenester = () => {
   return (
@@ -84,6 +85,10 @@ const Tjenester = () => {
           </ul>
         </div>
       </div>
+      <FullContactForm
+        className="z-0 bg-new-dark-green dark:bg-section-green px-6 py-6 sm:py-14 lg:px-8"
+        textColor="text-white"
+      />
     </div>
   );
 };
