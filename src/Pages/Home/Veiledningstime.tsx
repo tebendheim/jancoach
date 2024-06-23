@@ -1,28 +1,21 @@
 import React from "react";
-import MyButton from "./MyButton"; // Importer din MyButton komponent
+
 import HomeComponents from "./HomeComponents"; // Importer din HomeComponents komponent
 import image from "../../Bilder/Blomst.jpg"; // Importer bildet ditt
+import MyButton from "./MyButton";
 
 const Veiledningstime: React.FC = () => {
   return (
-    <HomeComponents
-      bgColor="bg-skog dark:bg-section-green"
-      darkBgColor="bg-section-green"
-      section="flex-row items-center md:justify-center lg:flex-row py-10"
-      wrapper=""
-      myButton={
-        <MyButton
-          className="w-fit items-center inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
-          buttonText="Book veiledningstime"
-          to="/kontakt"
-          textColor="text-white"
-        />
-      }
-      children={
-        <>
+    <section
+      className={`flex flex-row items-center md:justify-center lg:flex-row py-10 justify-between px-20 gap-20 w-full bg-section-green`}
+    >
+      <div
+        className={`w-full md:w-7/12 flex flex-col items-center md:items-start `}
+      >
+        <section className="text-white text-md mb-10">
           <div className="relative h-fit">
             <h1 className="relative p-2 sm:left-0 w-full xs:w-auto mb-10 text-white bg-new-dark-green dark:bg-section-green rounded-md font-extrabold text-md xs:text-xl md:text-3xl">
-              Gratis Veiledningstime i Coaching - Din Mulighet til Forandring
+              Gratis veiledningstime - Din Mulighet til Forandring
             </h1>
           </div>
           <div className="text-white">
@@ -91,10 +84,22 @@ const Veiledningstime: React.FC = () => {
               nedenfor for å booke din gratis veiledningstime i dag.
             </p>
           </div>
-        </>
-      }
-      image={image}
-    />
+        </section>
+        <div className="flex justify-center">
+          <MyButton
+            className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
+            buttonText="Gratis veiledningstime"
+            to="/kontakt"
+            textColor="text-white"
+          />
+        </div>
+      </div>
+      <div
+        className={`w-full h-96 md:w-5/12 rounded-3xl
+                bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
+        style={{ backgroundImage: `url(${image})` }}
+      ></div>
+    </section>
   );
 };
 
