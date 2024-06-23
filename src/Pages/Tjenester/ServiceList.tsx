@@ -27,9 +27,13 @@ const services = [
   },
 ];
 
-const ServicesList = () => {
+interface props {
+  gridCols: string;
+}
+
+const ServicesList: React.FC<props> = ({ gridCols }) => {
   return (
-    <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+    <div className={`grid gap-10 ${gridCols}`}>
       {services.map((service, index) => (
         <div
           key={index}

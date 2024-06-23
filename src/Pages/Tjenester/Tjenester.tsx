@@ -31,7 +31,7 @@ const Tjenester = () => {
             </h1>
           </div>
 
-          <ServicesList />
+          <ServicesList gridCols="md:grid-cols-2 lg:grid-cols-3" />
         </div>
       </div>
       <FullContactForm
