@@ -1,15 +1,14 @@
 import { ShieldExclamationIcon } from "@heroicons/react/24/solid";
 import React from "react";
-import Navbar from "../Components/Navbar";
-import image from "../Bilder/GammelBaat.jpg";
-import FullContactForm from "./Kontakt/FormComponents/FullContactForm";
+import Navbar from "../../Components/Navbar";
+import image from "../../Bilder/Molo.jpg";
 
-const Tjenester = () => {
+const Om = () => {
   return (
     <div>
       <section className="relative h-20">
         <Navbar
-          bgColor="bg-new-dark-green sm:bg-new-dark-green text-white dark:bg-nav-dark"
+          bgColor="bg-new-dark-green sm:bg-new-dark-green/90 text-white dark:bg-nav-dark"
           logoColor="bg-skog"
         />
       </section>
@@ -25,10 +24,10 @@ const Tjenester = () => {
         <div className=" flex flex-col gap-10 ">
           <div className="relative h-fit">
             <h1 className="absolute -top-3 p-2 xs:-top-3 sm:left-0 w-full xs:w-auto transform -translate-y-full text-white bg-new-dark-green dark:bg-section-green rounded-md  font-extrabold text-md xs:text-xl md:text-3xl">
-              HVA KAN JEG HJELPE DEG MED?
+              OM MEG
             </h1>
           </div>
-          <ul className="list-disc ml-4 text-black dark:text-white">
+          <ul className="list-disc ml-4">
             <li>
               <h2>Coaching</h2>
               <p>
@@ -85,14 +84,8 @@ const Tjenester = () => {
           </ul>
         </div>
       </div>
-      <FullContactForm
-        className="z-0 bg-new-dark-green dark:bg-section-green px-6 py-6 sm:py-14 lg:px-8"
-        textColor="text-white"
-        bgInputs="bg-light-beige text-black dark:bg-section-beige dark:text-white"
-        textPrivacy="text-indigo-200"
-      />
     </div>
   );
 };
 
-export default Tjenester;
+export default Om;
