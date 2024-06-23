@@ -197,9 +197,9 @@ const ContactFormDetails: React.FC<DetailsProps> = ({
       <button
         className={`${
           privacy
-            ? "bg-indigo-600 text-white focus-visible:outline-indigo-600 hover:bg-indigo-500 "
-            : "border-indigo-600 text-black"
-        }block w-full rounded-md border-2  px-3.5 py-2.5 text-center text-sm font-semibold  shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 `}
+            ? "bg-indigo-600 focus-visible:outline-indigo-600 hover:bg-indigo-500 "
+            : "border-indigo-600 "
+        } ${textColor} block w-full rounded-md border-2  px-3.5 py-2.5 text-center text-sm font-semibold  shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 `}
         type="submit"
         disabled={state.submitting}
       >

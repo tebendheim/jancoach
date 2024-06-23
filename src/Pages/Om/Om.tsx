@@ -2,6 +2,8 @@ import { ShieldExclamationIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import Navbar from "../../Components/Navbar";
 import image from "../../Bilder/Molo.jpg";
+import janImg from "../../Bilder/JanPaaVannet.jpg";
+import FullContactForm from "../Kontakt/FormComponents/FullContactForm";
 
 const Om = () => {
   return (
@@ -27,63 +29,40 @@ const Om = () => {
               OM MEG
             </h1>
           </div>
-          <ul className="list-disc ml-4">
-            <li>
-              <h2>Coaching</h2>
-              <p>
-                {" "}
-                Som NLP practitioner coach kan jeg være den støtten du trenger i
-                forhold til å skape endring i ditt liv. Jeg hjelper deg til å
-                sette mål og har en rekke verktøy jeg kan bruke for å støtte deg
-                på veien til å nå målene. Gjennom samtaler, på nett eller ved
-                fysisk møte, vil jeg hjelpe deg til å bli bedre kjent med deg
-                selv – hva driver deg, hva hindrer deg, hva skaper glede og
-                entusiasme, hvilke verdier styrer deg, hva gjør deg trist og
-                hvorfor osv. – det skaper et skifte i deg i forhold til å ta
-                grep om livet ditt og skape de endringene du ønsker eller
-                trenger.{" "}
+          <div className="flex flex-col-reverse md:flex-row items-center gap-10">
+            <div className="w-full md:w-1/3">
+              <img
+                src={janImg} // Oppdater stien til det opplastede bildet
+                alt="Jan Bendheim"
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="w-full md:w-2/3 text-2xl">
+              <p className="mb-4">
+                <span className="font-bold">Jan Bendheim</span> har vært
+                yrkesoffiser i nærmere 40 år, med lederstillinger opp til høyt
+                mellomledernivå. Han har lang erfaring som tillitsvalgt for
+                befal i Forsvaret, og har vært ettertraktet seminarleder for
+                Famlab.
               </p>
-            </li>
-            <li className="">
-              <h2>Lederutvikling</h2>{" "}
               <p>
-                Jeg tar på meg oppdrag som mentor eller veileder for ledere på
-                alle nivåer, som ønsker å utvikle seg selv og sitt lederskap for
-                derigjennom å skape trygge gode arbeidsmiljøer med forutsetning
-                for høyt prestasjonsnivå blant medarbeiderne. Jeg kan også legge
-                til rette for utvikling av grupper. Det kan være i form av
-                teamcoaching, teambuilding eller foredrag.
-              </p>{" "}
-            </li>
-            <li>
-              {" "}
-              <h2>Foreldreutvikling</h2>{" "}
-              <p>
-                Er du usikker på foreldrerollen eller papparollen – Hvordan
-                skape sunne relasjoner til dine barn? Hvordan skape læring og
-                utvikling, heller enn konflikt og stagnasjon? Hvordan takle
-                livet som småbarnsforelder og leder eller medarbeider, uten at
-                stress, frustrasjon opplevelsen av å mislykkes tar overhånd? Er
-                du usikker på hvordan du skal være pappa? Mister du deg selv på
-                veien? Med en kombinasjon av coaching og rådgivning kan jeg
-                bidra til at du får en bedre hverdag og periode i livet ditt,
-                som ikke minst også skaper bedre rammer og hverdager for dine
-                barn. Gjennom foredrag eller teamcoaching med tema som barns
-                selvfølelse, kunsten å si nei, og trassalder, kan jeg også
-                formidle til foreldregrupper mv.{" "}
+                Jan er kjent for å være hel ved, robust og trygg, og han skaper
+                tillit og bygger sterke relasjoner. Han er en god formidler som
+                er verdiorientert og helhetsorientert. Som leder er han tydelig
+                og fleksibel, og han ser hver enkelt person. Jan er en aktiv
+                lytter, arbeidsom og reflektert, samt analytisk og lojal. Han er
+                autentisk og gir alltid sitt beste.
               </p>
-            </li>
-            <li>
-              {" "}
-              <h2>Foredrag</h2> <p>Hel ved! Foredrag må lages</p>{" "}
-            </li>
-            <li>
-              {" "}
-              <h2>Rådgivning</h2>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
+      <FullContactForm
+        className="z-0 bg-new-dark-green dark:bg-section-green px-6 py-6 sm:py-14 lg:px-8"
+        textColor="text-white"
+        bgInputs="bg-light-beige text-black dark:bg-section-beige dark:text-white"
+        textPrivacy="text-indigo-200"
+      />
     </div>
   );
 };
