@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import reactLogo from "./assets/react.svg";
 import Home from "./Pages/Home/Home";
 import Navbar from "./Components/Navbar";
@@ -11,6 +11,7 @@ import { useDarkMode } from "usehooks-ts";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 // import CookiePolicy from "./Pages/PrivacyPolicy/CookiePolicy";
 import CookiePolicy from "./Pages/PrivacyPolicy/CoockiePolicy";
+import Layout from "./Layout";
 
 function App({}: React.HTMLAttributes<HTMLDivElement>) {
   const { isDarkMode } = useDarkMode();
@@ -24,20 +25,22 @@ function App({}: React.HTMLAttributes<HTMLDivElement>) {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/">
-          <Route index element={<Home />} />
-          <Route path="kontakt" element={<Kontakt />} />
-          <Route path="tjenester" element={<Tjenester />} />
-          <Route path="om" element={<Om />} />
-          <Route path="legal/">
-            <Route path="privacypolicy" element={<PrivacyPolicy />} />
-            <Route path="cookiepolicy" element={<CookiePolicy />} />
-            {/* <Route path="cookiepolicy" element={<CookiePolicy />} /> */}
+      <Layout>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="kontakt" element={<Kontakt />} />
+            <Route path="tjenester" element={<Tjenester />} />
+            <Route path="om" element={<Om />} />
+            <Route path="legal/">
+              <Route path="privacypolicy" element={<PrivacyPolicy />} />
+              <Route path="cookiepolicy" element={<CookiePolicy />} />
+              {/* <Route path="cookiepolicy" element={<CookiePolicy />} /> */}
+            </Route>
           </Route>
-        </Route>
-      </Routes>
-      <Footer />
+        </Routes>
+        <Footer />
+      </Layout>
     </BrowserRouter>
   );
 }
