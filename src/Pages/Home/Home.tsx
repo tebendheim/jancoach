@@ -1,12 +1,12 @@
 import React from "react";
 import { Navigate, Link } from "react-router-dom";
-import OmHome from "../Components/OmHome";
-import JanPaaFjellet from "../Bilder/janPaaFjellet.png";
-import logo from "../Bilder/Logo-cropped.svg";
-import MyButton from "../Components/MyButton";
-import Navbar from "../Components/Navbar";
-import NavbarPicture from "../Components/NavbarPicture";
-import HomeComponents from "../Components/HomeComponents";
+import OmHome from "./OmHome";
+import JanPaaFjellet from "../../Bilder/janPaaFjellet.png";
+import logo from "../../Bilder/Logo-cropped.svg";
+import MyButton from "./MyButton";
+import Navbar from "../../Components/Navbar";
+import NavbarPicture from "../../Components/NavbarPicture";
+import HomeComponents from "./HomeComponents";
 
 function Home(): JSX.Element {
   // h-full w-full relative -top-24 left-0

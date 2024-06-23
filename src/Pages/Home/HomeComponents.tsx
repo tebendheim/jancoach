@@ -32,7 +32,7 @@ const HomeComponents: React.FC<props> = ({
       >
         {h1 && <h1 className="text-3xl  font-extrabold text-white">{h1}</h1>}
         {h2 && <h2 className="text-xl mt-3 font-semibold text-white">{h2}</h2>}
-        <p className="text-white text-md mb-10">{children}</p>
+        <section className="text-white text-md mb-10">{children}</section>
         <div className="flex justify-center">{myButton}</div>
       </div>
       <div
