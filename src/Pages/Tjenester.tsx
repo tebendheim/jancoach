@@ -2,7 +2,7 @@ import { ShieldExclamationIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import Navbar from "../Components/Navbar";
 import image from "../Bilder/GammelBaat.jpg";
-import FullContactForm from "../Components/FormComponents/FullContactForm";
+import FullContactForm from "./Kontakt/FormComponents/FullContactForm";
 
 const Tjenester = () => {
   return (

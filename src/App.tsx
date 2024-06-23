@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import reactLogo from "./assets/react.svg";
 import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar";
-import Kontakt from "./Pages/Kontakt";
+import Kontakt from "./Pages/Kontakt/Kontakt";
 import Tjenester from "./Pages/Tjenester";
 import Footer from "./Components/Footer";
 import Om from "./Pages/Om";

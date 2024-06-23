@@ -1,10 +1,10 @@
 import React, { FormEventHandler } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
-import Navbar from "../Components/Navbar";
-import { fetchData } from "../hjelpefunksjoner/ApiService";
+import Navbar from "../../Components/Navbar";
+import { fetchData } from "../../hjelpefunksjoner/ApiService";
 import { useForm, ValidationError } from "@formspree/react";
-import FullContactForm from "../Components/FormComponents/FullContactForm";
+import FullContactForm from "./FormComponents/FullContactForm";
 
 interface states {
   email: string;
