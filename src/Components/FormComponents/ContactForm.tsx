@@ -7,12 +7,19 @@ import ReCAPTCHA, {
   GoogleReCaptchaProvider,
   GoogleReCaptcha,
 } from "react-google-recaptcha-v3";
+import { bg } from "date-fns/locale";
 
 interface DetailsProps {
   textColor: string;
+  bgInputs: string;
+  textPrivacy: string;
 }
 
-const ContactFormDetails: React.FC<DetailsProps> = ({ textColor }) => {
+const ContactFormDetails: React.FC<DetailsProps> = ({
+  textColor,
+  bgInputs,
+  textPrivacy,
+}) => {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const formCode = import.meta.env.VITE_FORM_CODE || "";
   const siteKey = import.meta.env.VITE_CAPTCHA_SITE_KEY || "";
@@ -64,6 +71,7 @@ const ContactFormDetails: React.FC<DetailsProps> = ({ textColor }) => {
             formCode={formCode}
             state={state}
             textColor={textColor}
+            bgInputs={bgInputs}
           />
         </div>
         <div className="flex-grow-0 basis-5/12">
@@ -75,6 +83,7 @@ const ContactFormDetails: React.FC<DetailsProps> = ({ textColor }) => {
             formCode={formCode}
             state={state}
             textColor={textColor}
+            bgInputs={bgInputs}
           />
         </div>
       </div>
@@ -87,6 +96,7 @@ const ContactFormDetails: React.FC<DetailsProps> = ({ textColor }) => {
         formCode={formCode}
         state={state}
         textColor={textColor}
+        bgInputs={bgInputs}
       />
 
       <div className="flex flex-col w-full">
@@ -104,7 +114,7 @@ const ContactFormDetails: React.FC<DetailsProps> = ({ textColor }) => {
             <select
               id="country"
               name="country"
-              className="h-full w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className={`${bgInputs} h-full w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6`}
               autoComplete="country"
             >
               <option>US</option>
@@ -120,7 +130,7 @@ const ContactFormDetails: React.FC<DetailsProps> = ({ textColor }) => {
               name="phone"
               id="phone-number"
               autoComplete="tel"
-              className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className={`${bgInputs} block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6`}
             />
           </div>
         </div>
@@ -134,6 +144,7 @@ const ContactFormDetails: React.FC<DetailsProps> = ({ textColor }) => {
         formCode={formCode}
         state={state}
         textColor={textColor}
+        bgInputs={bgInputs}
       />
 
       <label
@@ -147,7 +158,7 @@ const ContactFormDetails: React.FC<DetailsProps> = ({ textColor }) => {
           name="message"
           id="message"
           rows={6}
-          className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          className={`${bgInputs} block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6`}
         />
         <ValidationError
           prefix="Message"
@@ -162,7 +173,7 @@ const ContactFormDetails: React.FC<DetailsProps> = ({ textColor }) => {
           name="privacy consent"
           id="privacy consent"
           onChange={(e) => setPrivacy(!privacy)}
-          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+          className={`h-4 w-4 rounded ${bgInputs} border-gray-300 text-indigo-600 focus:ring-indigo-500`}
         />
         <ValidationError
           prefix="privacy consent"
@@ -176,7 +187,7 @@ const ContactFormDetails: React.FC<DetailsProps> = ({ textColor }) => {
           By selecting this, you agree to our{" "}
           <Link
             to="/legal/privacypolicy"
-            className="font-semibold text-indigo-900 dark:text-indigo-50"
+            className={`font-semibold ${textPrivacy}`}
           >
             privacy&nbsp;policy
           </Link>
@@ -205,11 +216,19 @@ const ContactFormDetails: React.FC<DetailsProps> = ({ textColor }) => {
   );
 };
 
-const ContactForm: React.FC<DetailsProps> = ({ textColor }) => {
+const ContactForm: React.FC<DetailsProps> = ({
+  textColor,
+  bgInputs,
+  textPrivacy,
+}) => {
   const siteKey = import.meta.env.VITE_CAPTCHA_SITE_KEY || "";
   return (
     <GoogleReCaptchaProvider reCaptchaKey={siteKey}>
-      <ContactFormDetails textColor={textColor} />
+      <ContactFormDetails
+        textColor={textColor}
+        bgInputs={bgInputs}
+        textPrivacy={textPrivacy}
+      />
     </GoogleReCaptchaProvider>
   );
 };

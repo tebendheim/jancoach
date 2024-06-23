@@ -31,7 +31,7 @@ function Home(): JSX.Element {
           width={"full"}
           tekstkomponent={navSlogan}
           navColor={
-            "bg-new-dark-green sm:bg-new-dark-green/90 text-white dark:bg-nav-dark"
+            "bg-new-dark-green sm:bg-new-dark-green text-white dark:bg-nav-dark"
           }
           logoColor={"bg-skog dark:bg-section-beige"}
         />

@@ -9,7 +9,7 @@ const Tjenester = () => {
     <div>
       <section className="relative h-20">
         <Navbar
-          bgColor="bg-new-dark-green sm:bg-new-dark-green/90 text-white dark:bg-nav-dark"
+          bgColor="bg-new-dark-green sm:bg-new-dark-green text-white dark:bg-nav-dark"
           logoColor="bg-skog"
         />
       </section>
@@ -28,7 +28,7 @@ const Tjenester = () => {
               HVA KAN JEG HJELPE DEG MED?
             </h1>
           </div>
-          <ul className="list-disc ml-4">
+          <ul className="list-disc ml-4 text-black dark:text-white">
             <li>
               <h2>Coaching</h2>
               <p>
@@ -88,6 +88,8 @@ const Tjenester = () => {
       <FullContactForm
         className="z-0 bg-new-dark-green dark:bg-section-green px-6 py-6 sm:py-14 lg:px-8"
         textColor="text-white"
+        bgInputs="bg-light-beige text-black dark:bg-section-beige dark:text-white"
+        textPrivacy="text-indigo-200"
       />
     </div>
   );

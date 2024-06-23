@@ -4,9 +4,16 @@ import ContactForm from "./ContactForm";
 interface contactProps {
   className: string;
   textColor: string;
+  bgInputs: string;
+  textPrivacy: string;
 }
 
-const FullContactForm: React.FC<contactProps> = ({ className, textColor }) => {
+const FullContactForm: React.FC<contactProps> = ({
+  className,
+  textColor,
+  bgInputs,
+  textPrivacy,
+}) => {
   return (
     <div className={` ${className} `}>
       <div
@@ -32,7 +39,11 @@ const FullContactForm: React.FC<contactProps> = ({ className, textColor }) => {
         </p>
       </div>
 
-      <ContactForm textColor={textColor} />
+      <ContactForm
+        textColor={textColor}
+        bgInputs={bgInputs}
+        textPrivacy={textPrivacy}
+      />
     </div>
   );
 };

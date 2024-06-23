@@ -35,6 +35,8 @@ const Kontakt: React.FC = () => {
       <FullContactForm
         className="z-0 bg-light-beige dark:bg-section-beige px-6 mt-20 sm:py-14 lg:px-8"
         textColor="text-grey-900 dark:text-white"
+        bgInputs="dark:bg-section-green text-white"
+        textPrivacy="text-indigo-800 dark:text-indigo-300"
       />
     </section>
   );
