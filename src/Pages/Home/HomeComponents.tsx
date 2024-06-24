@@ -25,10 +25,10 @@ const HomeComponents: React.FC<props> = ({
 }) => {
   return (
     <section
-      className={`flex ${section} justify-between px-20 py-10 gap-20 w-full ${bgColor}`}
+      className={`flex ${section} justify-between py-10 gap-20 w-full ${bgColor}`}
     >
       <div
-        className={`w-full md:w-7/12 flex flex-col items-center md:items-start  ${wrapper}`}
+        className={`w-full lg:w-7/12 flex flex-col items-center lg:items-start  ${wrapper}`}
       >
         {h1 && <h1 className="text-3xl  font-extrabold text-white">{h1}</h1>}
         {h2 && <h2 className="text-xl mt-3 font-semibold text-white">{h2}</h2>}

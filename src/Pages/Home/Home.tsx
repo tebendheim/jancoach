@@ -44,7 +44,7 @@ function Home(): JSX.Element {
       <HomeComponents
         bgColor="bg-skog dark:bg-section-green"
         darkBgColor="bg-section-green "
-        section="flex-row items-center md:justify-center lg:flex-row py-10"
+        section="flex-col md:flex-row px-6 items-center md:justify-center lg:flex-row py-10"
         wrapper=""
         myButton={
           <MyButton
@@ -58,7 +58,7 @@ function Home(): JSX.Element {
         children={
           <>
             <div className="relative h-fit">
-              <h1 className="relative p-2  sm:left-0 w-full xs:w-auto mb-10 text-white bg-new-dark-green dark:bg-section-green rounded-md  font-extrabold text-md xs:text-xl md:text-3xl">
+              <h1 className="relative  sm:left-0 w-full xs:w-auto mb-10 text-white bg-new-dark-green dark:bg-section-green rounded-md  font-extrabold text-md xs:text-xl md:text-3xl">
                 HVA KAN JEG HJELPE DEG MED?
               </h1>
             </div>
@@ -67,12 +67,15 @@ function Home(): JSX.Element {
         }
         image={JanPaaFjellet}
       />
-      <Veiledningstime />
+      <Veiledningstime
+        textColor="text-black"
+        className="flex text-black flex-col md:flex-row items-center md:justify-center lg:flex-row py-10 justify-between px-6 md:px-20 gap-20 w-full bg-light-beige dark:bg-section-beige"
+      />
 
       <HomeComponents
-        bgColor="bg-light-beige dark:bg-section-beige"
+        bgColor="bg-skog dark:bg-section-green"
         darkBgColor=""
-        section="flex-col md:flex-row-reverse"
+        section="flex-col px-6 md:flex-row-reverse"
         wrapper=""
         myButton={
           <MyButton
@@ -117,10 +120,10 @@ function Home(): JSX.Element {
       />
 
       <FullContactForm
-        className="z-0 bg-new-dark-green dark:bg-section-green px-6 py-6 sm:py-14 lg:px-8"
-        textColor="text-white"
-        bgInputs="bg-light-beige text-black dark:bg-section-beige dark:text-white"
-        textPrivacy="text-indigo-200"
+        className="z-0 bg-light-beige dark:bg-section-beige px-6 py-6 sm:py-14 lg:px-8"
+        textColor="text-black"
+        bgInputs="bg-white text-black dark:bg-section-beige dark:text-white"
+        textPrivacy="text-indigo-700"
       />
     </section>
   );

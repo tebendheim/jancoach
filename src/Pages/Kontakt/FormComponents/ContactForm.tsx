@@ -57,7 +57,7 @@ const ContactFormDetails: React.FC<DetailsProps> = ({
 
   return (
     <form
-      className="flex flex-col mx-10 sm:mx-28 md:mx-32 lg:mx-44 "
+      className="flex flex-col sm:mx-28 md:mx-32 lg:mx-44 "
       onSubmit={onSubmit}
     >
       <GoogleReCaptcha onVerify={handleVerify} />

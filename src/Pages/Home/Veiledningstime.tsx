@@ -4,11 +4,14 @@ import HomeComponents from "./HomeComponents"; // Importer din HomeComponents ko
 import image from "../../Bilder/Blomst.jpg"; // Importer bildet ditt
 import MyButton from "./MyButton";
 
-const Veiledningstime: React.FC = () => {
+interface props {
+  className: string;
+  textColor: string;
+}
+
+const Veiledningstime: React.FC<props> = ({ className, textColor }) => {
   return (
-    <section
-      className={`flex flex-row items-center md:justify-center lg:flex-row py-10 justify-between px-20 gap-20 w-full bg-section-green`}
-    >
+    <section className={className}>
       <div
         className={`w-full md:w-7/12 flex flex-col items-center md:items-start `}
       >
@@ -18,7 +21,7 @@ const Veiledningstime: React.FC = () => {
               Gratis veiledningstime - Din Mulighet til Forandring
             </h1>
           </div>
-          <div className="text-white">
+          <div className={textColor}>
             <p className="mb-4">
               Er du klar for å ta det neste steget mot et bedre liv? Som en
               erfaren coach tilbyr jeg en gratis veiledningstime for å hjelpe
@@ -26,7 +29,7 @@ const Veiledningstime: React.FC = () => {
               din sjanse til å få en smakebit på hvordan coaching kan
               transformere ditt liv.
             </p>
-            <h2 className="font-bold text-lg mb-2">
+            <h2 className={`font-bold text-lg mb-2 `}>
               Hvorfor Bør Du Booke en Gratis Veiledningstime i Dag?
             </h2>
             <ul className="list-disc ml-5 mb-4">
@@ -94,11 +97,11 @@ const Veiledningstime: React.FC = () => {
           />
         </div>
       </div>
-      <div
+      {/* <div
         className={`w-full h-96 md:w-5/12 rounded-3xl
                 bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
         style={{ backgroundImage: `url(${image})` }}
-      ></div>
+      ></div> */}
     </section>
   );
 };
