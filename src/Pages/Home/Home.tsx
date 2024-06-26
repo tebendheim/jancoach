@@ -44,7 +44,7 @@ function Home(): JSX.Element {
       <HomeComponents
         bgColor="bg-skog dark:bg-section-green"
         darkBgColor="bg-section-green "
-        section="flex-col md:flex-row px-6 items-center md:justify-center lg:flex-row py-10"
+        section="flex-col md:flex-row px-6 sm:px-20 md:px-32 items-center md:justify-center lg:flex-row py-10"
         wrapper=""
         myButton={
           <MyButton
@@ -69,13 +69,13 @@ function Home(): JSX.Element {
       />
       <Veiledningstime
         textColor="text-black"
-        className="flex text-black flex-col md:flex-row items-center md:justify-center lg:flex-row py-10 justify-between px-6 md:px-20 gap-20 w-full bg-light-beige dark:bg-section-beige"
+        className="flex text-black flex-col md:flex-row items-center md:justify-center lg:flex-row py-10 justify-between px-6 sm:px-20 md:px-32 gap-20 w-full bg-light-beige dark:bg-section-beige"
       />
 
       <HomeComponents
         bgColor="bg-skog dark:bg-section-green"
         darkBgColor=""
-        section="flex-col px-6 md:flex-row-reverse"
+        section="flex-col px-6 sm:px-20 md:px-32 md:flex-row-reverse"
         wrapper=""
         myButton={
           <MyButton
@@ -94,7 +94,7 @@ function Home(): JSX.Element {
                 </h1>
               </div>
               <div className="flex flex-col-reverse md:flex-row items-center gap-10">
-                <div className="w-full md:w-2/3 text-2xl text-black">
+                <div className="w-full text-2xl text-black">
                   <p className="mb-4 ">
                     <span className="font-bold">Jan Bendheim</span> har vært
                     yrkesoffiser i nærmere 40 år, med lederstillinger opp til
@@ -120,7 +120,7 @@ function Home(): JSX.Element {
       />
 
       <FullContactForm
-        className="z-0 bg-light-beige dark:bg-section-beige px-6 py-6 sm:py-14 lg:px-8"
+        className="z-0 bg-light-beige dark:bg-section-beige px-6 py-6  sm:py-14 lg:px-8"
         textColor="text-black"
         bgInputs="bg-white text-black dark:bg-section-beige dark:text-white"
         textPrivacy="text-indigo-700"

@@ -12,9 +12,7 @@ interface props {
 const Veiledningstime: React.FC<props> = ({ className, textColor }) => {
   return (
     <section className={className}>
-      <div
-        className={`w-full md:w-7/12 flex flex-col items-center md:items-start `}
-      >
+      <div className={`w-full flex flex-col items-center md:items-start `}>
         <section className="text-white text-md mb-10">
           <div className="relative h-fit">
             <h1 className="relative p-2 sm:left-0 w-full xs:w-auto mb-10 text-white bg-new-dark-green dark:bg-section-green rounded-md font-extrabold text-md xs:text-xl md:text-3xl">

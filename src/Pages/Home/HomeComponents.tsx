@@ -6,7 +6,7 @@ interface props {
   darkBgColor: string;
   section: string;
   wrapper?: string;
-  image: string;
+  image?: string;
   h1?: string;
   h2?: string;
   children: React.ReactNode;
@@ -35,11 +35,13 @@ const HomeComponents: React.FC<props> = ({
         <section className="text-white text-md mb-10">{children}</section>
         <div className="flex justify-center">{myButton}</div>
       </div>
-      <div
-        className={`w-full h-96 md:w-5/12 rounded-3xl
+      {image && (
+        <div
+          className={`w-full h-96 md:w-5/12 rounded-3xl
                   bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
-        style={{ backgroundImage: `url(${image})` }}
-      ></div>
+          style={{ backgroundImage: `url(${image})` }}
+        ></div>
+      )}{" "}
     </section>
   );
 };
