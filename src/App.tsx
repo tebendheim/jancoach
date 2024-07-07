@@ -24,10 +24,13 @@ function App({}: React.HTMLAttributes<HTMLDivElement>) {
   //const [count, setCount] = useState(0);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Layout>
         <Routes>
-          <Route path="/">
+          <Route
+            // basename={import.meta.env.VITE_PUBLIC_URL}
+            path={"/"}
+          >
             <Route index element={<Home />} />
             <Route path="kontakt" element={<Kontakt />} />
             <Route path="tjenester" element={<Tjenester />} />
