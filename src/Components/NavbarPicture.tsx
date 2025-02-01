@@ -34,13 +34,13 @@ const NavbarPicture: React.FC<BildeProps> = ({
       <div className="m-auto mt-16">
         <TekstKomponent />
       </div>
-      <div className="flex flex-row justify-evenly overflow-hidden ">
+      <div className="flex flex-col lg:flex-row lg:justify-evenly overflow-hidden ">
         <img
-          className="mt-10 max-h- w-auto object-contain overflow-auto border-2 border-black p-10 rounded-2xl"
+          className="mt-10 max-h- w-auto object-contain overflow-auto lg:border-2 lg:border-black lg:p-10 rounded-2xl"
           src={imgUrl}
         />
-        <div className="flex flex-col my-auto w-1/3 h-3/4  rounded-2xl">
-          <p className="my-auto text-black text-2xl text-justify">
+        <div className="flex flex-col lg:my-auto w-full p-10 lg:w-1/3 lg:h-3/4  rounded-2xl">
+          <p className="my-auto text-black md:text-xl lg:text-2xl text-justify">
             HEL VED - handler om å være deg selv. For å være deg selv må du
             kjenne deg selv. Du må vite hva du står for, og hvorfor du står for
             det. Du må tørre å kjenne etter både når det føles godt og når det
