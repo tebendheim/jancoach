@@ -30,16 +30,25 @@ const NavbarPicture: React.FC<BildeProps> = ({
       <div className="relative h-fit">
         <Navbar bgColor={navColor} logoColor={logoColor} />
       </div>
-      <div
-        className=" mt-m22
-       flex-grow flex flex-col items-center justify-around overflow-hidden"
-      >
+
+      <div className="m-auto mt-16">
+        <TekstKomponent />
+      </div>
+      <div className="flex flex-row justify-evenly overflow-hidden ">
         <img
-          className=" mt-24 max-h- w-auto object-contain overflow-auto"
+          className="mt-10 max-h- w-auto object-contain overflow-auto border-2 border-black p-10 rounded-2xl"
           src={imgUrl}
         />
-        <div className=" mt-auto mb-2">
-          <TekstKomponent />
+        <div className="flex flex-col my-auto w-1/3 h-3/4  rounded-2xl">
+          <p className="my-auto text-black text-2xl text-justify">
+            HEL VED - handler om å være deg selv. For å være deg selv må du
+            kjenne deg selv. Du må vite hva du står for, og hvorfor du står for
+            det. Du må tørre å kjenne etter både når det føles godt og når det
+            føles vondt. Du må kjenne dine sterke sider og kjenne til og
+            akseptere dine svake. Du må tørre å være sårbar, men også tørre å
+            vise styrken din og være sterk. Når du er deg selv er du til å stole
+            på. Du er gjenkjennelig for andre. Du er ærlig. Du er hel ved.
+          </p>
         </div>
       </div>
     </section>
@@ -47,3 +56,23 @@ const NavbarPicture: React.FC<BildeProps> = ({
 };
 
 export default NavbarPicture;
+
+{
+  /* <div
+className=" mt-m22
+flex-grow flex flex-col items-center justify-around overflow-hidden"
+>
+<div className=" mt-10">
+  <TekstKomponent />
+</div>
+<div className="flex flex-col">
+  <img
+    className=" mt-24 max-h- w-auto object-contain overflow-auto"
+    src={imgUrl}
+  />
+</div>
+<div className="mt-24 max-h- w-auto">
+  <p>Dette er hvor vi kan skrive en tekst</p>
+</div>
+</div> */
+}

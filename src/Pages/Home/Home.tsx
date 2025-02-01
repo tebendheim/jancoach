@@ -82,7 +82,7 @@ function Home(): JSX.Element {
           <MyButton
             className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
             buttonText="Gratis veiledningstime"
-            to="/kontakt"
+            onClick={scrollToSection}
             textColor="text-white"
           />
         }
