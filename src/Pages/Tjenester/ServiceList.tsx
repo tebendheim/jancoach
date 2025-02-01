@@ -42,7 +42,7 @@ const ServicesList: React.FC<props> = ({ gridCols }) => {
           <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
             {service.title}
           </h2>
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-gray-700 dark:text-gray-300 whitespace-pre-line">
             {service.description}
           </p>
         </div>

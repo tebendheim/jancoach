@@ -7,7 +7,7 @@ import MyButton from "./MyButton";
 import Navbar from "../../Components/Navbar";
 import NavbarPicture from "../../Components/NavbarPicture";
 import HomeComponents from "./HomeComponents";
-import ServicesList from "../Tjenester/ServiceList";
+import ServicesList from "./ServiceList";
 import Om from "../Om/Om";
 import FullContactForm from "../Kontakt/FormComponents/FullContactForm";
 import Veiledningstime from "./Veiledningstime";
