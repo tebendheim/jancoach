@@ -39,20 +39,24 @@ const Om = () => {
               />
             </div>
             <div className="w-full md:w-2/3 text-2xl">
-              <p className="mb-4">
+              <p className="mb-4 ">
                 <span className="font-bold">Jan Bendheim</span> har vært
-                yrkesoffiser i nærmere 40 år, med lederstillinger opp til høyt
-                mellomledernivå. Han har lang erfaring som tillitsvalgt for
-                befal i Forsvaret, og har vært ettertraktet seminarleder for
-                Famlab.
+                yrkesoffiser i nærmere 40 år, med lederansvar og lederstillinger
+                det meste av tiden. Han har i lange perioder også vært
+                tillitsvalgt for befal i Forsvaret, og han har vært ettertraktet
+                seminarleder og foredragsholder for Famlab (famlab.no).
               </p>
-              <p>
+              <p className="mb-4 ">
                 Jan er kjent for å være hel ved, robust og trygg, og han skaper
                 tillit og bygger sterke relasjoner. Han er en god formidler som
                 er verdiorientert og helhetsorientert. Som leder er han tydelig
                 og fleksibel, og han ser hver enkelt person. Jan er en aktiv
                 lytter, arbeidsom og reflektert, samt analytisk og lojal. Han er
                 autentisk og gir alltid sitt beste.
+              </p>
+              <p className="mb-4 ">
+                Jan har fire barn i hvorav de eldste er voksne. Han har
+                periodevis vært aleneforelder både til småbarn og tenåringsbarn.
               </p>
             </div>
           </div>
