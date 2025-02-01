@@ -5,6 +5,7 @@ import { useDarkMode } from "usehooks-ts";
 //import "../css/mask.css";
 // import logo from "../../Bilder/Logo (2).svg";
 import logo from "../Bilder/Logo (2).svg";
+import logowhite from "../Bilder/logoNy.png";
 
 interface props {
   bgColor: string;
@@ -41,7 +42,11 @@ const Navbar: React.FC<props> = ({ bgColor, logoColor }) => {
             <Link to="/" className="flex items-center h-full">
               <img
                 className={` h-16 ${logoColor} rounded-full`}
-                src={logo}
+                src={
+                  document.documentElement.classList.contains("dark")
+                    ? logowhite
+                    : logo
+                }
               ></img>
             </Link>
             <button

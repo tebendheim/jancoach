@@ -3,6 +3,7 @@ import { Navigate, Link } from "react-router-dom";
 import OmHome from "./OmHome";
 import JanPaaFjellet from "../../Bilder/janPaaFjellet.png";
 import logo from "../../Bilder/Logo-cropped.svg";
+import logoWhite from "../../Bilder/Hel Ved Coaching.png";
 import MyButton from "./MyButton";
 import Navbar from "../../Components/Navbar";
 import NavbarPicture from "../../Components/NavbarPicture";
@@ -23,7 +24,7 @@ function Home(): JSX.Element {
   const navSlogan = () => {
     return (
       <div className="mt-10 self-center justify-self-center">
-        <p className="font-semibold font-rockwell sm:text-lg md:text-2xl lg:text-4xl xl:text-6xl text-black">
+        <p className="font-semibold font-rockwell text-3xl lg:text-4xl xl:text-6xl text-black dark:text-white">
           DET HANDLER OM Å VÆRE HEL VED
         </p>
       </div>
@@ -32,9 +33,13 @@ function Home(): JSX.Element {
 
   return (
     <section className="bg-light-beige">
-      <div className="relative bg-light-beige dark:bg-section-beige pb-10">
+      <div className="relative bg-light-beige dark:bg-section-beige pb-10 dark:text-white">
         <NavbarPicture
-          imgUrl={logo}
+          imgUrl={
+            document.documentElement.classList.contains("dark")
+              ? logoWhite
+              : logo
+          }
           componentHeight={"full"}
           height="full"
           width={"full"}

@@ -40,7 +40,7 @@ const NavbarPicture: React.FC<BildeProps> = ({
           src={imgUrl}
         />
         <div className="flex flex-col lg:my-auto w-full p-10 lg:w-1/3 lg:h-3/4  rounded-2xl">
-          <p className="my-auto text-black md:text-xl lg:text-2xl text-justify">
+          <p className="my-auto text-black dark:text-white md:text-xl lg:text-2xl text-justify">
             HEL VED - handler om å være deg selv. For å være deg selv må du
             kjenne deg selv. Du må vite hva du står for, og hvorfor du står for
             det. Du må tørre å kjenne etter både når det føles godt og når det
