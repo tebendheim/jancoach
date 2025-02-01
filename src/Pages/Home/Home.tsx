@@ -27,7 +27,7 @@ function Home(): JSX.Element {
 
   const navSlogan = () => {
     return (
-      <div className="mt-10 self-center justify-self-center">
+      <div className="mt-10 self-center justify-center mx-auto px-10 text-center justify-self-center">
         <p className="font-semibold font-rockwell text-3xl lg:text-4xl xl:text-6xl text-black dark:text-white">
           DET HANDLER OM Å VÆRE HEL VED
         </p>

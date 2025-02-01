@@ -12,7 +12,7 @@ const services = [
       "Er du en leder som er ærlig nok til å innrømme at lederskap kan være utfordrende? \n \n Som tenker at det hadde vært fint å sparre med noen og bli utfordret på eget tankemønster? Jeg tar på meg oppdrag som mentor eller veileder for ledere på alle nivåer, som ønsker å utvikle seg selv og sitt lederskap.",
   },
   {
-    title: "Foreldreutvikling",
+    title: "Foreldreveiledning",
     description:
       "Er du usikker på foreldrerollen eller papparollen? Hvordan skape sunne relasjoner til dine barn, og samtidig bidra til at dine barn utvikler seg til robuste individer med sunn selvfølelse? \n \n Med min kunnskap og erfaring kan jeg veilede deg så du får en bedre hverdag og periode i livet ditt.",
   },

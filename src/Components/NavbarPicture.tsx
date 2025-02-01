@@ -36,7 +36,7 @@ const NavbarPicture: React.FC<BildeProps> = ({
       </div>
       <div className="flex flex-col lg:flex-row lg:justify-evenly overflow-hidden ">
         <img
-          className="mt-10 max-h- w-auto object-contain overflow-auto lg:border-2 lg:border-black lg:p-10 rounded-2xl"
+          className="mt-10 max-h-screen min-h-80 lg:w-auto object-contain overflow-auto lg:border-2 lg:border-black lg:p-10 rounded-2xl"
           src={imgUrl}
         />
         <div className="flex flex-col lg:my-auto w-full p-10 lg:w-1/3 lg:h-3/4  rounded-2xl">
