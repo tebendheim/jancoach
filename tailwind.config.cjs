@@ -47,6 +47,9 @@ module.exports = {
         150: "38rem",
         120: "30rem",
       },
+      height: {
+        150: "38rem",
+      },
       backgroundPosition: {
         "top-10": "top 10%",
         "bottom-10": "bottom 10%",

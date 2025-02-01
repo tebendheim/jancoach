@@ -58,7 +58,9 @@ const HomeComponents: React.FC<props> = ({
       ) : (
         image && (
           <div
-            className={` w-full rounded-3xl bg-no-repeat bg-cover bg-center`}
+            className="w-96 h-150 self-center
+             rounded-3xl bg-white overflow-visible shadow-lg 
+             bg-no-repeat bg-cover bg-center"
             style={{ backgroundImage: `url(${image})` }}
           ></div>
         )
