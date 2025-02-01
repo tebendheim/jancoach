@@ -6,6 +6,9 @@ import ItemList from "../ItemList";
 import ParagraphList from "../ParagraphList";
 
 const CookiePolicyText = () => {
+  const companyName = "Jan Bendheim Hel Ved Coaching";
+  const nettside = "www.helved.net";
+  const epost = "helvedcoaching@gmail.com";
   return (
     <div className={styles.c}>
       <h1>COOKIE POLICY</h1>
@@ -16,12 +19,10 @@ const CookiePolicyText = () => {
         <ParagraphList
           items={[
             <>
-              This Cookie Policy explains how Tom-Elbin Bendheim ENK (" Company
-              ," "we ," "us ," and "our ") uses cookies and similar technologies
-              to recognize you when you visit our website at
-              <Link to="http://www.tomandveronika.com">
-                http://www.tomandveronika.com
-              </Link>
+              This Cookie Policy explains how {companyName}
+              (" Company ," "we ," "us ," and "our ") uses cookies and similar
+              technologies to recognize you when you visit our website at
+              <Link to={nettside}>{nettside}</Link>
               (" Website "). It explains what these technologies are and why we
               use them, as well as your rights to control our use of them.
             </>,
@@ -43,15 +44,15 @@ const CookiePolicyText = () => {
               more efficiently, as well as to provide reporting information.
             </>,
             <>
-              Cookies set by the website owner (in this case, Tom-Elbin Bendheim
-              ENK) are called "first-party cookies." Cookies set by parties
-              other than the website owner are called "third-party cookies."
-              Third-party cookies enable third-party features or functionality
-              to be provided on or through the website (e.g., advertising,
-              interactive content, and analytics). The parties that set these
-              third-party cookies can recognize your computer both when it
-              visits the website in question and also when it visits certain
-              other websites.
+              Cookies set by the website owner (in this case, {companyName}) are
+              called "first-party cookies." Cookies set by parties other than
+              the website owner are called "third-party cookies." Third-party
+              cookies enable third-party features or functionality to be
+              provided on or through the website (e.g., advertising, interactive
+              content, and analytics). The parties that set these third-party
+              cookies can recognize your computer both when it visits the
+              website in question and also when it visits certain other
+              websites.
             </>,
           ]}
         />
@@ -61,20 +62,17 @@ const CookiePolicyText = () => {
         <ParagraphList
           items={[
             <>
-              We use first- and third-party cookies for several reasons. Some
-              cookies are required for technical reasons in order for our
+              We use only essential third-party cookies for several reasons.
+              Some cookies are required for technical reasons in order for our
               Website to operate, and we refer to these as "essential" or
-              "strictly necessary" cookies. Other cookies also enable us to
-              track and target the interests of our users to enhance the
-              experience on our Online Properties. Third parties serve cookies
-              through our Website for advertising, analytics, and other
-              purposes. This is described in more detail below.
+              "strictly necessary" cookies. Third parties serve cookies through
+              our Website for advertising, analytics, and other purposes.
             </>,
           ]}
         />
       </Section>
 
-      <Section id="controlcookies" title="How can I control cookies?">
+      {/* <Section id="controlcookies" title="How can I control cookies?">
         <ParagraphList
           items={[
             <>
@@ -100,7 +98,7 @@ const CookiePolicyText = () => {
             </>,
           ]}
         />
-      </Section>
+      </Section> */}
 
       <Section
         id="controlonbrowser"
@@ -184,13 +182,13 @@ const CookiePolicyText = () => {
         <ParagraphList
           items={[
             <>
-              Cookies are not the only way&nbsp;to recognize or track visitors
+              Cookies are not the only way&nbsp; to recognize or track visitors
               to a website. We may use other, similar technologies from time to
               time, like web beacons (sometimes called "tracking pixels" or
               "clear gifs"). These are tiny graphics files that contain a unique
               identifier that enables us to recognize when someone has visited
               our Website or opened an email including them. This allows us, for
-              example, to monitor&nbsp;the traffic patterns of users from one
+              example, to monitor&nbsp; the traffic patterns of users from one
               page within a website to another, to deliver or communicate with
               cookies, to understand whether you have come to the website from
               an online advertisement displayed on a third-party website, to
@@ -219,15 +217,15 @@ const CookiePolicyText = () => {
               {" "}
               If you do not want Flash Cookies stored on your computer, you can
               adjust the settings of your Flash player to block Flash Cookies
-              storage using the tools contained in the&nbsp;
+              storage using the tools contained in the &nbsp;
               <Link to="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html">
                 Website Storage Settings Panel
               </Link>
-              . You can also control Flash Cookies by going to the&nbsp;
+              . You can also control Flash Cookies by going to the &nbsp;
               <Link to="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager03.html">
                 Global Storage Settings Panel
               </Link>
-              &nbsp;and&nbsp;following the instructions (which may include
+              &nbsp; and &nbsp;following the instructions (which may include
               instructions that explain, for example, how to delete existing
               Flash Cookies (referred to "information" on the Macromedia site),
               how to prevent Flash LSOs from being placed on your computer
@@ -297,8 +295,7 @@ const CookiePolicyText = () => {
           items={[
             <>
               If you have any questions about our use of cookies or other
-              technologies, please email us at{" "}
-              <strong>tomelbin.bendheim@gmail.com</strong>.
+              technologies, please email us at <strong>{epost}</strong>.
             </>,
           ]}
         />

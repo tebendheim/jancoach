@@ -8,6 +8,11 @@ import styles from "../../CSS/PrivacyText.module.css";
 const PrivacyText = () => {
   const location = useLocation();
 
+  const companyName = "Jan Bendheim Hel Ved Coaching";
+  const nettside = "www.helved.net";
+  const epost = "helvedcoaching@gmail.com";
+  const legalnettside = "www.helved.net";
+
   useEffect(() => {
     if (location.hash) {
       const element = document.getElementById(location.hash.substring(1));
@@ -23,20 +28,18 @@ const PrivacyText = () => {
       <Paragraphs
         items={[
           <>
-            This privacy notice for&nbsp;Tom-Elbin Bendheim&nbsp;(" we ," " us
-            ," or " our "), describes how and why we might collect, store, use,
-            and/or share (" process ") your information when you use our
-            services (" Services "), such as when you:
+            This privacy notice for&nbsp; {companyName}&nbsp;(" we ," " us ," or
+            " our "), describes how and why we might collect, store, use, and/or
+            share (" process ") your information when you use our services ("
+            Services "), such as when you:
           </>,
           <>
             <ItemList
               items={[
                 <>
                   Visit our website&nbsp;at{" "}
-                  <Link to="http://www.tomandveronika.com">
-                    http://www.tomandveronika.com
-                  </Link>
-                  , or any website of ours that links to this privacy notice
+                  <Link to={nettside}>{nettside}</Link>, or any website of ours
+                  that links to this privacy notice
                 </>,
                 "Engage with us in other related ways, including any sales, marketing, or events ",
               ]}
@@ -47,7 +50,7 @@ const PrivacyText = () => {
               understand your privacy rights and choices. If you do not agree
               with our policies and practices, please do not use our
               Services.&nbsp;If you still have any questions or concerns, please
-              contact us at&nbsp;tomelbin.bendheim@gmail.com.
+              contact us at&nbsp; {epost}.
             </>
           </>,
         ]}
@@ -205,16 +208,6 @@ const PrivacyText = () => {
               Sensitive Information. We do not process sensitive information.
             </>,
             <>
-              Payment Data. We may collect data necessary to process your
-              payment if you choose to make purchases, such as your payment
-              instrument number, and the security code associated with your
-              payment instrument. All payment data is handled and stored
-              by&nbsp;Stripe. You may find their privacy notice link(s) here:
-              <Link to="https://stripe.com/en-no/privacy">
-                https://stripe.com/en-no/privacy.
-              </Link>
-            </>,
-            <>
               Social Media Login Data. We may provide you with the option to
               register with us using your existing social media account details,
               like your Facebook, X, or other social media account. If you
@@ -257,10 +250,7 @@ const PrivacyText = () => {
               Like many businesses, we also collect information through cookies
               and similar technologies.&nbsp;You can find out more about this in
               our Cookie Notice:
-              <Link to="http://www.tomandveronika.com/legal/cookiepolicy">
-                http://www.tomandveronika.com/legal/cookiepolicy
-              </Link>
-              .
+              <Link to={legalnettside}>{legalnettside}</Link>.
             </>,
             <>The information we collect includes:</>,
             <>
@@ -370,9 +360,7 @@ const PrivacyText = () => {
                     display&nbsp;personalized&nbsp;content and advertising
                     tailored to your interests, location, and more.&nbsp;For
                     more information see our Cookie Notice:
-                    <Link to="http://www.tomandveronika.com/legal/cookiepolicy">
-                      http://www.tomandveronika.com/legal/cookiepolicy.
-                    </Link>{" "}
+                    <Link to={legalnettside}>{legalnettside}.</Link>{" "}
                   </>,
                   <>
                     {" "}
@@ -595,9 +583,7 @@ const PrivacyText = () => {
               either on our Services or on other websites.Specific information
               about how we use such technologies and how you can refuse certain
               cookies is set out in our Cookie Notice:
-              <Link to="http://www.tomandveronika.com/legal/cookiepolicy">
-                http://www.tomandveronika.com/legal/cookiepolicy
-              </Link>
+              <Link to={legalnettside}>{legalnettside}</Link>
             </>,
           ]}
         />
@@ -919,10 +905,7 @@ const PrivacyText = () => {
               </Link>
               on our Services.&nbsp;For further information, please see our
               Cookie Notice:
-              <Link to="http://www.tomandveronika.com/legal/cookiepolicy">
-                http://www.tomandveronika.com/legal/cookiepolicy
-              </Link>
-              .
+              <Link to={legalnettside}>{legalnettside}</Link>.
             </>,
             <>
               If you have questions or comments about your privacy rights, you
@@ -985,7 +968,7 @@ const PrivacyText = () => {
             <>
               If you have questions or comments about this notice, you
               may&nbsp;contact our Data Protection Officer (DPO)&nbsp;by email
-              at&nbsp;tomelbin.bendheim@gmail.com
+              at&nbsp;{epost}
             </>,
           ]}
         />
