@@ -1,3 +1,4 @@
+import { List } from "postcss/lib/list";
 import React, { Children, ReactNode } from "react";
 
 interface props {
@@ -11,6 +12,7 @@ interface props {
   h1?: string;
   h2?: string;
   children: React.ReactNode;
+  images?: String[];
 }
 
 const HomeComponents: React.FC<props> = ({
@@ -24,6 +26,7 @@ const HomeComponents: React.FC<props> = ({
   h1,
   h2,
   children,
+  images,
 }) => {
   return (
     <section
@@ -40,13 +43,26 @@ const HomeComponents: React.FC<props> = ({
         <section className="text-white text-md mb-10">{children}</section>
         <div className="flex justify-center">{myButton}</div>
       </div>
-      {image && (
-        <div
-          className={`w-full h-96 md:w-5/12 rounded-3xl
-                  bg-no-repeat bg-cover bg-right-bottom bg-clip-content`}
-          style={{ backgroundImage: `url(${image})` }}
-        ></div>
-      )}{" "}
+
+      {images && images.length > 0 ? (
+        <div className="flex flex-col gap-4 w-full md:w-5/12">
+          {" "}
+          {images.map((img, index) => (
+            <div
+              key={index}
+              className="w-full h-96 rounded-3xl bg-no-repeat bg-cover bg-center"
+              style={{ backgroundImage: `url(${img})` }}
+            ></div>
+          ))}
+        </div>
+      ) : (
+        image && (
+          <div
+            className={`w-full h-96 m-auto  rounded-3xl bg-no-repeat bg-cover bg-center`}
+            style={{ backgroundImage: `url(${image})` }}
+          ></div>
+        )
+      )}
     </section>
   );
 };

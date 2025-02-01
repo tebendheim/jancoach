@@ -2,6 +2,7 @@ import React from "react";
 import { Navigate, Link } from "react-router-dom";
 import OmHome from "./OmHome";
 import JanPaaFjellet from "../../Bilder/janPaaFjellet.png";
+import janSmiler from "../../Bilder/20250201_091157.jpg";
 import logo from "../../Bilder/Logo-cropped.svg";
 import logoWhite from "../../Bilder/Hel Ved Coaching.png";
 import MyButton from "./MyButton";
@@ -75,7 +76,7 @@ function Home(): JSX.Element {
             <ServicesList gridCols="grid-cols-1 lg:grid-cols-2" />
           </>
         }
-        image={JanPaaFjellet}
+        images={[janSmiler, JanPaaFjellet]}
       />
 
       <HomeComponents
