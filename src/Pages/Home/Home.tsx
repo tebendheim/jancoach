@@ -5,6 +5,9 @@ import JanPaaFjellet from "../../Bilder/janPaaFjellet.png";
 import janSmiler from "../../Bilder/20250201_091157.jpg";
 import logo from "../../Bilder/Logo-cropped.svg";
 import logoWhite from "../../Bilder/Hel Ved Coaching.png";
+import naturogskog from "../../Bilder/naturogskog.jpg";
+import janMil from "../../Bilder/janmil1.jpg";
+import janMilSortHvit from "../../Bilder/janmil2SortHvit.jpg";
 import MyButton from "./MyButton";
 import Navbar from "../../Components/Navbar";
 import NavbarPicture from "../../Components/NavbarPicture";
@@ -76,7 +79,7 @@ function Home(): JSX.Element {
             <ServicesList gridCols="grid-cols-1 lg:grid-cols-2" />
           </>
         }
-        images={[janSmiler, JanPaaFjellet]}
+        images={[janSmiler, naturogskog]}
       />
 
       <HomeComponents
@@ -129,7 +132,7 @@ function Home(): JSX.Element {
             </div>
           </>
         }
-        image={JanPaaFjellet}
+        image={janMilSortHvit}
       />
 
       <HomeComponents

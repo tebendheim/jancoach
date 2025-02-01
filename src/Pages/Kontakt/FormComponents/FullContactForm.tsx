@@ -35,7 +35,7 @@ const FullContactForm: React.FC<contactProps> = ({
           KONTAKT MEG
         </h2>
         <p className={`mt-2 text-lg leading-8 ${textColor}`}>
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
+          Fyll ut skjemaet, så tar jeg kontakt med deg ved første anledning.
         </p>
       </div>
 

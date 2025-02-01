@@ -1,8 +1,9 @@
 import { ShieldExclamationIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import Navbar from "../../Components/Navbar";
-import image from "../../Bilder/Molo.jpg";
+import image from "../../Bilder/broMolo.jpg";
 import janImg from "../../Bilder/JanPaaVannet.jpg";
+import jan2 from "../../Bilder/image.png";
 import FullContactForm from "../Kontakt/FormComponents/FullContactForm";
 
 const Om = () => {
@@ -32,7 +33,7 @@ const Om = () => {
           <div className="flex flex-col-reverse md:flex-row items-center gap-10">
             <div className="w-full md:w-1/3">
               <img
-                src={janImg} // Oppdater stien til det opplastede bildet
+                src={jan2} // Oppdater stien til det opplastede bildet
                 alt="Jan Bendheim"
                 className="rounded-lg shadow-lg"
               />
