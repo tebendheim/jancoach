@@ -31,7 +31,7 @@ const HomeComponents: React.FC<props> = ({
   return (
     <section
       id={id}
-      className={`flex ${section} justify-between py-10 gap-20 w-full ${bgColor}`}
+      className={`flex ${section} justify-between py-10 gap-20 w-full ${bgColor} h-fit`}
     >
       <div
         className={`w-full ${

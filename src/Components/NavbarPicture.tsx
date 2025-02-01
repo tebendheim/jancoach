@@ -26,7 +26,7 @@ const NavbarPicture: React.FC<BildeProps> = ({
   logoColor,
 }) => {
   return (
-    <section className={`relative  h-screen flex flex-col`} id="NavPicture">
+    <section className={`relative  flex flex-col`} id="NavPicture">
       <div className="relative h-fit">
         <Navbar bgColor={navColor} logoColor={logoColor} />
       </div>
@@ -34,12 +34,12 @@ const NavbarPicture: React.FC<BildeProps> = ({
       <div className="m-auto mt-16">
         <TekstKomponent />
       </div>
-      <div className="flex flex-col lg:flex-row lg:justify-evenly overflow-hidden ">
+      <div className="flex flex-col mx-10 gap-10 lg:flex-row lg:justify-around ">
         <img
-          className="mt-10 max-h-screen min-h-80 lg:w-auto object-contain overflow-auto lg:border-2 lg:border-black lg:p-10 rounded-2xl"
+          className="mt-10 max-h-screen min-h-76 lg:w-auto object-contain lg:border-2 lg:border-black lg:p-10 rounded-2xl overflow-hidden"
           src={imgUrl}
         />
-        <div className="flex flex-col lg:my-auto w-full p-10 lg:w-1/3 lg:h-3/4  rounded-2xl">
+        <div className="flex flex-col min-h-fit lg:my-auto w-full lg:w-1/3 lg:h-3/4  rounded-2xl">
           <p className="my-auto text-black dark:text-white md:text-xl lg:text-2xl text-justify">
             HEL VED - handler om å være deg selv. For å være deg selv må du
             kjenne deg selv. Du må vite hva du står for, og hvorfor du står for
