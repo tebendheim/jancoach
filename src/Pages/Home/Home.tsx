@@ -79,7 +79,7 @@ function Home(): JSX.Element {
       />
 
       <HomeComponents
-        bgColor=" bg-new-dark-green dark:bg-section-green"
+        bgColor=" bg-light-beige dark:bg-section-beige"
         darkBgColor=""
         section="flex-col px-6 sm:px-20 md:px-32 md:flex-row-reverse"
         wrapper=""
@@ -100,7 +100,7 @@ function Home(): JSX.Element {
                 </h1>
               </div>
               <div className="flex flex-col-reverse md:flex-row items-center gap-10">
-                <div className="w-full text-2xl text-black">
+                <div className="w-full text-2xl text-black dark:text-white">
                   <p className="mb-4 ">
                     <span className="font-bold">Jan Bendheim</span> har vært
                     yrkesoffiser i nærmere 40 år, med lederansvar og
@@ -133,8 +133,8 @@ function Home(): JSX.Element {
 
       <HomeComponents
         id="gratisVeiledning"
-        bgColor=" bg-light-beige dark:bg-section-beige"
-        darkBgColor=""
+        bgColor="bg-skog dark:bg-section-green"
+        darkBgColor="bg-section-green "
         section="flex-col px-6 sm:px-20 md:px-32 md:flex-row-reverse"
         wrapper=""
         myButton={
@@ -157,7 +157,7 @@ function Home(): JSX.Element {
                     Forandring
                   </h1>
                 </div>
-                <div className="text-black">
+                <div className="text-black dark:text-white">
                   <p className="mb-4">
                     Ønsker du en endring i livet, men synes det er vanskelig å
                     finne veien? Å ta kontakt med meg for en gratis
@@ -237,7 +237,7 @@ function Home(): JSX.Element {
 
       <FullContactForm
         className="z-0 bg-light-beige dark:bg-section-beige px-6 py-6  sm:py-14 lg:px-8"
-        textColor="text-black"
+        textColor="text-black dark:text-white"
         bgInputs="bg-white text-black dark:bg-section-beige dark:text-white"
         textPrivacy="text-indigo-700"
       />
