@@ -63,7 +63,7 @@ function Home(): JSX.Element {
         myButton={
           <MyButton
             className="w-fit items-center inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
-            buttonText="Gratis veiledningstime - Din Mulighet til Forandring"
+            buttonText="Gratis oppstartsamtale - Din Mulighet til Forandring"
             onClick={scrollToSection}
             textColor="text-white"
           />
@@ -90,7 +90,7 @@ function Home(): JSX.Element {
         myButton={
           <MyButton
             className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
-            buttonText="Gratis veiledningstime"
+            buttonText="Gratis oppstartsamtale"
             onClick={scrollToSection}
             textColor="text-white"
           />
@@ -144,7 +144,7 @@ function Home(): JSX.Element {
         myButton={
           <MyButton
             className="w-fit inline-flex bg-gradient-to-terracotta-red dark:bg-gradient-button-dark-mode"
-            buttonText="Bestill gratis veiledningstime"
+            buttonText="Bestill gratis oppstartsamtale"
             to="/kontakt"
             textColor="text-white"
           />
